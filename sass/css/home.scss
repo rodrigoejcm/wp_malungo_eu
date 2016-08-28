@@ -1,0 +1,83 @@
+$azul-atividade: #0787FF;
+$roxo-sociedade: #593F7E;
+$laranja-malunguices: #FF9B0F;
+$cor-texto: #303331;
+$cor-fundo: #F7EFE7;
+
+.img-yaon{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.img-cultura{
+	width:500px;
+}
+
+.header-home{
+	text-align:center;
+	margin: 60px 0;
+	font-weight: lighter;
+}
+
+.home-post{
+
+	.imagem-h-300{
+
+		overflow: hidden;
+		height: 300px;
+
+		img{
+			width: 100%;
+			margin: auto;
+		}
+	}
+
+	.imagem-h-400{
+
+		overflow: hidden;
+		height: 400px;
+
+		img{
+			width: 100%;
+			margin: auto;
+		}
+	}
+
+
+	
+
+	.categoria{
+		font-weight: bold;
+		font-size: 15px;
+		text-transform: uppercase;	
+		margin:0 !impotant;
+		display: inline;
+		padding: 0 10px;
+	}	
+	.cor-atividade{
+		color: $cor-fundo;
+		background-color: $azul-atividade;
+	}
+	.cor-sociedade{
+		color: $cor-fundo;
+		background-color: $roxo-sociedade;
+	}
+	.cor-malunguices{
+		color: $cor-fundo;
+		background-color: $laranja-malunguices;
+	}
+
+	.titulo {
+		margin-top: 10px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-weight: lighter;
+		color: 	$cor-texto;
+	}
+
+	.resumo{
+		line-height: 1.6;
+		color: 	$cor-texto;
+	}
+
+}				            

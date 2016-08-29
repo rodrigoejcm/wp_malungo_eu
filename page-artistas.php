@@ -77,6 +77,7 @@ get_header(); ?>
 					<?php
 
 							$posts = get_posts(array(
+								'numberposts' => -1 ,
 								'post_type' => 'artista',
 								'category_name'  => $categoria
 							));
@@ -97,7 +98,8 @@ get_header(); ?>
 								<?php echo '<a href="' . get_permalink($post->ID) . '" style="background-image: url(\'' . $thumb_url . '\')">';?>
 								        <div class="box">
 								          <div class="title"><?php the_title(); ?></div>
-								          <div class="title">
+								          <br>
+								          <div class="pais">
 								          	
 								          		<?php
 									          		$vari  = get_field('pais');
@@ -110,7 +112,8 @@ get_header(); ?>
 													}
 												?>
 								          </div>
-								          <div class="box-artista-descricao"><?php the_field('breve_descricao'); ?></div>
+								          <br>
+								          <div class="descricao"><?php the_field('breve_descricao'); ?></div>
 								        </div>
 								      </a>
 									</li>

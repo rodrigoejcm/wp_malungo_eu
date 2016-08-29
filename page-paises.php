@@ -12,7 +12,7 @@
  * @package _s
  */
 
-get_header(); ?>
+get_header('paises'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -20,96 +20,52 @@ get_header(); ?>
 			<h1>Países</h1>
 			<p>Explore a morada de nossos Malungos...</p>
 
-			<br>
-
+			
 			<div class="row">
-				
-				<div class="col-md-2  col-md-offset-2">
-					<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
-					<div class="box-pais">
-						
-						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-						</img>
-						<p>Africa do Sul</p>
-					</div>
-					</a>
-				
+				<div class="col-md-8 col-md-offset-2">
+					<ul>
+
+
+						<?php
+
+							$posts = get_posts(array(
+								'numberposts' => -1,
+								'post_type' => 'pais',
+								'order' => 'ASC',
+								'orderby' => 'title'
+							));
+
+
+							if($posts)
+							{
+								foreach($posts as $post)
+								{
+								?>
+									<li> 
+										<?php
+											$thumb_id = get_post_thumbnail_id();
+											$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+											$thumb_url = $thumb_url_array[0];
+										?>
+
+
+
+										<a  href="<?=get_permalink();?>">
+											<div class="box-pais">
+												<img src="<?php echo get_field('imagem_mapa')['url']; ?>" >
+												</img>
+												<p><?php the_title();?></p>
+											</div>
+										</a>
+									</li>
+								<?php
+								}
+							}
+					?>
+
+					</ul>
 				</div>
-				<div class="col-md-2">
-					<a  class="link-audiovisual" href="#">
-						<div class="box-pais">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-							</img>
-							<p>Moçambique</p>
-						</div>
-					</a>				
-				</div>
-				<div class="col-md-2">
-					<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
-					<div class="box-pais">
-						
-						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-						</img>
-						<p>Africa do Sul</p>
-					</div>
-					</a>
-				
-				</div>
-				<div class="col-md-2">
-					<a  class="link-audiovisual" href="#">
-						<div class="box-pais">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-							</img>
-							<p>Moçambique</p>
-						</div>
-					</a>				
-				</div>
-				
-			</div>
-			<br><br>
-						<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-2">
-					<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
-					<div class="box-pais">
-						
-						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-						</img>
-						<p>Africa do Sul</p>
-					</div>
-					</a>
-				
-				</div>
-				<div class="col-md-2">
-					<a  class="link-audiovisual" href="#">
-						<div class="box-pais">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-							</img>
-							<p>Moçambique</p>
-						</div>
-					</a>				
-				</div>
-				<div class="col-md-2">
-					<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
-					<div class="box-pais">
-						
-						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-						</img>
-						<p>Africa do Sul</p>
-					</div>
-					</a>
-				
-				</div>
-				<div class="col-md-2">
-					<a  class="link-audiovisual" href="#">
-						<div class="box-pais">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/PAISES_africa-do-sul.png' ?>" >
-							</img>
-							<p>Moçambique</p>
-						</div>
-					</a>				
-				</div>
-				<div class="col-md-2"></div>
+
 			</div>
 		</div>
 		</main><!-- #main -->

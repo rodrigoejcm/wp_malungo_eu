@@ -21,23 +21,32 @@ $cor-texto-pais: #303331;
 		text-align: center;
 	}
 
+    ul li:first-child{
+        margin-left: 0;
+    }
+
 	.box-pais{
-	border: 1px solid #303331;
-	height: 180px;
-	width: 180px;
+    	border: 1px solid #303331;
+    	height: 180px;
+    	width: 180px;
+        float: left;
+        margin-left: 3%;
+        margin-top: 40px;
 
 
-		img{
-			margin-top: -10px;
-		}
-		
-		p{
-			text-align: center;
-			color: #303331;
-			margin-top: -5px;
-			font-family: "proxima-nova",sans-serif;
-			letter-spacing: 2.5px;
-		}
+
+
+    		img{
+    			/* margin-top: -10px; */
+    		}
+    		
+    		p{
+    			text-align: center;
+    			color: #303331;
+    			margin-top: -22px;
+    			font-family: "proxima-nova",sans-serif;
+    			letter-spacing: 2.5px;
+    		}
 	}
 
 
@@ -261,7 +270,7 @@ $cor-texto-pais: #303331;
     top: 0;
     left: 0;
     position: fixed !important;
-    background-image: url("http://www.africadosul.org.br/turismo/foto2.jpg");
+    
     background-size: cover;
 }
 
@@ -293,8 +302,8 @@ $cor-texto-pais: #303331;
 
 /* This is the main heading that appears on the blue section */
 .splash-head-pais {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: lighter;
     color: white;
    /*  border: 3px solid white; */
     padding: 1em 1.6em;
@@ -323,7 +332,7 @@ $cor-texto-pais: #303331;
 .content-wrapper-pais {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 70%;
+    top: 50%;
     width: 100%;
     min-height: 12%;
     z-index: 2;
@@ -342,4 +351,8 @@ $cor-texto-pais: #303331;
 
 .descricao-pais{
 	color: black;
+
+    .bandeira{
+        width: 90px;
+    }
 }

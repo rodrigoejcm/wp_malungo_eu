@@ -4,6 +4,7 @@ $transition-type: linear;
 $overlay-color: black;
 $texts-and-icons: #fff;
 $linhas-close: black;
+$cor-linha-fundobraco: #303331;
 
 
 
@@ -121,6 +122,15 @@ $linhas-close: black;
 	margin: 8px 0;
 	transition: all 450ms $transition-type;
 }
+
+.lines-fb {
+	background-color: $cor-linha-fundobraco;
+	width: 100%;
+	height: 2px;
+	margin: 8px 0;
+	transition: all 450ms $transition-type;
+}
+
 
 // SET ANIMATION EFFECT - HAMBURGUER MENU CLOSED
 

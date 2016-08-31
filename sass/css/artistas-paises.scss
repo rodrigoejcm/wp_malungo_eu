@@ -4,12 +4,8 @@ $cor-fundo-pais: #F7EFE7;
 $cor-texto-pais: #303331;
 
 .page {
-	background-color: $cor-fundo;
-}
-
-.page-id-33 {
-	background-color: $cor-fundo-pais;	
-}
+    	background-color: $cor-fundo;
+    }
 
 
 .paises-lista{
@@ -17,7 +13,7 @@ $cor-texto-pais: #303331;
 
 
 	h1,p{
-		color: $cor-fundo;
+		color: $cor-texto;
 		text-align: center;
 	}
 
@@ -42,7 +38,7 @@ $cor-texto-pais: #303331;
     		
     		p{
     			text-align: center;
-    			color: #303331;
+    			color: $cor-texto;
     			margin-top: -22px;
     			font-family: "proxima-nova",sans-serif;
     			letter-spacing: 2.5px;
@@ -69,49 +65,49 @@ $cor-texto-pais: #303331;
 	.link-artesvisuais .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
 	.link-audiovisual .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
 	.link-danca .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
 	.link-literatura .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
 	.link-moda .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
 	.link-musica .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
 	.link-teatro .box-categoria{
 
 		&:hover {
-		background-image: url("https://placeimg.com/180/180/people");
+		/* background-image: url("https://placeimg.com/180/180/people"); */
 		}
 	}
 
@@ -121,6 +117,15 @@ $cor-texto-pais: #303331;
 	height: 180px;
 	width: 180px;
 
+        .indique{
+            font-family: 'proxima-nova';
+            font-size:20px;
+            color: $cor-texto;
+
+            p{
+                margin: 47px auto;
+            }
+        }
 
 		img{
 			margin-top: -10px;
@@ -166,7 +171,9 @@ $cor-texto-pais: #303331;
     top: 0;
     left: 0;
     position: fixed !important;
-    background-image: url("http://www.iriedancetheatre.org/wp-content/uploads/2012/05/Adzido-Pan-African-Dance-Ensemble.jpg");
+    background-size: cover;
+    background-position: center center;
+    min-height: 200px !important;
 }
 
 .splash-container-artista-opacity{
@@ -191,33 +198,47 @@ $cor-texto-pais: #303331;
     /* absolute center .splash within .splash-container */
     margin: auto;
     position: absolute;
-    top: 20%; left: 0; bottom: 0; right:20;
+    top: 15%; left: 0; bottom: 0; right:20;
     text-align: center;
-    text-transform: uppercase;
+
     width: 100%;
+    
     
 
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head-artista {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 7vw;
+    font-family: "proxima-nova",sans-serif;
+    font-weight: lighter;
     color: white;
+    margin-top: 5px;
+   
    /*  border: 3px solid white; */
-    padding: 1em 1.6em;
-    font-weight: 100;
-    border-radius: 5px;
+    
+    
     line-height: 1em;
     text-align: center;
 }
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead-artista {
-    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 0.05em;
     opacity: 0.8;
     text-align: center;
+    color: white;
+    margin-top: 5px;
+}
+
+.splash-subhead-artista-categoria{
+    text-transform: uppercase;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .splash-artista img{
@@ -292,25 +313,36 @@ $cor-texto-pais: #303331;
     /* absolute center .splash within .splash-container */
     margin: auto;
     position: absolute;
-    top: 20%; left: 0; bottom: 0; right:20;
+    top: 15%; left: 0; bottom: 0; right:20;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
     
+    .tag-vocabulos{
+        display: inline;
+        text-align: center;
+        padding: 5px 10px;
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+        
+    }
+
 
 }
 
 /* This is the main heading that appears on the blue section */
 .splash-head-pais {
-    font-size: 40px;
+   font-size: 6vw;
+    font-family: "proxima-nova",sans-serif;
     font-weight: lighter;
     color: white;
    /*  border: 3px solid white; */
-    padding: 1em 1.6em;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -336,7 +368,11 @@ $cor-texto-pais: #303331;
     width: 100%;
     min-height: 12%;
     z-index: 2;
-    background-color: $cor-fundo-pais;
+    background-color: $cor-fundo;
+
+    .img-mapa-full{
+        margin-bottom: 20px;
+    }
 
 }
 
@@ -350,9 +386,13 @@ $cor-texto-pais: #303331;
 
 
 .descricao-pais{
-	color: black;
+	color: $cor-texto;
 
     .bandeira{
         width: 90px;
     }
+}
+
+.conteudo-pais{
+    color: $cor-texto;    
 }

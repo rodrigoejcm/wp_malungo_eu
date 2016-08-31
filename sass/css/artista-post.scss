@@ -1,0 +1,35 @@
+.imagem-estourada {
+    clear: both;
+    display: block;
+    margin-left: -79% !important;
+    margin-right: auto !important;
+    overflow: hidden !important;
+    max-width: 250%;
+}
+
+.fora-da-margem-esquerda{
+	margin: 15px 15px 15px -10%;
+}
+
+
+.fora-da-margem-direita{
+	margin: 15px -10% 15px 15px;
+}
+
+.content-wrapper-artista{
+	overflow:hidden;
+}
+
+.alignleft{
+	    margin: 0 15px 7px inherit;
+	    font-family: 'proxima nova';
+	    font-style: italic; 
+
+	    .wp-caption-text{
+	    	margin-bottom: 2px !important;;
+	    }
+}
+
+.wp-caption {
+    margin-bottom: 0;
+}

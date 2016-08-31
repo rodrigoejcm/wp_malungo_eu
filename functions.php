@@ -117,6 +117,16 @@ function _s_scripts() {
         wp_enqueue_script('malungo-jquery-js');
     }
 
+
+	if (!is_admin() && $GLOBALS['pagenow'] != 'wp-login.php') {
+        wp_deregister_script('malungo-jquery-ui-js');
+        wp_register_script('malungo-jquery-ui-js', 'https://code.jquery.com/ui/1.12.0/jquery-ui.js', false, '3.1.0');
+        wp_enqueue_script('malungo-jquery-ui-js');
+    }
+
+
+
+
 	wp_enqueue_script( '_s-malungo-hamburguer', get_template_directory_uri() . '/js/malungo.js', array(), '20151215', true );
 
 		wp_enqueue_script( '_s-malungo-jquery', get_template_directory_uri() . '/js/malungo_jquery.js', array(), '20151215', true );
@@ -161,6 +171,39 @@ function remove_my_post_metaboxes() {
 }
 add_action('admin_menu','remove_my_post_metaboxes');
 
+
+
+
+function get_imagem_categoria_artista( $categoria ){
+	
+	$imagem = '';
+
+	switch ($categoria) {
+	    case 'artes-visuais' :
+	        $imagem = 'ARTISTAS_simbolos-01.png';
+	    	break;
+	    case 'audiovisual' :
+	    	$imagem = 'ARTISTAS_simbolos-02.png';
+	    	break;
+	    case 'danca' :
+	    	$imagem = 'ARTISTAS_simbolos-03.png';
+	    	break;
+	    case 'literatura' :
+	    	$imagem = 'ARTISTAS_simbolos-04.png';
+	    	break;
+	    case 'moda' :
+	    	$imagem = 'ARTISTAS_simbolos-05.png';
+	    	break;
+	    case 'musica' :
+	    	$imagem = 'ARTISTAS_simbolos-06.png';
+	    	break;
+	    case 'teatro' :	
+	    	$imagem = 'ARTISTAS_simbolos-07.png';
+	    	break;
+	}       
+
+	return $imagem;
+}
 
 /**
  * Implement the Custom Header feature.

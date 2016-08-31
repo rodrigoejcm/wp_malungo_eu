@@ -439,13 +439,8 @@ a:hover, a:active {
 .menu-toggle, .main-navigation.toggled ul {
   display: block;
 }
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none;
-  }
-  .main-navigation ul {
-    display: block;
-  }
+.main-navigation ul {
+  display: block;
 }
 .site-main .comment-navigation, .site-main .posts-navigation, .site-main .post-navigation {
   margin: 0 0 1.5em;
@@ -687,8 +682,6 @@ a.pure-button-primary {
   background: transparent;
 }
 .pure-menu.pure-menu-fixed {
-  /* I need a higher z-index here because of the scroll-over effect. */
-  border-bottom: none;
   z-index: 4;
 }
 .home-menu .pure-menu-heading {
@@ -838,6 +831,12 @@ a.pure-button-primary {
     font-size: 300%;
   }
 }
+#mobile-menu-1 {
+  display: none;
+}
+.main-navigation {
+  margin-top: 20%;
+}
 .full-menu, .content {
   width: 100%;
   height: 100%;
@@ -857,38 +856,20 @@ a.pure-button-primary {
   /* transition: all 400ms $transition-type; */
   transform: translatey(100%);
 }
-.full-menu img {
+.full-menu .img-full {
   position: absolute;
   height: 100%;
   width: 100%;
   left: 0;
   /* z-index: 3; */
   top: 0;
+  overflow: hidden;
+  background-image: url('./img/menu_01.jpg');
+  background-position: center center;
+  background-size : cover;
   /* 		opacity: 0.5;
 		transform: translatey(100%); */
   /* 		z-index: 10; */
-  overflow: hidden;
-}
-.full-menu li {
-  font-size: 4em;
-  color: #fff;
-  opacity: 0;
-  transform: translateY(2%);
-  transition: all 300ms linear;
-  cursor: pointer;
-}
-.full-menu li:after {
-  content: "";
-  position: absolute;
-  height: 5px;
-  width: 0%;
-  left: 0;
-  bottom: 0;
-  background-color: #fff;
-  transition: width 200ms linear;
-}
-.full-menu li:hover:after {
-  width: 100%;
 }
 .full-menu ul {
   list-style: none;
@@ -901,12 +882,79 @@ a.pure-button-primary {
 .full-menu.active li {
   opacity: 1;
   transform: translateX(0%);
-}
-.full-menu.active li:hover {
-  animation: zoom 200ms linear;
+  text-align: center;
 }
 .full-menu .main-navigation {
   z-index: 5;
+  /* TEXT */
+}
+.full-menu .main-navigation span :hover {
+  text-decoration: none;
+}
+.full-menu .main-navigation ul li .sub-menu {
+  font-size: 25px !important;
+}
+.full-menu .main-navigation ul ul {
+  box-shadow: none;
+  float: none;
+}
+.full-menu .main-navigation ul ul a {
+  width: 100%;
+  margin: 0 auto;
+}
+.full-menu header ul li span, .full-menu header span {
+  display: block;
+}
+.full-menu header p, .full-menu header ul li a span {
+  font-family: "Proxima Nova", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.full-menu header {
+  padding-top: 12px;
+}
+.full-menu .sub-menu li {
+  display: block;
+  visibility: visible;
+}
+.full-menu header ul li {
+  text-align: center;
+}
+.full-menu header ul li a {
+  font-family: "Proxima Nova", sans-serif;
+  color: #53417b;
+  font-size: 25.02px;
+  font-weight: 300;
+  text-align: center;
+  white-space: nowrap;
+}
+.full-menu header ul li a:hover {
+  text-decoration: none;
+}
+.full-menu header ul li a span {
+  color: #303331;
+  font-size: 10.01px;
+  display: block;
+}
+.full-menu header ul li a span:hover {
+  text-decoration: none;
+}
+.full-menu .sub-menu li {
+  display: block;
+}
+.full-menu .sub-menu li a {
+  color: #53417b;
+  font-size: 15px;
+  text-align: center;
+}
+.full-menu header ul ul {
+  left: 0;
+  position: inherit;
+}
+.full-menu .main-navigation .sub-menu li {
+  float: none;
+  position: static;
+  /* TEXT */
 }
 .hamburguer {
   position: absolute;
@@ -954,6 +1002,16 @@ a.pure-button-primary {
 ul, ol {
   margin: 0;
   padding: 0px;
+}
+.nav-tabs a {
+  color: white;
+}
+.nav-tabs a:visited {
+  color: white;
+  text-decoration: none;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+  color: #303331;
 }
 .header .logo-malungo img {
   width: 160px;
@@ -1027,14 +1085,11 @@ ul, ol {
 .page {
   background-color: #303331;
 }
-.page-id-33 {
-  background-color: #f7efe7;
-}
 .paises-lista {
   padding-top: 5%;
 }
 .paises-lista h1, .paises-lista p {
-  color: #303331;
+  color: #f7efe7;
   text-align: center;
 }
 .paises-lista ul li:first-child {
@@ -1050,7 +1105,7 @@ ul, ol {
 }
 .paises-lista .box-pais p {
   text-align: center;
-  color: #303331;
+  color: #f7efe7;
   margin-top: -22px;
   font-family: "proxima-nova", sans-serif;
   letter-spacing: 2.5px;
@@ -1065,31 +1120,18 @@ ul, ol {
   color: #f7efe7;
   text-align: center;
 }
-.artistas-categorias .link-artesvisuais .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
-.artistas-categorias .link-audiovisual .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
-.artistas-categorias .link-danca .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
-.artistas-categorias .link-literatura .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
-.artistas-categorias .link-moda .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
-.artistas-categorias .link-musica .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
-.artistas-categorias .link-teatro .box-categoria:hover {
-  background-image: url("https://placeimg.com/180/180/people");
-}
 .artistas-categorias .box-categoria {
   border: 1px solid white;
   height: 180px;
   width: 180px;
+}
+.artistas-categorias .box-categoria .indique {
+  font-family: 'proxima-nova';
+  font-size: 20px;
+  color: #f7efe7;
+}
+.artistas-categorias .box-categoria .indique p {
+  margin: 47px auto;
 }
 .artistas-categorias .box-categoria img {
   margin-top: -10px;
@@ -1122,7 +1164,9 @@ ul, ol {
   top: 0;
   left: 0;
   position: fixed !important;
-  background-image: url("http://www.iriedancetheatre.org/wp-content/uploads/2012/05/Adzido-Pan-African-Dance-Ensemble.jpg");
+  background-size: cover;
+  background-position: center center;
+  min-height: 200px !important;
 }
 .splash-container-artista-opacity {
   background-color: #303331;
@@ -1142,32 +1186,40 @@ ul, ol {
 .splash-artista {
   margin: auto;
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 0;
   bottom: 0;
   right: 20;
   text-align: center;
-  text-transform: uppercase;
   width: 100%;
   /* This is the main heading that appears on the blue section */
 }
 .splash-head-artista {
-  font-size: 20px;
-  font-weight: bold;
-  /*  border: 3px solid white; */
+  font-size: 7vw;
+  font-family: "proxima-nova", sans-serif;
+  font-weight: lighter;
   color: white;
-  padding: 1em 1.6em;
-  font-weight: 100;
-  border-radius: 5px;
+  /*  border: 3px solid white; */
+  margin-top: 5px;
   line-height: 1em;
   text-align: center;
   /* This is the subheading that appears on the blue section */
 }
 .splash-subhead-artista {
-  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
   letter-spacing: 0.05em;
   opacity: 0.8;
   text-align: center;
+  color: white;
+  margin-top: 5px;
+}
+.splash-subhead-artista-categoria {
+  text-transform: uppercase;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: bold;
 }
 .splash-artista img {
   /*
@@ -1224,7 +1276,7 @@ ul, ol {
 .splash-pais {
   margin: auto;
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 0;
   bottom: 0;
   right: 20;
@@ -1233,16 +1285,25 @@ ul, ol {
   width: 100%;
   /* This is the main heading that appears on the blue section */
 }
+.splash-pais .tag-vocabulos {
+  display: inline;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+}
 .splash-head-pais {
-  font-size: 40px;
+  font-size: 6vw;
+  font-family: "proxima-nova", sans-serif;
   font-weight: lighter;
   /*  border: 3px solid white; */
   color: white;
-  padding: 1em 1.6em;
   font-weight: 100;
   border-radius: 5px;
   line-height: 1em;
   text-align: center;
+  margin-bottom: 15px;
   /* This is the subheading that appears on the blue section */
 }
 .splash-subhead-pais {
@@ -1263,8 +1324,11 @@ ul, ol {
   width: 100%;
   min-height: 12%;
   z-index: 2;
-  background-color: #f7efe7;
+  background-color: #303331;
   /* This is the class used for the main content headers (<h2>) */
+}
+.content-wrapper-pais .img-mapa-full {
+  margin-bottom: 20px;
 }
 .content-head-pais {
   font-weight: 400;
@@ -1273,10 +1337,13 @@ ul, ol {
   margin: 2em 0 1em;
 }
 .descricao-pais {
-  color: black;
+  color: #f7efe7;
 }
 .descricao-pais .bandeira {
   width: 90px;
+}
+.conteudo-pais {
+  color: #f7efe7;
 }
 li, ul {
   list-style: none;
@@ -1288,6 +1355,15 @@ li, ul {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+.projects-list .img_categoria {
+  padding: 30px;
+}
+.projects-list .nome_categoria_box {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: -15%;
 }
 .projects-list li {
   background-size: cover;
@@ -1328,7 +1404,6 @@ li, ul {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #40c1fb;
   opacity: 0.9;
   box-sizing: border-box;
   display: -webkit-flex;
@@ -2139,4 +2214,32 @@ li, ul {
   100% {
     visibility: hidden;
   }
+}
+.imagem-estourada {
+  clear: both;
+  display: block;
+  margin-left: -79% !important;
+  margin-right: auto !important;
+  overflow: hidden !important;
+  max-width: 250%;
+}
+.fora-da-margem-esquerda {
+  margin: 15px 15px 15px -10%;
+}
+.fora-da-margem-direita {
+  margin: 15px -10% 15px 15px;
+}
+.content-wrapper-artista {
+  overflow: hidden;
+}
+.alignleft {
+  margin: 0 15px 7px inherit;
+  font-family: 'proxima nova';
+  font-style: italic;
+}
+.alignleft .wp-caption-text {
+  margin-bottom: 2px !important;
+}
+.wp-caption {
+  margin-bottom: 0;
 }

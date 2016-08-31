@@ -23,8 +23,8 @@ get_header(); ?>
 			<br>
 
 			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-2">
+				
+				<div class="col-md-2 col-md-offset-2">
 					<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
 					<div class="box-categoria">
 						
@@ -36,7 +36,7 @@ get_header(); ?>
 				
 				</div>
 				<div class="col-md-2">
-					<a  class="link-audiovisual" href="#">
+					<a  class="link-audiovisual" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
 						<div class="box-categoria">
 							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-02.png' ?>" >
 							</img>
@@ -45,7 +45,7 @@ get_header(); ?>
 					</a>				
 				</div>
 				<div class="col-md-2">
-					<a class="link-danca" href="#">
+					<a class="link-danca" href="<?=get_site_url() .'/artistas/?categoria_artista=danca' ?>">
 						<div class="box-categoria">
 							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-03.png' ?>" >
 							</img>
@@ -54,7 +54,7 @@ get_header(); ?>
 					</a>					
 				</div>
 				<div class="col-md-2">
-					<a class="link-literatura" href="#">
+					<a class="link-literatura" href="<?=get_site_url() .'/artistas/?categoria_artista=literatura' ?>">
 						<div class="box-categoria">
 							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-04.png' ?>" >
 							</img>
@@ -62,13 +62,12 @@ get_header(); ?>
 						</div>
 					</a>				
 				</div>
-				<div class="col-md-2"></div>
+				
 			</div>
 			<br><br>
 			<div class="row">
-				<div class="col-md-2"></div>
-				<div class="col-md-2">
-					<a class="link-moda" href="#">
+				<div class="col-md-2 col-md-offset-2">
+					<a class="link-moda" href="<?=get_site_url() .'/artistas/?categoria_artista=moda' ?>">
 						<div class="box-categoria">
 							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-05.png' ?>" >
 							</img>
@@ -77,7 +76,7 @@ get_header(); ?>
 					</a>
 				</div>
 				<div class="col-md-2">
-				<a class="link-musica" href="#">
+				<a class="link-musica" href="<?=get_site_url() .'/artistas/?categoria_artista=musica' ?>">
 					<div class="box-categoria">
 						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-06.png' ?>" >
 						</img>
@@ -86,7 +85,7 @@ get_header(); ?>
 				</a>
 				</div>
 				<div class="col-md-2">
-					<a class="link-teatro" href="#">
+					<a class="link-teatro" href="<?=get_site_url() .'/artistas/?categoria_artista=teatro' ?>">
 						<div class="box-categoria">
 							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-07.png' ?>" >
 							</img>
@@ -96,10 +95,12 @@ get_header(); ?>
 				</div>
 				<div class="col-md-2">
 					<div class="box-categoria">
-						BLA BLA BLA
+						<div class="indique">
+							<p>INDIQUE<br>UM<br>ARTISTA</p>
+						</div>
 					</div>				
 				</div>
-				<div class="col-md-2"></div>
+				
 			</div>
 		</div>
 		</main><!-- #main -->

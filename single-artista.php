@@ -9,23 +9,53 @@
 
 get_header(); ?>
 
+
+
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<div class="splash-container-artista">
+			<?php
+										/*url da Featured image do artista*/
+										$thumb_id = get_post_thumbnail_id();
+										$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+										$thumb_url = $thumb_url_array[0];
+
+										/*Nome Categoria - Para uma lista de categorias, usar the_category*/	
+										$categoria = get_the_category()[0]->name;
+										
+										/*Imagem da categoria*/
+										$categorias_do_artista = get_the_terms( get_the_ID(), 'category');
+										$categoria_principal = array_pop($categorias_do_artista);
+										$categoria_image = get_field('icone', $categoria_principal);
+										$estilo_cor_texto_categoria = "color: " . get_field('cor', $categoria_principal) . ";";
+										
+			?>
+
+			<div class="splash-container-artista" style="background-image: url('<?=$thumb_url;?>')">
 				<div class="splash-container-artista-opacity">
 				</div>
 			    <div class="splash-artista">
-			    	<img  style="height:150px;" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-01.png' ?>" >
+			    	<img  style="height:150px;" src="<?= $categoria_image['url']; ?>" >
 					</img>
-			    	<div class="splash-subhead-artista">
-			    		Artes Visuais
+			    	<div class="splash-subhead-artista-categoria" style="<?= $estilo_cor_texto_categoria ;?>">
+			    		<?= esc_html($categoria) ; ?>
+
 			    	</div>
 			    	<div class="splash-head-artista">
-			    		Nome Artistas
+			    		<?= the_title(); ?>
 			    	</div>
 			    	<div class="splash-subhead-artista">
-			    		País do Artista
+			    		<?php
+			          		$pais_artista  = get_field('pais');
+
+							if( $pais_artista ){
+								foreach( $pais_artista as $pais){
+									echo get_the_title( $pais->ID );
+								} 
+
+							}
+						?>
 			    	</div>
 			    </div>
 			</div>
@@ -39,13 +69,7 @@ get_header(); ?>
 						<div class="col-md-3"></div>
 						<div class="col-md-6">
 							<div class="descricao-artistas">
-					          Podemos já vislumbrar o modo pelo qual a consulta aos diversos militantes maximiza as possibilidades por conta do investimento em reciclagem técnica. O incentivo ao avanço tecnológico, assim como a complexidade dos estudos efetuados assume importantes posições no estabelecimento das formas de ação. Pensando mais a longo prazo, o fenômeno da Internet ainda não demonstrou convincentemente que vai participar na mudança das condições inegavelmente apropriadas. Desta maneira, a estrutura atual da organização desafia a capacidade de equalização dos procedimentos normalmente adotados. É claro que a expansão dos mercados mundiais garante a contribuição de um grupo importante na determinação das regras de conduta normativas. 
-
-					          É importante questionar o quanto o aumento do diálogo entre os diferentes setores produtivos talvez venha a ressaltar a relatividade do orçamento setorial. Por conseguinte, a revolução dos costumes pode nos levar a considerar a reestruturação das diversas correntes de pensamento. Todas estas questões, devidamente ponderadas, levantam dúvidas sobre se a percepção das dificuldades não pode mais se dissociar do retorno esperado a longo prazo. 
-
-					          Acima de tudo, é fundamental ressaltar que a determinação clara de objetivos afeta positivamente a correta previsão de todos os recursos funcionais envolvidos. O empenho em analisar a execução dos pontos do programa prepara-nos para enfrentar situações atípicas decorrentes dos métodos utilizados na avaliação de resultados. Evidentemente, o consenso sobre a necessidade de qualificação facilita a criação dos níveis de motivação departamental. 
-
-					          Do mesmo modo, a necessidade de renovação processual cumpre um papel essencial na formulação dos modos de operação convencionais. Assim mesmo, o comprometimento entre as equipes deve passar por modificações independentemente dos paradigmas corporativos. Por outro lado, a contínua expansão de nossa atividade causa impacto indireto na reavaliação das direções preferenciais no sentido do progresso. 
+								<?php echo apply_filters('the_content', $post->post_content); ?>
 							</div>
 						</div>
 						<div class="col-md-3"></div>

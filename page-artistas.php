@@ -15,6 +15,15 @@
 
 $categoria =  get_query_var( 'categoria_artista', 1 ); 
 
+
+/*Imagem da categoria*/
+										$categorias_do_artista = get_category_by_slug( $categoria );
+
+										$estilo_cor_box_categoria = "background-color: " . get_field('cor', $categorias_do_artista) . ";";
+										$estilo_cor_texto_categoria = "color: " . get_field('cor', $categorias_do_artista) . ";";
+										
+
+
 $imagem = '';
 
 switch ($categoria) {
@@ -65,12 +74,17 @@ get_header(); ?>
 
 
 
-		      			<a href="http://relampago.co/descomplica/" style="background-image: url('<?=get_template_directory_uri().'/img/'. $imagem ?>');" name="Descomplica" ajax="">
+		      			<img class="img_categoria" src="<?=get_template_directory_uri().'/img/'. $imagem; ?>" alt="iamgem_categoria" ajax="">
+		      			
 			          		<!-- <img class="hover" src="http://relampago.co/wp-content/uploads/portfolio_relampago_descomplica_02.gif"> -->
 			        		<!-- <div class="box" style="transform: translate(12px, 233px);">
 			          		
 			        		</div> -->
-		      			</a>
+		      			</img>
+		      			<p  class="nome_categoria_box"  style="<?= $estilo_cor_texto_categoria; ?>">
+		      			
+		      			<?= $categorias_do_artista->name; ?>
+		      			</p>
 		    		</li>
       				
 
@@ -96,7 +110,7 @@ get_header(); ?>
 									?>
 
 								<?php echo '<a href="' . get_permalink($post->ID) . '" style="background-image: url(\'' . $thumb_url . '\')">';?>
-								        <div class="box">
+								        <div class="box" style="<?= $estilo_cor_box_categoria; ?>">
 								          <div class="title"><?php the_title(); ?></div>
 								          <br>
 								          <div class="pais">

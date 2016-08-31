@@ -15,3 +15,17 @@ ul, ol {
    padding: 0px;
 
 }
+
+
+.nav-tabs a{
+	color: white;
+}
+
+.nav-tabs a:visited{
+	color: white;
+	text-decoration:none;
+}
+
+.nav>li>a:focus, .nav>li>a:hover{
+	color:#303331;
+}

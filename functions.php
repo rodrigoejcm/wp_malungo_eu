@@ -102,6 +102,9 @@ add_action( 'widgets_init', '_s_widgets_init' );
  * Enqueue scripts and styles.
  */
 function _s_scripts() {
+
+	global $template;
+
 	wp_enqueue_style( '_s-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'malungo-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
@@ -115,6 +118,8 @@ function _s_scripts() {
         wp_deregister_script('malungo-jquery-js');
         wp_register_script('malungo-jquery-js', 'https://code.jquery.com/jquery-3.1.0.min.js', false, '3.1.0');
         wp_enqueue_script('malungo-jquery-js');
+
+       
     }
 
 
@@ -125,11 +130,20 @@ function _s_scripts() {
     }
 
 
-
+   	if ( trim(basename( $template )) == 'single-artista.php') {
+   		wp_deregister_script('malungo-galleria-js');
+        wp_register_script('malungo-galleria-js', 'http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js', false, '3.1.0');
+        wp_enqueue_script('malungo-galleria-js');
+        wp_enqueue_style( 'malungo-galleria-css', 'http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css');
+/*
+        wp_deregister_script('malungo-galleria-run-js');
+        wp_register_script('malungo-galleria-run-js', get_template_directory_uri() . '/js/galleria-run.js', false, '3.1.0', true);
+        wp_enqueue_script('malungo-galleria-run-js');*/
+	}
 
 	wp_enqueue_script( '_s-malungo-hamburguer', get_template_directory_uri() . '/js/malungo.js', array(), '20151215', true );
 
-		wp_enqueue_script( '_s-malungo-jquery', get_template_directory_uri() . '/js/malungo_jquery.js', array(), '20151215', true );
+	wp_enqueue_script( '_s-malungo-jquery', get_template_directory_uri() . '/js/malungo_jquery.js', array(), '20151215', true );
 
 	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

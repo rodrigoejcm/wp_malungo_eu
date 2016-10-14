@@ -7,7 +7,9 @@
  * @package _s
  */
 
+
 get_header(); ?>
+
 
 
 
@@ -29,8 +31,17 @@ get_header(); ?>
 										$categoria_principal = array_pop($categorias_do_artista);
 										$categoria_image = get_field('icone', $categoria_principal);
 										$estilo_cor_texto_categoria = "color: " . get_field('cor', $categoria_principal) . ";";
-										
+
+						
 			?>
+
+				<style>
+					.descricao-artistas p a {
+						<?= $estilo_cor_texto_categoria . ' !important' ;?>;
+						target-name: new;
+    					target-new: tab;
+					}
+				</style>
 
 			<div class="splash-container-artista" style="background-image: url('<?=$thumb_url;?>')">
 				<div class="splash-container-artista-opacity">
@@ -40,7 +51,6 @@ get_header(); ?>
 					</img>
 			    	<div class="splash-subhead-artista-categoria" style="<?= $estilo_cor_texto_categoria ;?>">
 			    		<?= esc_html($categoria) ; ?>
-
 			    	</div>
 			    	<div class="splash-head-artista">
 			    		<?= the_title(); ?>
@@ -56,6 +66,7 @@ get_header(); ?>
 
 							}
 						?>
+						<p class="data_publicacao">Publicado em: <?php the_modified_date(); ?></p>
 			    	</div>
 			    </div>
 			</div>
@@ -66,16 +77,48 @@ get_header(); ?>
 					<br>
 					<br>
 					<div class="row">
-						<div class="col-md-3"></div>
-						<div class="col-md-6">
-							<div class="descricao-artistas">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="descricao-artistas" >
 								<?php echo apply_filters('the_content', $post->post_content); ?>
 							</div>
 						</div>
-						<div class="col-md-3"></div>
 					</div>
+					<?php 
+					$galeria = get_field('galeria', $post->ID); 
+					
+					if($galeria){
+					?>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3">
+							<div 	class="fotorama"
+									data-allowfullscreen="true"
+							 		data-nav="thumbs" >
+								<?php 
+									$acf_photo_gallery_attachments = explode(',', $galeria);
+									foreach($acf_photo_gallery_attachments as $id):
+										
+									/*$img = wp_get_attachment_image($image);*/
+									$imagem_infos = wp_prepare_attachment_for_js( $id );
+													
+
+									
+								?>
+
+									<img src=" <?php echo $imagem_infos['url']; ?> " />
+
+								<?php
+									endforeach;
+								?>
+							</div>
+
+							
+						</div>
+					</div>
+				<?php				} ?>
 				</div>
 			</div>
+
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

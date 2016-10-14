@@ -21,7 +21,7 @@ get_header();
 										$thumb_id = get_post_thumbnail_id();
 										$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 										$thumb_url = $thumb_url_array[0];
-										$nome_pais = the_title();
+										$nome_pais = get_the_title();
 										
 			?>
 
@@ -107,16 +107,25 @@ get_header();
 								  <div id="tabs-artistas" class="conteudo-pais-artistas">
 								  	<br><br><br>
 									<ul class="projects-list">
-		    	
+		    							<p>
 								  	<?php
+								  			
 
 											$posts = get_posts(array(
 												'numberposts' => -1 ,
 												'post_type' => 'artista',
-												'meta_key'		=> 'pais',
-												'meta_value'	=> $nome_pais
+												'meta_query' => array(
+													array(
+														'key' => 'pais', // name of custom field
+														'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+														'compare' => 'LIKE'
+														
+													)
+												)
 											));
 
+										
+								
 
 											if($posts)
 											{
@@ -156,7 +165,6 @@ get_header();
 												}
 											}
 									?>
-
 									</ul>
 								  </div>
 								</div>

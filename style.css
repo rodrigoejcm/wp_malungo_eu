@@ -1194,6 +1194,10 @@ ul, ol {
   width: 100%;
   /* This is the main heading that appears on the blue section */
 }
+.splash-artista .data_publicacao {
+  margin-top: 20px;
+  font-size: 9px;
+}
 .splash-head-artista {
   font-size: 7vw;
   font-family: "proxima-nova", sans-serif;
@@ -1229,7 +1233,7 @@ ul, ol {
 }
 .content-wrapper-artista {
   position: absolute;
-  top: 70%;
+  top: 100%;
   width: 100%;
   min-height: 12%;
   z-index: 2;
@@ -2242,4 +2246,15 @@ li, ul {
 }
 .wp-caption {
   margin-bottom: 0;
+}
+.epq-pull-quote-default {
+  /* border-bottom: 2px solid white; */
+  /* margin-top: 1.2%; */
+  border-top: 2px solid white;
+  margin-bottom: 2%;
+  padding: 0.5em 0 0;
+  font-size: 18px;
+}
+.epq-pull-quote-default a:hover, .epq-pull-quote-default a:focus {
+  text-decoration: none !important;
 }

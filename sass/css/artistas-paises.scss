@@ -202,10 +202,16 @@ $cor-texto-pais: #303331;
     text-align: center;
 
     width: 100%;
-    
-    
+  
+    .data_publicacao{
+        margin-top: 20px;
+        font-size: 9px;
+    }    
 
 }
+
+
+
 
 /* This is the main heading that appears on the blue section */
 .splash-head-artista {
@@ -252,7 +258,7 @@ $cor-texto-pais: #303331;
 .content-wrapper-artista {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 70%;
+    top: 100%;
     width: 100%;
     min-height: 12%;
     z-index: 2;

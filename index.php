@@ -52,14 +52,16 @@ get_header(); ?>
 				    	<div class="home-post">
 					    	<div class="col-md-8 col-sm-12">
 				                <div class="imagem-h-400">
-					                <img class="imagem2-3" src="<?=get_template_directory_uri().'/img/DESTAQUE_01.jpg' ?>" >
+					                <img src="<?=get_template_directory_uri().'/img/DESTAQUE_01.jpg' ?>" >
 									</img>
 								</div>
 				            </div>
-				            <div class="col-md-4 col-sm-12">
-				            	<p class="categoria cor-atividade">Artes Visuais</h3>
-				               	<h2 class="titulo">Conheça o Land Art com o coletivo Site Specific.</h2>
-				               	<p class="resumo">O coletivo Site_Specific teve início em 2011 como um esforço colaborativo dos sul-africanos Strijdom van der Merwe, Anni Snyman, PC van Rensburg, Heather Greig, Erica Lüttich, entre outros artistas, amigos e simpatizantes. Lançado durante a “International Land Art Biennale” na baía de Plettenberg na África do Sul, o coletivo, devotado à arte na natureza, promove desde então Land Arts em Site Specifics, proporcionando o diálogo entre as práticas culturais no país e os baixos impactos ambientais provocados por tais ações....</p>
+				            <div class="col-md-4 col-sm-12 col-h-400">
+				            	<a href="" class="hover-blue">
+				            		<p class="categoria cor-atividade">Artes Visuais</h3>
+				               		<h2 class="titulo">Conheça o Land Art com o coletivo Site Specific.</h2>
+				               		<p class="resumo">O coletivo Site_Specific teve início em 2011 como um esforço colaborativo dos sul-africanos Strijdom van der Merwe, Anni Snyman, PC van Rensburg, Heather Greig, Erica Lüttich, entre outros artistas, amigos e simpatizantes. Lançado durante a “International Land Art Biennale” na baía de Plettenberg na África do Sul, o coletivo, devotado à arte na natureza, promove desde então Land Arts em Site Specifics, proporcionando o diálogo entre as práticas culturais no país e os baixos impactos ambientais provocados por tais ações....</p>
+				            	</a>
 					        </div>
 			            </div>
 				    </div>

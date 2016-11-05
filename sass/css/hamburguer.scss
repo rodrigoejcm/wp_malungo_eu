@@ -1,6 +1,6 @@
 //Variables for change animation and colors of background, menu overlay, text and icons
 
-$transition-type: linear;
+$transition-type: ease;
 $overlay-color: black;
 $texts-and-icons: #fff;
 $linhas-close: black;
@@ -38,42 +38,50 @@ $cor-linha-fundobraco: #303331;
 	justify-content: center;
 }
 
+$effect-opacity: 0.5;
+
+@include keyframes(alternate-bg-color) {
+	0%		{background:rgba($azul-atividade, $effect-opacity);}
+	33%		{background:rgba($roxo-sociedade, $effect-opacity);}
+	66%	{background:rgba($laranja-malunguices, $effect-opacity);}
+	100%		{background:rgba($azul-atividade, $effect-opacity);}
+}
+
+%bg-alternate-colors {
+	@include animation(alternate-bg-color 12s infinite);
+}
+
 
 // SET BASIC CONTENT AND ANIMATION EFFECT- MENU OVERLAY
 
 .full-menu {
-	position: fixed;
-/* 	background-image: url("img/menu_01.jpg");
-	background-position: center; */
 	height:  100%;
+	position: fixed;
+	opacity: 0;
+	top: 100%;
+	transition: all 400ms $transition-type;
 	width:  100%;
-	opacity: 0.5;
-	transform: translatey(100%);
-	/* transition: all 400ms $transition-type; */
+	z-index: 3;
 
 	.img-full{
-		position: absolute;
- 		height:  100%;
- 		width: 100%;
-		left: 0;
-  		top: 0;
-		/* z-index: 3; */
-		overflow: hidden;
+		@extend %bg-alternate-colors;
+		background-color:rgba($azul-atividade, $effect-opacity);
 		background-image: url('./img/menu_01.jpg');
-		background-position: center center;
-		background-size :cover;
-
-
-/* 		opacity: 0.5;
-		transform: translatey(100%); */
-/* 		z-index: 10; */
+ 		height:  100%;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+  		top: 0;
+		transition: all 400ms $transition-type;
+ 		width: 100%;
 	}
-
 
 	ul { list-style: none;}
 
 	&.active {
 		transform: translateX(0%);
+		transition: all 400ms $transition-type;
+		top:0;
 		opacity: 1;
 		z-index: 3;
 
@@ -81,8 +89,6 @@ $cor-linha-fundobraco: #303331;
 			opacity: 1;
 			transform: translateX(0%);
 			text-align: center;
-
-
 		}
 	}
 

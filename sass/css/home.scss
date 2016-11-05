@@ -1,9 +1,3 @@
-$azul-atividade: #0787FF;
-$roxo-sociedade: #593F7E;
-$laranja-malunguices: #FF9B0F;
-$cor-texto: #303331;
-$cor-fundo: #F7EFE7;
-
 .img-yaon{
 	padding-left: 10px;
 	padding-right: 10px;
@@ -43,14 +37,24 @@ $cor-fundo: #F7EFE7;
 		}
 	}
 
+	.col-h-400 {
+		box-sizing: border-box;
+		max-height: 400px;
+		text-overflow: ellipsis; //não funfou ainda :(
+	}
 
-	
+	a.hover-blue:hover {
+		&, & *:not(.categoria) {
+			color: $azul-atividade !important; //pegar na variável que não achei
+			text-decoration: none;
+		}
+	}
 
 	.categoria{
 		font-weight: bold;
 		font-size: 15px;
 		text-transform: uppercase;	
-		margin:0 !impotant;
+		// margin:0 !important;
 		display: inline;
 		padding: 0 10px;
 	}	

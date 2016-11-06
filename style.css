@@ -947,31 +947,31 @@ a.pure-button-primary {
 
 @-webkit-keyframes alternate-bg-color {
   0% {
-    background: rgba(7, 135, 255, 0.5); }
+    background: url("./img/menu-img01.jpg"); }
   33% {
-    background: rgba(89, 63, 126, 0.5); }
+    background: url("./img/menu-img02.jpg"); }
   66% {
-    background: rgba(255, 155, 15, 0.5); }
+    background: url("./img/menu-img03.jpg"); }
   100% {
-    background: rgba(7, 135, 255, 0.5); } }
+    background: url("./img/menu-img01.jpg"); } }
 @-moz-keyframes alternate-bg-color {
   0% {
-    background: rgba(7, 135, 255, 0.5); }
+    background: url("./img/menu-img01.jpg"); }
   33% {
-    background: rgba(89, 63, 126, 0.5); }
+    background: url("./img/menu-img02.jpg"); }
   66% {
-    background: rgba(255, 155, 15, 0.5); }
+    background: url("./img/menu-img03.jpg"); }
   100% {
-    background: rgba(7, 135, 255, 0.5); } }
+    background: url("./img/menu-img01.jpg"); } }
 @keyframes alternate-bg-color {
   0% {
-    background: rgba(7, 135, 255, 0.5); }
+    background: url("./img/menu-img01.jpg"); }
   33% {
-    background: rgba(89, 63, 126, 0.5); }
+    background: url("./img/menu-img02.jpg"); }
   66% {
-    background: rgba(255, 155, 15, 0.5); }
+    background: url("./img/menu-img03.jpg"); }
   100% {
-    background: rgba(7, 135, 255, 0.5); } }
+    background: url("./img/menu-img01.jpg"); } }
 .full-menu .img-full {
   -webkit-animation: alternate-bg-color 12s infinite;
   -moz-animation: alternate-bg-color 12s infinite;
@@ -988,8 +988,6 @@ a.pure-button-primary {
   /* TEXT */
   /* TEXT */ }
   .full-menu .img-full {
-    background-color: rgba(7, 135, 255, 0.5);
-    background-image: url("./img/menu_01.jpg");
     height: 100%;
     left: 0;
     overflow: hidden;

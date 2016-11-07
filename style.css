@@ -1157,8 +1157,23 @@ ul, ol {
   box-sizing: border-box;
   max-height: 400px;
   text-overflow: ellipsis; }
-.home-post a.hover-blue:hover, .home-post a.hover-blue:hover *:not(.categoria) {
-  color: #0787FF !important;
+.home-post a.hover-artesvisuais:hover, .home-post a.hover-artesvisuais:hover *:not(.categoria) {
+  color: #40c1fb !important;
+  text-decoration: none; }
+.home-post a.hover-audiovisual:hover, .home-post a.hover-audiovisual:hover *:not(.categoria) {
+  color: #ff362d !important;
+  text-decoration: none; }
+.home-post a.hover-danca:hover, .home-post a.hover-danca:hover *:not(.categoria) {
+  color: #18cc58 !important;
+  text-decoration: none; }
+.home-post a.hover-literatura:hover, .home-post a.hover-literatura:hover *:not(.categoria) {
+  color: #c6006c !important;
+  text-decoration: none; }
+.home-post a.hover-teatro:hover, .home-post a.hover-teatro:hover *:not(.categoria) {
+  color: #0083fc !important;
+  text-decoration: none; }
+.home-post a.hover-musica:hover, .home-post a.hover-musica:hover *:not(.categoria) {
+  color: #593F7E !important;
   text-decoration: none; }
 .home-post .categoria {
   font-weight: bold;
@@ -1166,15 +1181,24 @@ ul, ol {
   text-transform: uppercase;
   display: inline;
   padding: 0 10px; }
-.home-post .cor-atividade {
-  color: #F7EFE7;
-  background-color: #0787FF; }
-.home-post .cor-sociedade {
-  color: #F7EFE7;
-  background-color: #593F7E; }
-.home-post .cor-malunguices {
-  color: #F7EFE7;
-  background-color: #FF9B0F; }
+.home-post .cor-artesvisuais {
+  background-color: #40c1fb;
+  color: #F7EFE7; }
+.home-post .cor-audiovisual {
+  background-color: #ff362d;
+  color: #F7EFE7; }
+.home-post .cor-danca {
+  background-color: #18cc58;
+  color: #F7EFE7; }
+.home-post .cor-literatura {
+  background-color: #c6006c;
+  color: #F7EFE7; }
+.home-post .cor-teatro {
+  background-color: #0083fc;
+  color: #F7EFE7; }
+.home-post .cor-musica {
+  background-color: #593F7E;
+  color: #F7EFE7; }
 .home-post .titulo {
   margin-top: 10px;
   text-transform: uppercase;

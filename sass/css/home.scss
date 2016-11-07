@@ -43,12 +43,21 @@
 		text-overflow: ellipsis; //não funfou ainda :(
 	}
 
-	a.hover-blue:hover {
-		&, & *:not(.categoria) {
-			color: $azul-atividade !important; //pegar na variável que não achei
-			text-decoration: none;
+	@mixin hover-texto($color){
+		&:hover{
+			&, & *:not(.categoria) {
+				color: $color !important;
+				text-decoration: none;
+			}
 		}
 	}
+
+	a.hover-artesvisuais 	{ @include hover-texto($azul-artesvisuais); }
+	a.hover-audiovisual 	{ @include hover-texto($laranja-audiovisual); }
+	a.hover-danca 			{ @include hover-texto($verde-danca); }
+	a.hover-literatura		{ @include hover-texto($rosa-literatura); }
+	a.hover-teatro			{ @include hover-texto($azul-teatro); }
+	a.hover-musica			{ @include hover-texto($roxo-musica); }
 
 	.categoria{
 		font-weight: bold;
@@ -58,18 +67,17 @@
 		display: inline;
 		padding: 0 10px;
 	}	
-	.cor-atividade{
+
+	@mixin titulo-post($color){
+		background-color: $color;
 		color: $cor-fundo;
-		background-color: $azul-atividade;
 	}
-	.cor-sociedade{
-		color: $cor-fundo;
-		background-color: $roxo-sociedade;
-	}
-	.cor-malunguices{
-		color: $cor-fundo;
-		background-color: $laranja-malunguices;
-	}
+	.cor-artesvisuais	{ @include titulo-post($azul-artesvisuais);}
+	.cor-audiovisual	{ @include titulo-post($laranja-audiovisual);}
+	.cor-danca			{ @include titulo-post($verde-danca);}
+	.cor-literatura		{ @include titulo-post($rosa-literatura);}
+	.cor-teatro			{ @include titulo-post($azul-teatro);}
+	.cor-musica			{ @include titulo-post($roxo-musica);}
 
 	.titulo {
 		margin-top: 10px;

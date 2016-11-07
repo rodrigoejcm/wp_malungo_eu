@@ -1219,38 +1219,143 @@ ul, ol {
   .artistas-categorias h1, .artistas-categorias p {
     color: #F7EFE7;
     text-align: center; }
-  .artistas-categorias .link-artesvisuais .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
-  .artistas-categorias .link-audiovisual .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
-  .artistas-categorias .link-danca .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
-  .artistas-categorias .link-literatura .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
-  .artistas-categorias .link-moda .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
-  .artistas-categorias .link-musica .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
-  .artistas-categorias .link-teatro .box-categoria:hover {
-    /* background-image: url("https://placeimg.com/180/180/people"); */ }
+  .artistas-categorias h1 > img {
+    height: 3em; }
+  .artistas-categorias .link-artesvisuais {
+    text-decoration: none; }
+    .artistas-categorias .link-artesvisuais:hover, .artistas-categorias .link-artesvisuais:hover * {
+      background: #F7EFE7;
+      color: #0787FF;
+      color: #0787FF;
+      cursor: pointer; }
+    .artistas-categorias .link-artesvisuais:hover *:not(.box-categoria) {
+      border-color: #0787FF; }
+    .artistas-categorias .link-artesvisuais svg, .artistas-categorias .link-artesvisuais svg * {
+      fill: #0787FF; }
+  .artistas-categorias .link-audiovisual {
+    text-decoration: none; }
+    .artistas-categorias .link-audiovisual:hover, .artistas-categorias .link-audiovisual:hover * {
+      background: #F7EFE7;
+      color: #ff362d;
+      color: #ff362d;
+      cursor: pointer; }
+    .artistas-categorias .link-audiovisual:hover *:not(.box-categoria) {
+      border-color: #ff362d; }
+    .artistas-categorias .link-audiovisual svg, .artistas-categorias .link-audiovisual svg * {
+      fill: #ff362d; }
+  .artistas-categorias .link-danca {
+    text-decoration: none; }
+    .artistas-categorias .link-danca:hover, .artistas-categorias .link-danca:hover * {
+      background: #F7EFE7;
+      color: #18cc58;
+      color: #18cc58;
+      cursor: pointer; }
+    .artistas-categorias .link-danca:hover *:not(.box-categoria) {
+      border-color: #18cc58; }
+    .artistas-categorias .link-danca svg, .artistas-categorias .link-danca svg * {
+      fill: #18cc58; }
+  .artistas-categorias .link-literatura {
+    text-decoration: none; }
+    .artistas-categorias .link-literatura:hover, .artistas-categorias .link-literatura:hover * {
+      background: #aaa;
+      color: #fff;
+      color: #fff;
+      cursor: pointer; }
+    .artistas-categorias .link-literatura:hover *:not(.box-categoria) {
+      border-color: #fff; }
+    .artistas-categorias .link-literatura svg, .artistas-categorias .link-literatura svg * {
+      fill: #fff; }
+  .artistas-categorias .link-moda {
+    text-decoration: none; }
+    .artistas-categorias .link-moda:hover, .artistas-categorias .link-moda:hover * {
+      background: #F7EFE7;
+      color: #593F7E;
+      color: #593F7E;
+      cursor: pointer; }
+    .artistas-categorias .link-moda:hover *:not(.box-categoria) {
+      border-color: #593F7E; }
+    .artistas-categorias .link-moda svg, .artistas-categorias .link-moda svg * {
+      fill: #593F7E; }
+  .artistas-categorias .link-musica {
+    text-decoration: none; }
+    .artistas-categorias .link-musica:hover, .artistas-categorias .link-musica:hover * {
+      background: #F7EFE7;
+      color: #FF9B0F;
+      color: #FF9B0F;
+      cursor: pointer; }
+    .artistas-categorias .link-musica:hover *:not(.box-categoria) {
+      border-color: #FF9B0F; }
+    .artistas-categorias .link-musica svg, .artistas-categorias .link-musica svg * {
+      fill: #FF9B0F; }
+  .artistas-categorias .link-teatro {
+    text-decoration: none; }
+    .artistas-categorias .link-teatro:hover, .artistas-categorias .link-teatro:hover * {
+      background: #F7EFE7;
+      color: #0083fc;
+      color: #0083fc;
+      cursor: pointer; }
+    .artistas-categorias .link-teatro:hover *:not(.box-categoria) {
+      border-color: #0083fc; }
+    .artistas-categorias .link-teatro svg, .artistas-categorias .link-teatro svg * {
+      fill: #0083fc; }
+  .artistas-categorias .link-indicacao {
+    text-decoration: none; }
+    .artistas-categorias .link-indicacao:hover, .artistas-categorias .link-indicacao:hover * {
+      background: #aaa;
+      color: #fff;
+      color: #fff;
+      cursor: pointer; }
+    .artistas-categorias .link-indicacao:hover *:not(.box-categoria) {
+      border-color: #fff; }
+    .artistas-categorias .link-indicacao svg, .artistas-categorias .link-indicacao svg * {
+      fill: #fff; }
+  .artistas-categorias .categoria-grid {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 884px;
+    padding-bottom: 5vh; }
+    .artistas-categorias .categoria-grid > * {
+      display: inline-block;
+      margin: 0;
+      vertical-align: top;
+      border-size: 0;
+      box-sizing: border-box; }
   .artistas-categorias .box-categoria {
+    align-items: center;
     border: 1px solid white;
-    height: 180px;
-    width: 180px; }
-    .artistas-categorias .box-categoria .indique {
-      font-family: 'proxima-nova';
-      font-size: 20px;
-      color: #F7EFE7; }
-      .artistas-categorias .box-categoria .indique p {
-        margin: 47px auto; }
-    .artistas-categorias .box-categoria img {
-      margin-top: -10px; }
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -1px;
+    margin-bottom: -1px;
+    width: 220px; }
+    .artistas-categorias .box-categoria * {
+      margin: 0;
+      padding: 0; }
+    .artistas-categorias .box-categoria svg {
+      box-sizing: border-box;
+      height: 132px;
+      padding-bottom: 10px; }
     .artistas-categorias .box-categoria p {
-      text-align: center;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
       color: #F7EFE7;
-      margin-top: -5px;
       font-family: "proxima-nova",sans-serif;
-      letter-spacing: 2.5px; }
+      font-size: 0.9em;
+      letter-spacing: 2.5px;
+      line-height: 1.1em;
+      max-width: 80%;
+      text-align: center;
+      text-transform: uppercase;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      width: 80%; }
 
 .artistas {
   padding-top: 5%; }

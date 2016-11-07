@@ -16,93 +16,67 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<div class="artistas-categorias">
-			<h1>Artistas</h1>
-			<p>Quem pensa, Quem faz, Quem dança, Quem canta...</p>
-
+		<section class="artistas-categorias">
+			<h1>
+				<img src="<?=get_template_directory_uri().
+						'/img/titulo-artes.svg'?>"
+					alt="ARTES"
+					/>
+			</h1>
 			<br>
-
-			<div class="row">
-				
-				<div class="col-md-2 col-md-offset-2">
-					<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
+			<div class="categoria-grid">
+				<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
 					<div class="box-categoria">
-						
-						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-01.png' ?>" >
-						</img>
+						<?= get_imagem_categoria_artista('artesvisuais', true) ?>
 						<p>artes visuais</p>
 					</div>
-					</a>
+				</a>
 				
-				</div>
-				<div class="col-md-2">
-					<a  class="link-audiovisual" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
-						<div class="box-categoria">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-02.png' ?>" >
-							</img>
-							<p>audiovisual</p>
-						</div>
-					</a>				
-				</div>
-				<div class="col-md-2">
-					<a class="link-danca" href="<?=get_site_url() .'/artistas/?categoria_artista=danca' ?>">
-						<div class="box-categoria">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-03.png' ?>" >
-							</img>
-							<p>dança</p>
-						</div>
-					</a>					
-				</div>
-				<div class="col-md-2">
-					<a class="link-literatura" href="<?=get_site_url() .'/artistas/?categoria_artista=literatura' ?>">
-						<div class="box-categoria">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-04.png' ?>" >
-							</img>
-							<p>literatura</p>
-						</div>
-					</a>				
-				</div>
-				
-			</div>
-			<br><br>
-			<div class="row">
-				<div class="col-md-2 col-md-offset-2">
-					<a class="link-moda" href="<?=get_site_url() .'/artistas/?categoria_artista=moda' ?>">
-						<div class="box-categoria">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-05.png' ?>" >
-							</img>
-							<p>moda</p>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-2">
-				<a class="link-musica" href="<?=get_site_url() .'/artistas/?categoria_artista=musica' ?>">
+			
+				<a  class="link-audiovisual" href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
 					<div class="box-categoria">
-						<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-06.png' ?>" >
-						</img>
-						<p>música</p>
+						<?= get_imagem_categoria_artista('audiovisual', true) ?>
+						<p>audiovisual</p>
 					</div>
 				</a>
-				</div>
-				<div class="col-md-2">
-					<a class="link-teatro" href="<?=get_site_url() .'/artistas/?categoria_artista=teatro' ?>">
-						<div class="box-categoria">
-							<img class="img-yaon" src="<?=get_template_directory_uri().'/img/ARTISTAS_simbolos-07.png' ?>" >
-							</img>
-							<p>teatro</p>
-						</div>
-					</a>				
-				</div>
-				<div class="col-md-2">
+				<a class="link-danca" href="<?=get_site_url() .'/artistas/?categoria_artista=danca' ?>">
 					<div class="box-categoria">
-						<div class="indique">
-							<p>INDIQUE<br>UM<br>ARTISTA</p>
-						</div>
-					</div>				
-				</div>
-				
+						<?= get_imagem_categoria_artista('danca', true) ?>
+						<p>dança</p>
+					</div>
+				</a>					
+				<a class="link-literatura" href="<?=get_site_url() .'/artistas/?categoria_artista=literatura' ?>">
+					<div class="box-categoria">
+						<?= get_imagem_categoria_artista('literatura', true) ?>
+						<p>literatura</p>
+					</div>
+				</a>				
+				<a class="link-moda" href="<?=get_site_url() .'/artistas/?categoria_artista=moda' ?>">
+					<div class="box-categoria">
+						<?= get_imagem_categoria_artista('moda', true) ?>
+						<p>moda</p>
+					</div>
+				</a>
+				<a class="link-musica" href="<?=get_site_url() .'/artistas/?categoria_artista=musica' ?>">
+					<div class="box-categoria">
+						<?= get_imagem_categoria_artista('musica', true) ?>
+						<p>Música</p>
+					</div>
+				</a>
+				<a class="link-teatro" href="<?=get_site_url() .'/artistas/?categoria_artista=teatro' ?>">
+					<div class="box-categoria">
+						<?= get_imagem_categoria_artista('teatro', true) ?>
+						<p>Teatro</p>
+					</div>
+				</a>
+				<a class="link-indicacao" href="#">
+					<div class="box-categoria">
+						<?= get_imagem_categoria_artista('participe', true) ?>
+						<p>Indique um artista</p>
+					</div>
+				</a>
 			</div>
-		</div>
+		</section>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

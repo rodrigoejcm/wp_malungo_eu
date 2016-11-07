@@ -22,3 +22,8 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+@mixin lines-up-down($size: 1px) {
+    border-top: $size solid #fff;
+    border-bottom: $size solid #fff;
+}

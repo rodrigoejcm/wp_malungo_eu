@@ -61,87 +61,95 @@ $cor-texto-pais: #303331;
 		color: $cor-texto;
 		text-align: center;
 	}
+    h1 > img {
+        height: 3em;
+    }
 
-	.link-artesvisuais .box-categoria{
+    @mixin link-hover($color-link: $cor-texto,
+                      $hover-color: $branco-malungo){
+        &:hover, &:hover * {
+            background: $hover-color;
+            color: $color-link;
+            color: $color-link;
+            cursor: pointer;
+        }
+        &:hover *:not(.box-categoria) {
+            border-color: $color-link;
+        }
+        svg, svg * {
+            fill: $color-link;
+        }
+        text-decoration: none;
+    }
 
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
+    $cinza: #aaa;
+	.link-artesvisuais { @include link-hover($azul-atividade); }
+    .link-audiovisual  { @include link-hover($laranja-audiovisual); }
+    .link-danca        { @include link-hover($verde-danca); }
+    .link-literatura   { @include link-hover(#fff, $cinza); }
+    .link-moda         { @include link-hover($roxo-sociedade); }
+    .link-musica       { @include link-hover($laranja-malunguices); }
+    .link-teatro       { @include link-hover($azul-teatro); }
+	.link-indicacao    { @include link-hover(#fff, $cinza); }
 
-	.link-audiovisual .box-categoria{
-
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
-
-	.link-danca .box-categoria{
-
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
-
-	.link-literatura .box-categoria{
-
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
-
-	.link-moda .box-categoria{
-
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
-
-	.link-musica .box-categoria{
-
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
-
-	.link-teatro .box-categoria{
-
-		&:hover {
-		/* background-image: url("https://placeimg.com/180/180/people"); */
-		}
-	}
-
+    $tamanho-categoria: 220px;
+    $tamanho-borda-categoria: 1px;
+    .categoria-grid {
+        align-items: center;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 4 * ($tamanho-categoria + $tamanho-borda-categoria);
+        padding-bottom: 5vh; // pra respirar em relação ao fundo
+         & > * {
+            display: inline-block;
+            margin: 0;
+            vertical-align: top;
+            border-size: 0;
+            box-sizing: border-box;
+        }
+    }
 
 	.box-categoria{
-	border: 1px solid white;
-	height: 180px;
-	width: 180px;
-
-        .indique{
-            font-family: 'proxima-nova';
-            font-size:20px;
-            color: $cor-texto;
-
-            p{
-                margin: 47px auto;
-            }
+        align-items: center;
+        border: $tamanho-borda-categoria solid white;
+    	height: $tamanho-categoria;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        //gambi FTW pra não ter bordas duplicadas
+        margin-left: -$tamanho-borda-categoria;
+        margin-bottom: -$tamanho-borda-categoria;
+    	width: $tamanho-categoria;
+        *{
+            margin: 0;
+            padding: 0; 
         }
 
-		img{
-			margin-top: -10px;
+		svg{
+            box-sizing: border-box;
+            height: 0.6 * $tamanho-categoria;
+            padding-bottom: 10px;
 		}
 		
 		p{
-			text-align: center;
-			color: $cor-texto;
-			margin-top: -5px;
+            @include lines-up-down();
+            color: $cor-texto;
 			font-family: "proxima-nova",sans-serif;
+            font-size: 0.9em;
 			letter-spacing: 2.5px;
+            line-height: 1.1em;
+            max-width: 80%;
+            text-align: center;
+            text-transform: uppercase;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            width: 80%;
 		}
 	}
-
-
-
 }
 
 .artistas{

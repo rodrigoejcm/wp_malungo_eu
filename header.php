@@ -28,7 +28,8 @@
 	    <div class=" cor-scroll home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
 	       <div class="logo-malungo">
 	       	<a href="<?php echo get_home_url(); ?>" >
-        		<img src="<?=get_template_directory_uri().'/img/LOGO_fp.png' ?>" >
+        		<img src="<?=get_template_directory_uri().'/img/LOGO_fp.png' ?>" 
+        			class="<?php echo get_page_uri().""; ?>">
 				</img>
             </a>	
 	       </div>

@@ -19,7 +19,9 @@
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
+<script type="text/javascript">
+    var _root = "<?php echo get_site_url(); ?>";
+</script>
 <?php wp_footer(); ?>
 
 </body>

@@ -65,8 +65,8 @@ $cor-texto-pais: #303331;
         height: 3em;
     }
 
-    @mixin link-hover($color-link: $cor-texto,
-                      $hover-color: $branco-malungo){
+    @mixin link-hover($color-link: $cor-texto){
+        $hover-color: $branco-malungo;
         &:hover, &:hover * {
             background: $hover-color;
             color: $color-link;
@@ -82,15 +82,14 @@ $cor-texto-pais: #303331;
         text-decoration: none;
     }
 
-    $cinza: #aaa;
-	.link-artesvisuais { @include link-hover($azul-atividade); }
+	.link-artesvisuais { @include link-hover($azul-artesvisuais); }
     .link-audiovisual  { @include link-hover($laranja-audiovisual); }
     .link-danca        { @include link-hover($verde-danca); }
-    .link-literatura   { @include link-hover(#fff, $cinza); }
+    .link-literatura   { @include link-hover($rosa-literatura); }
     .link-moda         { @include link-hover($roxo-sociedade); }
     .link-musica       { @include link-hover($laranja-malunguices); }
     .link-teatro       { @include link-hover($azul-teatro); }
-	.link-indicacao    { @include link-hover(#fff, $cinza); }
+	.link-indicacao    { @include link-hover($cinza-indicacao); }
 
     $tamanho-categoria: 220px;
     $tamanho-borda-categoria: 1px;

@@ -1225,13 +1225,13 @@ ul, ol {
     text-decoration: none; }
     .artistas-categorias .link-artesvisuais:hover, .artistas-categorias .link-artesvisuais:hover * {
       background: #F7EFE7;
-      color: #0787FF;
-      color: #0787FF;
+      color: #40c1fb;
+      color: #40c1fb;
       cursor: pointer; }
     .artistas-categorias .link-artesvisuais:hover *:not(.box-categoria) {
-      border-color: #0787FF; }
+      border-color: #40c1fb; }
     .artistas-categorias .link-artesvisuais svg, .artistas-categorias .link-artesvisuais svg * {
-      fill: #0787FF; }
+      fill: #40c1fb; }
   .artistas-categorias .link-audiovisual {
     text-decoration: none; }
     .artistas-categorias .link-audiovisual:hover, .artistas-categorias .link-audiovisual:hover * {
@@ -1257,14 +1257,14 @@ ul, ol {
   .artistas-categorias .link-literatura {
     text-decoration: none; }
     .artistas-categorias .link-literatura:hover, .artistas-categorias .link-literatura:hover * {
-      background: #aaa;
-      color: #fff;
-      color: #fff;
+      background: #F7EFE7;
+      color: #c6006c;
+      color: #c6006c;
       cursor: pointer; }
     .artistas-categorias .link-literatura:hover *:not(.box-categoria) {
-      border-color: #fff; }
+      border-color: #c6006c; }
     .artistas-categorias .link-literatura svg, .artistas-categorias .link-literatura svg * {
-      fill: #fff; }
+      fill: #c6006c; }
   .artistas-categorias .link-moda {
     text-decoration: none; }
     .artistas-categorias .link-moda:hover, .artistas-categorias .link-moda:hover * {
@@ -1301,14 +1301,14 @@ ul, ol {
   .artistas-categorias .link-indicacao {
     text-decoration: none; }
     .artistas-categorias .link-indicacao:hover, .artistas-categorias .link-indicacao:hover * {
-      background: #aaa;
-      color: #fff;
-      color: #fff;
+      background: #F7EFE7;
+      color: #555555;
+      color: #555555;
       cursor: pointer; }
     .artistas-categorias .link-indicacao:hover *:not(.box-categoria) {
-      border-color: #fff; }
+      border-color: #555555; }
     .artistas-categorias .link-indicacao svg, .artistas-categorias .link-indicacao svg * {
-      fill: #fff; }
+      fill: #555555; }
   .artistas-categorias .categoria-grid {
     align-items: center;
     box-sizing: border-box;

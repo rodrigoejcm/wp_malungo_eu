@@ -468,6 +468,7 @@ a {
     .main-navigation > .menus .menu > li {
       font-size: 25px; }
     .main-navigation > .menus .sub-menu > li {
+      color: #F7EFE7;
       font-size: 20px; }
 
 /* Small menu. */

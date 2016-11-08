@@ -1,0 +1,33 @@
+$tamanho-cabecalho: 30vh;
+.cabecalho-mafua {
+    height: $tamanho-cabecalho;
+    overflow: hidden;
+    & > img {
+        width: 100%;
+    }
+    & > svg {
+        top: $tamanho-cabecalho / 2;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        width: 70%;
+        z-index: 2;
+    }
+}
+.malungo-post {
+    background: $branco-malungo;
+    color: $cor-texto;
+    font-family: serif;
+    article.page {
+        font-size: 18px;
+        line-height: 1.5em;
+        margin: auto;
+        max-width: 1080px;
+        min-width: 320px;
+    }
+    .entry-title {
+        text-align: center;
+        font-weight: bold;
+    }
+}

@@ -933,6 +933,34 @@ a.pure-button-primary {
   /* We increase the header font size even more */
   .splash-head {
     font-size: 300%; } }
+.cabecalho-mafua {
+  height: 30vh;
+  overflow: hidden; }
+  .cabecalho-mafua > img {
+    width: 100%; }
+  .cabecalho-mafua > svg {
+    top: 15vh;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 70%;
+    z-index: 2; }
+
+.malungo-post {
+  background: #F7EFE7;
+  color: #303331;
+  font-family: serif; }
+  .malungo-post article.page {
+    font-size: 18px;
+    line-height: 1.5em;
+    margin: auto;
+    max-width: 1080px;
+    min-width: 320px; }
+  .malungo-post .entry-title {
+    text-align: center;
+    font-weight: bold; }
+
 /* html, body {
 	overflow: hidden;
 	line-height: 1.5;
@@ -1165,7 +1193,7 @@ ul, ol {
   line-height: 1.6;
   color: #303331; }
 
-.page {
+.artista .page {
   background-color: #303331; }
 
 .paises-lista {

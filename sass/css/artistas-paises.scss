@@ -3,9 +3,11 @@ $cor-texto: #F7EFE7;
 $cor-fundo-pais: #F7EFE7;
 $cor-texto-pais: #303331;
 
-.page {
-    	background-color: $cor-fundo;
+.artista{
+    .page {
+	   background-color: $cor-fundo;
     }
+}
 
 
 .paises-lista{

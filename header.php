@@ -52,19 +52,42 @@
 
 
 	 <div class="full-menu">
-	
-		<nav id="menu" class="menu">
-			<div class="container">
-				<div class="row">
-					<header id="masthead" class="site-header img-full" role="banner">
-						
-						<nav id="site-navigation" class="main-navigation" role="navigation">
-							<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav><!-- #site-navigation -->
-					</header><!-- #masthead -->	
-				</div>
-			</div>
-		</nav>
+		<header id="masthead" class="site-header img-full" role="banner">
+			
+			<nav id="site-navigation" class="main-navigation"
+			role="navigation">
+			
+				<ul class="explica-menu">
+					<li><span>Sobre</span></li>
+					<li><span>Panorama África</span></li>
+					<li><span>Blog</span></li>
+					<li><span>Exposição</span></li>
+				</ul>
+			
+				<ul class="menus">
+					<li>
+						<?php wp_nav_menu( array(
+							'theme_location' => 'sobre'
+							) ); ?>
+					</li>
+					<li>
+						<?php wp_nav_menu( array(
+							'theme_location' => 'panorama-africa'
+							) ); ?>
+					</li>
+					<li>
+						<?php wp_nav_menu( array(
+							'theme_location' => 'blog'
+							) ); ?>
+					</li>
+					<li>
+						<?php wp_nav_menu( array(
+							'theme_location' => 'exposicao'
+							) ); ?>
+					</li>
+				</ul>
+			</nav><!-- #site-navigation -->
+		</header><!-- #masthead -->	
 	</div>
 
 

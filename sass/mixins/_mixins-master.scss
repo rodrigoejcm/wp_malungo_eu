@@ -23,7 +23,9 @@
 	clear: both;
 }
 
-@mixin lines-up-down($size: 1px) {
-    border-top: $size solid #fff;
-    border-bottom: $size solid #fff;
+@mixin lines-up-down($color: #fff, $size: 1px) {
+    border-top: $size solid $color;
+    border-bottom: $size solid $color;
+    padding-top: .5em;
+    padding-bottom: .5em;
 }

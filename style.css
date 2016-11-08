@@ -437,29 +437,38 @@ a {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 1.5em;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
-  .main-navigation li {
-    float: left;
-    position: relative; }
-  .main-navigation a {
-    display: block;
+  .main-navigation *, .main-navigation *:hover {
     text-decoration: none; }
+  .main-navigation > .explica-menu, .main-navigation > .menus {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    text-align: center;
+    width: 90%; }
+    .main-navigation > .explica-menu > li, .main-navigation > .menus > li {
+      width: 200px; }
+  .main-navigation > .explica-menu {
+    background: #F7EFE7;
+    box-sizing: border-box;
+    color: #303331;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px;
+    text-transform: uppercase; }
+    .main-navigation > .explica-menu > li span {
+      border-top: 1px solid #303331;
+      border-bottom: 1px solid #303331;
+      padding-top: .5em;
+      padding-bottom: .5em; }
+  .main-navigation > .menus {
+    font-family: serif;
+    text-transform: lowercase; }
+    .main-navigation > .menus a {
+      color: #FF9B0F; }
+    .main-navigation > .menus .menu > li {
+      font-size: 25px; }
+    .main-navigation > .menus .sub-menu > li {
+      font-size: 20px; }
 
 /* Small menu. */
 .menu-toggle,
@@ -984,9 +993,7 @@ a.pure-button-primary {
   top: 100%;
   transition: all 400ms ease;
   width: 100%;
-  z-index: 3;
-  /* TEXT */
-  /* TEXT */ }
+  z-index: 3; }
   .full-menu .img-full {
     height: 100%;
     left: 0;
@@ -1009,58 +1016,6 @@ a.pure-button-primary {
       text-align: center; }
   .full-menu .main-navigation {
     z-index: 5; }
-    .full-menu .main-navigation span :hover {
-      text-decoration: none; }
-    .full-menu .main-navigation ul li .sub-menu {
-      font-size: 25px !important; }
-    .full-menu .main-navigation ul ul {
-      box-shadow: none;
-      float: none; }
-      .full-menu .main-navigation ul ul a {
-        width: 100%;
-        margin: 0 auto; }
-  .full-menu header ul li span,
-  .full-menu header span {
-    display: block; }
-  .full-menu header p,
-  .full-menu header ul li a span {
-    font-family: "Proxima Nova", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold; }
-  .full-menu header {
-    padding-top: 12px; }
-  .full-menu .sub-menu li {
-    display: block;
-    visibility: visible; }
-  .full-menu header ul li {
-    text-align: center; }
-  .full-menu header ul li a {
-    font-family: "Proxima Nova", sans-serif;
-    color: #53417b;
-    font-size: 25.02px;
-    font-weight: 300;
-    text-align: center;
-    white-space: nowrap; }
-    .full-menu header ul li a:hover {
-      text-decoration: none; }
-  .full-menu header ul li a span {
-    color: #303331;
-    font-size: 10.01px;
-    display: block; }
-    .full-menu header ul li a span:hover {
-      text-decoration: none; }
-  .full-menu .sub-menu li {
-    display: block; }
-  .full-menu .sub-menu li a {
-    color: #53417b;
-    font-size: 15px;
-    text-align: center; }
-  .full-menu header ul ul {
-    left: 0;
-    position: inherit; }
-  .full-menu .main-navigation .sub-menu li {
-    float: none;
-    position: static; }
 
 .hamburguer {
   position: absolute;
@@ -1369,6 +1324,8 @@ ul, ol {
     .artistas-categorias .box-categoria p {
       border-top: 1px solid #fff;
       border-bottom: 1px solid #fff;
+      padding-top: .5em;
+      padding-bottom: .5em;
       color: #F7EFE7;
       font-family: "proxima-nova",sans-serif;
       font-size: 0.9em;

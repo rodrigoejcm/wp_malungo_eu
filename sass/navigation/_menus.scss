@@ -1,4 +1,5 @@
 .main-navigation {
+	$item-size: 200px;
 	clear: both;
 	display: block;
 	float: left;
@@ -9,64 +10,39 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
 	}
-
-	li {
-		float: left;
-		position: relative;
-
-		&:hover > a,
-		&.focus > a {
-		}
-	}
-
-	a {
-		display: block;
+	*, *:hover{
 		text-decoration: none;
 	}
-
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	& > .explica-menu,
+	& > .menus {
+		display: flex;
+		justify-content: space-around;
+		margin: auto;
+		text-align: center;
+		& > li { width: $item-size; }
+		width: 90%;
+	}
+	& > .explica-menu {
+		& > li span { @include lines-up-down($cor-texto); }
+		background: $branco-malungo;
+		box-sizing: border-box;
+		color: $cor-texto;
+		font-size: 10px;
+		font-weight: bold;
+		padding: 10px;
+		text-transform: uppercase;
+	}
+	& > .menus {
+		font-family: serif;
+		text-transform: lowercase; 
+		a { color: $laranja-malunguices; }
+		.menu > li{
+			font-size: 25px;
+		}
+		.sub-menu > li {
+			font-size: 20px;
+		}
 	}
 }
 

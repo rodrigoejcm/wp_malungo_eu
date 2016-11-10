@@ -1223,6 +1223,7 @@ ul, ol {
   font-size: 9px; }
 
 .artistas-categorias {
+  background: #303331;
   padding-top: 5%; }
   .artistas-categorias h1, .artistas-categorias p {
     color: #F7EFE7;

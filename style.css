@@ -1369,10 +1369,211 @@ ul, ol {
       width: 80%; }
 
 .artistas {
-  padding-top: 5%; }
+  background: #303331;
+  box-sizing: border-box;
+  color: #F7EFE7; }
+  .artistas h1 {
+    padding-top: 60px; }
+    .artistas h1 img {
+      height: 20vh; }
   .artistas h1, .artistas p {
     color: #F7EFE7;
     text-align: center; }
+
+ul.menu-categorias {
+  border-top: 1px solid #F7EFE7;
+  border-bottom: 1px solid #F7EFE7;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  padding: 0;
+  margin-bottom: 1.5em;
+  margin-left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%; }
+  ul.menu-categorias a {
+    color: #F7EFE7; }
+  ul.menu-categorias li {
+    display: inline-block; }
+  ul.menu-categorias a {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle; }
+  ul.menu-categorias a, ul.menu-categorias a:hover {
+    text-decoration: none;
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    transition: all ease 400ms; }
+  ul.menu-categorias .link-artesvisuais:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #40c1fb 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-artesvisuais:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-audiovisual:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #ff362d 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-audiovisual:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-danca:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #18cc58 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-danca:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-literatura:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #c6006c 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-literatura:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-moda:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #593F7E 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-moda:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-musica:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #FF9B0F 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-musica:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-teatro:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #0083fc 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-teatro:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-indicacao:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #555555 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-indicacao:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-artesvisuais:not(.active) {
+    background-image: linear-gradient(to bottom, #303331 50%, #40c1fb 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-artesvisuais:not(.active):hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-artesvisuais.active {
+    background-image: linear-gradient(to bottom, #40c1fb 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-artesvisuais.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-audiovisual.active {
+    background-image: linear-gradient(to bottom, #ff362d 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-audiovisual.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-danca.active {
+    background-image: linear-gradient(to bottom, #18cc58 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-danca.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-literatura.active {
+    background-image: linear-gradient(to bottom, #c6006c 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-literatura.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-moda.active {
+    background-image: linear-gradient(to bottom, #593F7E 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-moda.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-musica.active {
+    background-image: linear-gradient(to bottom, #FF9B0F 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-musica.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-teatro.active {
+    background-image: linear-gradient(to bottom, #0083fc 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-teatro.active:hover {
+      background-position: 0 -100%; }
+  ul.menu-categorias .link-indicacao.active {
+    background-image: linear-gradient(to bottom, #555555 50%, #303331 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    -webkit-transition: background-position ease 500ms;
+    -moz-transition: background-position ease 500ms;
+    transition: background-position ease 500ms; }
+    ul.menu-categorias .link-indicacao.active:hover {
+      background-position: 0 -100%; }
 
 /*
  * -- SPLASH ARTISTA

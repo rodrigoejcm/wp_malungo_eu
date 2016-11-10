@@ -17,138 +17,154 @@ $categoria =  get_query_var( 'categoria_artista', 1 );
 
 
 /*Imagem da categoria*/
-										$categorias_do_artista = get_category_by_slug( $categoria );
+$categorias_do_artista = get_category_by_slug( $categoria );
 
-										$estilo_cor_box_categoria = "background-color: " . get_field('cor', $categorias_do_artista) . ";";
-										$estilo_cor_texto_categoria = "color: " . get_field('cor', $categorias_do_artista) . ";";
-										
+$estilo_cor_box_categoria = "background-color: "
+                            .get_field('cor', $categorias_do_artista) . ";";
+$estilo_cor_texto_categoria = "color: "
+                            .get_field('cor', $categorias_do_artista) . ";";
 
+$cat_string = preg_replace('/-/', "", $categoria);
+$imagem = get_imagem_categoria_artista($cat_string, true);
 
-$imagem = '';
-
-switch ($categoria) {
-    case 'artes-visuais' :
-        $imagem = 'ARTISTAS_simbolos-01.png';
-    	break;
-    case 'audiovisual' :
-    	$imagem = 'ARTISTAS_simbolos-02.png';
-    	break;
-    case 'danca' :
-    	$imagem = 'ARTISTAS_simbolos-03.png';
-    	break;
-    case 'literatura' :
-    	$imagem = 'ARTISTAS_simbolos-04.png';
-    	break;
-    case 'moda' :
-    	$imagem = 'ARTISTAS_simbolos-05.png';
-    	break;
-    case 'musica' :
-    	$imagem = 'ARTISTAS_simbolos-06.png';
-    	break;
-    case 'teatro' :	
-    	$imagem = 'ARTISTAS_simbolos-07.png';
-    	break;
-	}       
-
-
-
-		    			
-
-get_header(); ?>
+get_header();
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="artistas">
-
-			<h1>Artistas</h1>
-			<p>Quem pensa, Quem faz, Quem dança, Quem canta...</p>
-
+			<h1>
+                <a href="<?= site_url().'/categoria-artistas' ?>">
+                	<img src="<?=get_template_directory_uri().
+                        '/img/titulo-artes.svg'?>"
+                    alt="ARTES"
+                    />
+                </a>
+            </h1>
+            <ul class="menu-categorias">
+            	<li>
+            		<a  class="link-artesvisuais <?php
+            				if($cat_string=='artesvisuais') echo "active";
+        				?>"
+            	 href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
+						Artes Visuais
+					</a>
+				</li>
+				
 			
+				<li>
+					<a  class="link-audiovisual <?php
+							if($cat_string=='audiovisual') echo "active";
+						?>"
+				 href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
+						Audiovisual
+					</a>
+				</li>
+				<li>
+					<a class="link-danca <?php
+							if($cat_string=='danca') echo "active";
+						?>"
+				 href="<?=get_site_url() .'/artistas/?categoria_artista=danca' ?>">
+						Danca
+					</a>
+				</li>
+				<li>
+					<a class="link-literatura <?php
+							if($cat_string=='literatura') echo "active";
+						?>"
+				 href="<?=get_site_url() .'/artistas/?categoria_artista=literatura' ?>">
+						Literatura
+					</a>
+				</li>
+				<li>
+					<a class="link-moda <?php
+							if($cat_string=='moda') echo "active";
+						?>"
+				 href="<?=get_site_url() .'/artistas/?categoria_artista=moda' ?>">
+						Moda
+					</a>
+				</li>
+				<li>
+					<a class="link-musica <?php
+							if($cat_string=='musica') echo "active";
+						?>"
+				 href="<?=get_site_url() .'/artistas/?categoria_artista=musica' ?>">
+						Musica
+					</a>
+				</li>
+				<li>
+					<a class="link-teatro <?php
+							if($cat_string=='teatro') echo "active";
+						?>"
+				 href="<?=get_site_url() .'/artistas/?categoria_artista=teatro' ?>">
+						Teatro
+					</a>
+				</li>
+            </ul>
+			<section id="main">
+	    		<div id="content" class="collection"><section id="collection">
+					<ul class="projects-list">
+			    		<li>
+			      			<?= $imagem ?>
+			      			<p  class="nome_categoria_box"  style="<?= $estilo_cor_texto_categoria; ?>">
+	                            <?= $categorias_do_artista->name; ?>
+			      			</p>
+			    		</li>
 
-			<br>
+						<?php
 
-		<section id="main">
-    		<div id="content" class="collection"><section id="collection">
-				<ul class="projects-list">
-		    		<li>
-
-
-
-		      			<img class="img_categoria" src="<?=get_template_directory_uri().'/img/'. $imagem; ?>" alt="iamgem_categoria" ajax="">
-		      			
-			          		<!-- <img class="hover" src="http://relampago.co/wp-content/uploads/portfolio_relampago_descomplica_02.gif"> -->
-			        		<!-- <div class="box" style="transform: translate(12px, 233px);">
-			          		
-			        		</div> -->
-		      			</img>
-		      			<p  class="nome_categoria_box"  style="<?= $estilo_cor_texto_categoria; ?>">
-		      			
-		      			<?= $categorias_do_artista->name; ?>
-		      			</p>
-		    		</li>
-      				
-
-					<?php
-
-							$posts = get_posts(array(
-								'numberposts' => -1 ,
-								'post_type' => 'artista',
-								'category_name'  => $categoria
-							));
+								$posts = get_posts(array(
+									'numberposts' => -1 ,
+									'post_type' => 'artista',
+									'category_name'  => $categoria
+								));
 
 
-							if($posts)
-							{
-								foreach($posts as $post)
+								if($posts)
 								{
-								?>
-									<li> 
-									<?php
-										$thumb_id = get_post_thumbnail_id();
-										$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-										$thumb_url = $thumb_url_array[0];
+									foreach($posts as $post)
+									{
 									?>
+										<li> 
+										<?php
+											$thumb_id = get_post_thumbnail_id();
+											$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+											$thumb_url = $thumb_url_array[0];
+										?>
 
-								<?php echo '<a href="' . get_permalink($post->ID) . '" style="background-image: url(\'' . $thumb_url . '\')">';?>
-								        <div class="box" style="<?= $estilo_cor_box_categoria; ?>">
-								          <div class="title"><?php the_title(); ?></div>
-								          <br>
-								          <div class="pais">
-								          	
-								          		<?php
-									          		$vari  = get_field('pais');
+									<?php echo '<a href="' . get_permalink($post->ID) . '" style="background-image: url(\'' . $thumb_url . '\')">';?>
+									        <div class="box" style="<?= $estilo_cor_box_categoria; ?>">
+									          <div class="title"><?php the_title(); ?></div>
+									          <br>
+									          <div class="pais">
+									          	
+									          		<?php
+										          		$vari  = get_field('pais');
 
-													if( $vari ){
-														foreach( $vari as $pais){
-															echo get_the_title( $pais->ID );
-														} 
+														if( $vari ){
+															foreach( $vari as $pais){
+																echo get_the_title( $pais->ID );
+															} 
 
-													}
-												?>
-								          </div>
-								          <br>
-								          <div class="descricao"><?php the_field('breve_descricao'); ?></div>
-								        </div>
-								      </a>
-									</li>
-								<?php
+														}
+													?>
+									          </div>
+									          <br>
+									          <div class="descricao"><?php the_field('breve_descricao'); ?></div>
+									        </div>
+									      </a>
+										</li>
+									<?php
+									}
 								}
-							}
-					?>
-
-      
-				    
-		  
-				</ul>
-			</div>
-		</section>
+						?>    
+			  
+					</ul>
+				</div>
+			</section>
 			
 			
 		</div>
-
-
-
-
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

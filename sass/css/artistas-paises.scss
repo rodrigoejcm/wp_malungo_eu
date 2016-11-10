@@ -31,9 +31,6 @@ $cor-texto-pais: #303331;
         margin-left: 3%;
         margin-top: 40px;
 
-
-
-
     		img{
     			/* margin-top: -10px; */
     		}
@@ -46,8 +43,6 @@ $cor-texto-pais: #303331;
     			letter-spacing: 2.5px;
     		}
 	}
-
-
 }
 
 
@@ -67,31 +62,7 @@ $cor-texto-pais: #303331;
         height: 3em;
     }
 
-    @mixin link-hover($color-link: $cor-texto){
-        $hover-color: $branco-malungo;
-        &:hover, &:hover * {
-            background: $hover-color;
-            color: $color-link;
-            color: $color-link;
-            cursor: pointer;
-        }
-        &:hover *:not(.box-categoria) {
-            border-color: $color-link;
-        }
-        svg, svg * {
-            fill: $color-link;
-        }
-        text-decoration: none;
-    }
-
-	.link-artesvisuais { @include link-hover($azul-artesvisuais); }
-    .link-audiovisual  { @include link-hover($laranja-audiovisual); }
-    .link-danca        { @include link-hover($verde-danca); }
-    .link-literatura   { @include link-hover($rosa-literatura); }
-    .link-moda         { @include link-hover($roxo-sociedade); }
-    .link-musica       { @include link-hover($laranja-malunguices); }
-    .link-teatro       { @include link-hover($azul-teatro); }
-	.link-indicacao    { @include link-hover($cinza-indicacao); }
+	@include apply-link-hover();
 
     $tamanho-categoria: 220px;
     $tamanho-borda-categoria: 1px;
@@ -154,13 +125,42 @@ $cor-texto-pais: #303331;
 }
 
 .artistas{
-
-	padding-top:5%;
-
+    background: $cor-fundo;
+    box-sizing: border-box;
+    color: $cor-texto;
+    h1{
+        padding-top: 60px;
+        img {
+            height: 20vh;
+        }
+    }
 	h1,p{
 		color: $cor-texto;
 		text-align: center;
 	}
+}
+ul.menu-categorias {
+    @include lines-up-down($branco-malungo);
+    a { color: $branco-malungo; }
+    padding: 0;
+    margin-bottom: 1.5em;
+    margin-left: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    li {
+        display: inline-block;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+    }
+    a,a:hover {
+        text-decoration: none;
+        @include transition(all ease 400ms);
+    }
+    @include bg-slide-categories();
 }
 
 

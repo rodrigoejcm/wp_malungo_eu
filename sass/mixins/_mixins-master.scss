@@ -29,3 +29,110 @@
     padding-top: .5em;
     padding-bottom: .5em;
 }
+
+@mixin link-hover($color-link: $cor-texto, $hover-color: $branco-malungo){
+    &:hover, &:hover * {
+        background: $hover-color;
+        color: $color-link;
+        color: $color-link;
+        cursor: pointer;
+    }
+    &:hover *:not(.box-categoria) {
+        border-color: $color-link;
+    }
+    svg, svg * {
+        fill: $color-link;
+    }
+    text-decoration: none;
+}
+
+@mixin apply-link-hover($swap: false){
+    @if($swap){
+         .link-artesvisuais { @include link-hover($branco-malungo, $azul-artesvisuais); }
+         .link-audiovisual  { @include link-hover($branco-malungo, $laranja-audiovisual); }
+         .link-danca        { @include link-hover($branco-malungo, $verde-danca); }
+         .link-literatura   { @include link-hover($branco-malungo, $rosa-literatura); }
+         .link-moda         { @include link-hover($branco-malungo, $roxo-sociedade); }
+         .link-musica       { @include link-hover($branco-malungo, $laranja-malunguices); }
+         .link-teatro       { @include link-hover($branco-malungo, $azul-teatro); }
+         .link-indicacao    { @include link-hover($branco-malungo, $cinza-indicacao); }
+    }
+    @else{
+         .link-artesvisuais { @include link-hover($azul-artesvisuais); }
+         .link-audiovisual  { @include link-hover($laranja-audiovisual); }
+         .link-danca        { @include link-hover($verde-danca); }
+         .link-literatura   { @include link-hover($rosa-literatura); }
+         .link-moda         { @include link-hover($roxo-sociedade); }
+         .link-musica       { @include link-hover($laranja-malunguices); }
+         .link-teatro       { @include link-hover($azul-teatro); }
+         .link-indicacao    { @include link-hover($cinza-indicacao); }
+    }
+}
+
+@mixin bg-slide($bg-color, $secondary-color: rgba(0,0,0,0)){
+    background-image: linear-gradient(to bottom, $secondary-color 50%, $bg-color 50%);
+    background-size: 100% 200%;
+    height: 1.8em;
+    width: 10em;
+    @include transition(background-position ease 500ms);
+    &:hover {
+        background-position: 0 -100%;
+    }
+}
+
+@mixin bg-slide-categories(){
+     .link-artesvisuais:not(.active) {
+        @include bg-slide($azul-artesvisuais, $preto-malungo);
+    }
+     .link-audiovisual:not(.active) {
+        @include bg-slide($laranja-audiovisual, $preto-malungo);
+    }
+     .link-danca:not(.active) {
+        @include bg-slide($verde-danca, $preto-malungo);
+    }
+     .link-literatura:not(.active) {
+        @include bg-slide($rosa-literatura, $preto-malungo);
+    }
+     .link-moda:not(.active) {
+        @include bg-slide($roxo-sociedade, $preto-malungo);
+    }
+     .link-musica:not(.active) {
+        @include bg-slide($laranja-malunguices, $preto-malungo);
+    }
+     .link-teatro:not(.active) {
+        @include bg-slide($azul-teatro, $preto-malungo);
+    }
+     .link-indicacao:not(.active) {
+        @include bg-slide($cinza-indicacao, $preto-malungo);
+    }
+     .link-artesvisuais:not(.active) {
+        @include bg-slide($azul-artesvisuais, $preto-malungo);
+    }
+    
+
+
+    .link-artesvisuais.active {
+        @include bg-slide($preto-malungo, $azul-artesvisuais);
+    }
+    .link-audiovisual.active {
+        @include bg-slide($preto-malungo, $laranja-audiovisual);
+    }
+     .link-danca.active { 
+        @include bg-slide($preto-malungo, $verde-danca);
+    }
+     .link-literatura.active {
+        @include bg-slide($preto-malungo, $rosa-literatura);
+    }
+     .link-moda.active {
+        @include bg-slide($preto-malungo, $roxo-sociedade);
+    }
+     .link-musica.active {
+        @include bg-slide($preto-malungo, $laranja-malunguices);
+    }
+     .link-teatro.active {
+        @include bg-slide($preto-malungo, $azul-teatro);
+    }
+     .link-indicacao.active {
+        @include bg-slide($preto-malungo, $cinza-indicacao);
+    }
+}

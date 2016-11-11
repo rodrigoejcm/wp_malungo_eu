@@ -1714,12 +1714,13 @@ ul.menu-categorias {
  */
 .content-wrapper-artista {
   /* These styles are required for the "scroll-over" effect */
+  background-color: #303331;
+  font-size: 20px;
+  min-height: 12%;
   position: absolute;
   top: 100%;
   width: 100%;
-  min-height: 12%;
-  z-index: 2;
-  background-color: #303331; }
+  z-index: 2; }
 
 /* This is the class used for the main content headers (<h2>) */
 .content-head-artista {
@@ -1729,7 +1730,8 @@ ul.menu-categorias {
   margin: 2em 0 1em; }
 
 .descricao-artistas {
-  color: #F7EFE7; }
+  color: #F7EFE7;
+  text-align: left !important; }
 
 /*
  * -- SPLASH PAIS

@@ -307,12 +307,13 @@ ul.menu-categorias {
  */
 .content-wrapper-artista {
     /* These styles are required for the "scroll-over" effect */
+    background-color: $cor-fundo;
+    font-size: 20px;
+    min-height: 12%;
     position: absolute;
     top: 100%;
     width: 100%;
-    min-height: 12%;
     z-index: 2;
-    background-color: $cor-fundo;
 
 }
 
@@ -327,6 +328,7 @@ ul.menu-categorias {
 
 .descricao-artistas{
 	color:$cor-texto;
+    text-align: left!important;
 }
 
 

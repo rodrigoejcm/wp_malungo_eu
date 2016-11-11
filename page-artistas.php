@@ -47,7 +47,7 @@ get_header();
             				if($cat_string=='artesvisuais') echo "active";
         				?>"
             	 href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
-						Artes Visuais
+						<span>Artes Visuais</span>
 					</a>
 				</li>
 				
@@ -57,7 +57,7 @@ get_header();
 							if($cat_string=='audiovisual') echo "active";
 						?>"
 				 href="<?=get_site_url() .'/artistas/?categoria_artista=audiovisual' ?>">
-						Audiovisual
+						<span>Audiovisual</span>
 					</a>
 				</li>
 				<li>
@@ -65,7 +65,7 @@ get_header();
 							if($cat_string=='danca') echo "active";
 						?>"
 				 href="<?=get_site_url() .'/artistas/?categoria_artista=danca' ?>">
-						Danca
+						<span>Danca</span>
 					</a>
 				</li>
 				<li>
@@ -73,7 +73,7 @@ get_header();
 							if($cat_string=='literatura') echo "active";
 						?>"
 				 href="<?=get_site_url() .'/artistas/?categoria_artista=literatura' ?>">
-						Literatura
+						<span>Literatura</span>
 					</a>
 				</li>
 				<li>
@@ -81,7 +81,7 @@ get_header();
 							if($cat_string=='moda') echo "active";
 						?>"
 				 href="<?=get_site_url() .'/artistas/?categoria_artista=moda' ?>">
-						Moda
+						<span>Moda</span>
 					</a>
 				</li>
 				<li>
@@ -89,7 +89,7 @@ get_header();
 							if($cat_string=='musica') echo "active";
 						?>"
 				 href="<?=get_site_url() .'/artistas/?categoria_artista=musica' ?>">
-						Musica
+						<span>Musica</span>
 					</a>
 				</li>
 				<li>
@@ -97,18 +97,15 @@ get_header();
 							if($cat_string=='teatro') echo "active";
 						?>"
 				 href="<?=get_site_url() .'/artistas/?categoria_artista=teatro' ?>">
-						Teatro
+						<span>Teatro</span>
 					</a>
 				</li>
             </ul>
 			<section id="main">
 	    		<div id="content" class="collection"><section id="collection">
 					<ul class="projects-list">
-			    		<li>
+			    		<li class="li-img-categoria">
 			      			<?= $imagem ?>
-			      			<p  class="nome_categoria_box"  style="<?= $estilo_cor_texto_categoria; ?>">
-	                            <?= $categorias_do_artista->name; ?>
-			      			</p>
 			    		</li>
 
 						<?php
@@ -130,13 +127,25 @@ get_header();
 											$thumb_id = get_post_thumbnail_id();
 											$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 											$thumb_url = $thumb_url_array[0];
+											/*
+											* O prazo está MUITO apertado.
+											* seja eu ou outra pessoa, eu peço
+											* desculpas já de adianto pelo pecado
+											* capital que você está prestes a ler
+											*/
 										?>
 
-									<?php echo '<a href="' . get_permalink($post->ID) . '" style="background-image: url(\'' . $thumb_url . '\')">';?>
-									        <div class="box" style="<?= $estilo_cor_box_categoria; ?>">
-									          <div class="title"><?php the_title(); ?></div>
-									          <br>
-									          <div class="pais">
+									<a href="<?=get_permalink($post->ID)?>"
+										class="link-artista link-artista-<?=$post->ID?>">
+										<style type="text/css">
+											.link-artista-<?= $post->ID ?>:before{
+												background: url("<?=$thumb_url?>");
+											}
+										</style>
+									        <section class="box <?= 'box-'.$cat_string ?>" 
+									        	style="<?= $estilo_cor_box_categoria; ?>">
+									          <h3><?php the_title(); ?></h3>
+									          <p class="pais">
 									          	
 									          		<?php
 										          		$vari  = get_field('pais');
@@ -148,10 +157,9 @@ get_header();
 
 														}
 													?>
-									          </div>
-									          <br>
-									          <div class="descricao"><?php the_field('breve_descricao'); ?></div>
-									        </div>
+									          </p>
+									          <p class="descricao"><?php the_field('breve_descricao'); ?></p>
+									        </section>
 									      </a>
 										</li>
 									<?php

@@ -155,6 +155,18 @@ ul.menu-categorias {
         display: inline-block;
         text-align: center;
         vertical-align: middle;
+        //gambiarra start (http://stackoverflow.com/questions/18485378/vertically-centering-text-within-an-inline-block)
+        &:before{
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        //gambiarra end
     }
     a,a:hover {
         text-decoration: none;

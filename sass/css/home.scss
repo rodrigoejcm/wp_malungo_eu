@@ -57,7 +57,7 @@
 	a.hover-danca 			{ @include hover-texto($verde-danca); }
 	a.hover-literatura		{ @include hover-texto($rosa-literatura); }
 	a.hover-teatro			{ @include hover-texto($azul-teatro); }
-	a.hover-musica			{ @include hover-texto($roxo-musica); }
+	a.hover-musica			{ @include hover-texto($laranja-musica); }
 
 	.categoria{
 		font-weight: bold;
@@ -77,7 +77,7 @@
 	.cor-danca			{ @include titulo-post($verde-danca);}
 	.cor-literatura		{ @include titulo-post($rosa-literatura);}
 	.cor-teatro			{ @include titulo-post($azul-teatro);}
-	.cor-musica			{ @include titulo-post($roxo-musica);}
+	.cor-musica			{ @include titulo-post($laranja-musica);}
 
 	.titulo {
 		margin-top: 10px;

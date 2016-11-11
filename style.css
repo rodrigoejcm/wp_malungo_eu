@@ -1636,14 +1636,46 @@ ul.menu-categorias {
 
 .splash-artista {
   /* absolute center .splash within .splash-container */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   margin: auto;
   position: absolute;
+  text-align: center;
   top: 15%;
   left: 0;
   bottom: 0;
   right: 20;
-  text-align: center;
   width: 100%; }
+  .splash-artista svg {
+    height: 20%; }
+  .splash-artista .title-artista-artesvisuais {
+    color: #40c1fb; }
+  .splash-artista .title-artista-artesvisuais {
+    color: #40c1fb; }
+  .splash-artista .title-artista-audiovisual {
+    color: #ff362d; }
+  .splash-artista .title-artista-danca {
+    color: #18cc58; }
+  .splash-artista .title-artista-literatura {
+    color: #c6006c; }
+  .splash-artista .title-artista-moda {
+    color: #593F7E; }
+  .splash-artista .title-artista-musica {
+    color: #FF9B0F; }
+  .splash-artista .title-artista-teatro {
+    color: #0083fc; }
+  .splash-artista .splash-subhead-artista-categoria {
+    border-top: 1px solid #F7EFE7;
+    border-bottom: 1px solid #F7EFE7;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: #F7EFE7;
+    margin: 0 auto;
+    width: auto; }
+  .splash-artista .arrow-down svg {
+    fill: #F7EFE7; }
   .splash-artista .data_publicacao {
     margin-top: 20px;
     font-size: 9px; }

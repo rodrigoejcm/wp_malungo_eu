@@ -9,54 +9,39 @@
 
 
 get_header(); ?>
-
-
-
-
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 			<?php
-										/*url da Featured image do artista*/
-										$thumb_id = get_post_thumbnail_id();
-										$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-										$thumb_url = $thumb_url_array[0];
+				/*url da Featured image do artista*/
+				$thumb_id = get_post_thumbnail_id();
+				$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+				$thumb_url = $thumb_url_array[0];
 
-										/*Nome Categoria - Para uma lista de categorias, usar the_category*/	
-										$categoria = get_the_category()[0]->name;
-										
-										/*Imagem da categoria*/
-										$categorias_do_artista = get_the_terms( get_the_ID(), 'category');
-										$categoria_principal = array_pop($categorias_do_artista);
-										$categoria_image = get_field('icone', $categoria_principal);
-										$estilo_cor_texto_categoria = "color: " . get_field('cor', $categoria_principal) . ";";
-
-						
+				/*Nome Categoria - Para uma lista de categorias, usar the_category*/	
+				$categoria = get_the_category()[0]->name;
+				
+				/*Imagem da categoria*/
+				$categorias_do_artista = get_the_terms( get_the_ID(), 'category');
+				$categoria_principal = array_pop($categorias_do_artista);
+				$cat_string = preg_replace("/-/", "", $categoria_principal->slug);
+				$categoria_imagem = get_imagem_categoria_artista($cat_string, true);
 			?>
-
-				<style>
-					.descricao-artistas p a {
-						<?= $estilo_cor_texto_categoria . ' !important' ;?>;
-						target-name: new;
-    					target-new: tab;
-					}
-				</style>
 
 			<div class="splash-container-artista" style="background-image: url('<?=$thumb_url;?>')">
 				<div class="splash-container-artista-opacity">
 				</div>
 			    <div class="splash-artista">
-			    	<img  style="height:150px;" src="<?= $categoria_image['url']; ?>" >
-					</img>
-			    	<div class="splash-subhead-artista-categoria" style="<?= $estilo_cor_texto_categoria ;?>">
+			    	<?= $categoria_imagem ?>
+			    	<br>
+			    	<div class="splash-subhead-artista-categoria">
 			    		<?= esc_html($categoria) ; ?>
 			    	</div>
-			    	<div class="splash-head-artista">
+			    	<h1 class="splash-head-artista title-artista-<?= $cat_string ?>">
 			    		<?= the_title(); ?>
-			    	</div>
+			    	</h1>
 			    	<div class="splash-subhead-artista">
-			    		<?php
+			    		———<?php
 			          		$pais_artista  = get_field('pais');
 
 							if( $pais_artista ){
@@ -65,12 +50,20 @@ get_header(); ?>
 								} 
 
 							}
-						?>
+						?>———
 						<p class="data_publicacao">Publicado em: <?php the_modified_date(); ?></p>
+			    	</div>
+			    	<div class="arrow-down">
+			    		<!-- triangulo equilatero,
+			    			formando um V com 5 de largura -->
+			    		<svg width="100" height="40">
+							<polygon
+							points="0 0, 5 0, 50 35, 95 0, 100 0, 50 40">
+							</polygon>
+						</svg>
 			    	</div>
 			    </div>
 			</div>
-
 
 			<div class="content-wrapper-artista">
 				<div class="container">

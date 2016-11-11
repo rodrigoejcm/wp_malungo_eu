@@ -19,8 +19,6 @@ $categoria =  get_query_var( 'categoria_artista', 1 );
 /*Imagem da categoria*/
 $categorias_do_artista = get_category_by_slug( $categoria );
 
-$estilo_cor_box_categoria = "background-color: "
-                            .get_field('cor', $categorias_do_artista) . ";";
 $estilo_cor_texto_categoria = "color: "
                             .get_field('cor', $categorias_do_artista) . ";";
 
@@ -142,8 +140,7 @@ get_header();
 												background: url("<?=$thumb_url?>");
 											}
 										</style>
-									        <section class="box <?= 'box-'.$cat_string ?>" 
-									        	style="<?= $estilo_cor_box_categoria; ?>">
+									        <section class="box <?= 'box-'.$cat_string ?>">
 									          <h3><?php the_title(); ?></h3>
 									          <p class="pais">
 									          	

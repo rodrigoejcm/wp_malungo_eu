@@ -463,7 +463,8 @@ a {
       padding-top: .5em;
       padding-bottom: .5em; }
   .main-navigation > .menus {
-    font-family: 'Maitree Light', serif;
+    font-family: 'Maitree', serif;
+    font-weight: 300;
     text-transform: lowercase; }
     .main-navigation > .menus li, .main-navigation > .menus a {
       color: #F7EFE7; }
@@ -474,7 +475,7 @@ a {
     .main-navigation > .menus a:hover {
       cursor: pointer; }
     .main-navigation > .menus .menu > li {
-      font-size: 28px; }
+      font-size: 26px; }
     .main-navigation > .menus .sub-menu > li {
       color: #F7EFE7;
       font-size: 20px; }
@@ -943,7 +944,7 @@ a.pure-button-primary {
     font-size: 300%; } }
 .cabecalho-mafua {
   overflow: hidden;
-  padding-top: 55px; }
+  padding-top: 54px; }
   .cabecalho-mafua > img {
     height: 100%;
     width: auto; }
@@ -959,16 +960,14 @@ a.pure-button-primary {
 .malungo-post {
   background: #F7EFE7;
   color: #303331;
-  font-family: 'Maitree', serif; }
-  .malungo-post article.page {
+  font-family: 'Maitree', serif;
+  font-weight: 300; }
+  .malungo-post .mafua-content {
     font-size: 18px;
     line-height: 1.5em;
     margin: auto;
-    max-width: 1080px;
-    min-width: 320px; }
-  .malungo-post .entry-title {
-    text-align: center;
-    font-weight: bold; }
+    min-width: 320px;
+    max-width: 880px; }
 
 #mobile-menu-1 {
   display: none; }

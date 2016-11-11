@@ -1,7 +1,7 @@
 $altura-imagem: 399px;
 .cabecalho-mafua {
     overflow: hidden;
-    padding-top: 55px;
+    padding-top: 54px;
     & > img {
         height: 100%;
         width: auto;
@@ -20,15 +20,12 @@ $altura-imagem: 399px;
     background: $branco-malungo;
     color: $cor-texto;
     font-family: 'Maitree', serif;
-    article.page {
+    font-weight: 300;
+    .mafua-content{
         font-size: 18px;
         line-height: 1.5em;
         margin: auto;
-        max-width: 1080px;
         min-width: 320px;
-    }
-    .entry-title {
-        text-align: center;
-        font-weight: bold;
+        max-width: $page-size;
     }
 }

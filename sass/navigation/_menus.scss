@@ -34,7 +34,8 @@
 		text-transform: uppercase;
 	}
 	& > .menus {
-		font-family: 'Maitree Light', serif;
+		font-family: 'Maitree', serif;
+		font-weight: 300;
 		text-transform: lowercase; 
 		li,a { color: $branco-malungo; }
 
@@ -42,7 +43,7 @@
 		li:hover { cursor: default; }
 		a:hover { cursor: pointer; }
 		.menu > li{
-			font-size: 28px;
+			font-size: 26px;
 		}
 		.sub-menu > li {
 			color: $branco-malungo;

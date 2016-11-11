@@ -468,7 +468,7 @@ a {
     .main-navigation > .menus li, .main-navigation > .menus a {
       color: #F7EFE7; }
     .main-navigation > .menus li:hover, .main-navigation > .menus a:hover {
-      color: #FF9B0F; }
+      color: #FB9D00; }
     .main-navigation > .menus li:hover {
       cursor: default; }
     .main-navigation > .menus a:hover {
@@ -942,16 +942,17 @@ a.pure-button-primary {
   .splash-head {
     font-size: 300%; } }
 .cabecalho-mafua {
-  height: 30vh;
-  overflow: hidden; }
+  overflow: hidden;
+  padding-top: 55px; }
   .cabecalho-mafua > img {
-    width: 100%; }
+    height: 100%;
+    width: auto; }
   .cabecalho-mafua > svg {
-    top: 15vh;
     left: 0;
     margin: 0 auto;
     position: absolute;
     right: 0;
+    top: 199.5px;
     width: 70%;
     z-index: 2; }
 

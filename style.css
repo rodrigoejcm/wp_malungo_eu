@@ -1194,31 +1194,88 @@ ul, ol {
   line-height: 1.6;
   color: #303331; }
 
+.paises-lista .grid-paises, .artistas-categorias .categoria-grid {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 884px;
+  padding-bottom: 5vh; }
+  .paises-lista .grid-paises > *, .artistas-categorias .categoria-grid > * {
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    border-size: 0;
+    box-sizing: border-box; }
+
+.paises-lista .box-pais, .artistas-categorias .box-categoria {
+  align-items: center;
+  border: 1px solid white;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -1px;
+  margin-bottom: -1px;
+  width: 220px; }
+  .paises-lista .box-pais *, .artistas-categorias .box-categoria * {
+    margin: 0;
+    padding: 0; }
+  .paises-lista .box-pais svg, .artistas-categorias .box-categoria svg {
+    box-sizing: border-box;
+    height: 132px;
+    padding-bottom: 10px; }
+  .paises-lista .box-pais p, .artistas-categorias .box-categoria p {
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: #F7EFE7;
+    font-family: "proxima-nova",sans-serif;
+    font-size: 0.9em;
+    letter-spacing: 2.5px;
+    line-height: 1.1em;
+    max-width: 80%;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    width: 80%; }
+
 .artista .page {
   background-color: #303331; }
 
 .paises-lista {
+  background: #303331;
+  box-sizing: border-box;
   padding-top: 5%; }
+  .paises-lista h1 > img {
+    height: 3em; }
   .paises-lista h1, .paises-lista p {
     color: #F7EFE7;
     text-align: center; }
   .paises-lista ul li:first-child {
     margin-left: 0; }
-  .paises-lista .box-pais {
-    border: 1px solid #303331;
-    height: 180px;
-    width: 180px;
-    float: left;
-    margin-left: 3%;
-    margin-top: 40px; }
-    .paises-lista .box-pais img {
-      /* margin-top: -10px; */ }
-    .paises-lista .box-pais p {
-      text-align: center;
-      color: #F7EFE7;
-      margin-top: -22px;
-      font-family: "proxima-nova",sans-serif;
-      letter-spacing: 2.5px; }
+  .paises-lista a:hover {
+    text-decoration: none; }
+  .paises-lista .link-pais {
+    text-decoration: none; }
+    .paises-lista .link-pais:hover, .paises-lista .link-pais:hover * {
+      background: #F7EFE7;
+      color: #555555;
+      color: #555555;
+      cursor: pointer; }
+    .paises-lista .link-pais:hover *:not(.box-categoria) {
+      border-color: #555555; }
+    .paises-lista .link-pais svg, .paises-lista .link-pais svg * {
+      fill: #555555; }
+    .paises-lista .link-pais img {
+      height: 60%;
+      padding-bottom: .5em;
+      width: auto; }
 
 .box-artista-descricao {
   font-size: 9px; }
@@ -1319,55 +1376,6 @@ ul, ol {
       border-color: #555555; }
     .artistas-categorias .link-indicacao svg, .artistas-categorias .link-indicacao svg * {
       fill: #555555; }
-  .artistas-categorias .categoria-grid {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 884px;
-    padding-bottom: 5vh; }
-    .artistas-categorias .categoria-grid > * {
-      display: inline-block;
-      margin: 0;
-      vertical-align: top;
-      border-size: 0;
-      box-sizing: border-box; }
-  .artistas-categorias .box-categoria {
-    align-items: center;
-    border: 1px solid white;
-    height: 220px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: -1px;
-    margin-bottom: -1px;
-    width: 220px; }
-    .artistas-categorias .box-categoria * {
-      margin: 0;
-      padding: 0; }
-    .artistas-categorias .box-categoria svg {
-      box-sizing: border-box;
-      height: 132px;
-      padding-bottom: 10px; }
-    .artistas-categorias .box-categoria p {
-      border-top: 1px solid #fff;
-      border-bottom: 1px solid #fff;
-      padding-top: .5em;
-      padding-bottom: .5em;
-      color: #F7EFE7;
-      font-family: "proxima-nova",sans-serif;
-      font-size: 0.9em;
-      letter-spacing: 2.5px;
-      line-height: 1.1em;
-      max-width: 80%;
-      text-align: center;
-      text-transform: uppercase;
-      padding-top: .5em;
-      padding-bottom: .5em;
-      width: 80%; }
 
 .artistas {
   background: #303331;

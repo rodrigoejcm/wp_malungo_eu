@@ -50,4 +50,24 @@ $( function() {
     	  active: 0
 	});
 });
-  
+
+
+$(document).ready(function () {
+    $('.sub-menu').fadeOut(0);
+    var $hasSubMenu = $('.menu-item-has-children');
+    //removendo link do super-item
+    for(var i=0; i<$hasSubMenu.length; i++){
+        var $item = $($hasSubMenu[i]);
+        var txt = $item.children('a').text();
+        $item.children('a').remove();
+        $item.prepend(txt);
+    }
+
+    $hasSubMenu.on('mouseover', function(ev){
+        ev.stopPropagation();
+        $(this).children('.sub-menu').stop().fadeIn();
+        }).on('mouseout', function(ev){
+            ev.stopPropagation();
+            $(this).children('.sub-menu').stop().fadeOut();
+    });
+});

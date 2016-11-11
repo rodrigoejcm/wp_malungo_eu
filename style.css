@@ -464,8 +464,14 @@ a {
   .main-navigation > .menus {
     font-family: serif;
     text-transform: lowercase; }
-    .main-navigation > .menus a {
+    .main-navigation > .menus li, .main-navigation > .menus a {
+      color: #F7EFE7; }
+    .main-navigation > .menus li:hover, .main-navigation > .menus a:hover {
       color: #FF9B0F; }
+    .main-navigation > .menus li:hover {
+      cursor: default; }
+    .main-navigation > .menus a:hover {
+      cursor: pointer; }
     .main-navigation > .menus .menu > li {
       font-size: 25px; }
     .main-navigation > .menus .sub-menu > li {

@@ -36,7 +36,11 @@
 	& > .menus {
 		font-family: serif;
 		text-transform: lowercase; 
-		a { color: $laranja-malunguices; }
+		li,a { color: $branco-malungo; }
+
+		li:hover, a:hover { color: $laranja-malunguices; }
+		li:hover { cursor: default; }
+		a:hover { cursor: pointer; }
 		.menu > li{
 			font-size: 25px;
 		}

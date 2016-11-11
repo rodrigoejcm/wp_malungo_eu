@@ -450,7 +450,7 @@ a {
     .main-navigation > .explica-menu > li, .main-navigation > .menus > li {
       width: 240px; }
   .main-navigation > .explica-menu {
-    background: #F7EFE7;
+    background: rgba(247, 239, 231, 0.8);
     box-sizing: border-box;
     color: #303331;
     font-size: 10px;

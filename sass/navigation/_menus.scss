@@ -25,7 +25,7 @@
 	}
 	& > .explica-menu {
 		& > li span { @include lines-up-down($cor-texto); }
-		background: $branco-malungo;
+		background: rgba($branco-malungo, 0.8);
 		box-sizing: border-box;
 		color: $cor-texto;
 		font-size: 10px;

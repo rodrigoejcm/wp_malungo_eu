@@ -20,6 +20,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+@import url("https://fonts.googleapis.com/css?family=Maitree:300,400");
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
@@ -447,7 +448,7 @@ a {
     text-align: center;
     width: 90%; }
     .main-navigation > .explica-menu > li, .main-navigation > .menus > li {
-      width: 200px; }
+      width: 240px; }
   .main-navigation > .explica-menu {
     background: #F7EFE7;
     box-sizing: border-box;
@@ -462,7 +463,7 @@ a {
       padding-top: .5em;
       padding-bottom: .5em; }
   .main-navigation > .menus {
-    font-family: serif;
+    font-family: 'Maitree Light', serif;
     text-transform: lowercase; }
     .main-navigation > .menus li, .main-navigation > .menus a {
       color: #F7EFE7; }
@@ -473,7 +474,7 @@ a {
     .main-navigation > .menus a:hover {
       cursor: pointer; }
     .main-navigation > .menus .menu > li {
-      font-size: 25px; }
+      font-size: 28px; }
     .main-navigation > .menus .sub-menu > li {
       color: #F7EFE7;
       font-size: 20px; }
@@ -957,7 +958,7 @@ a.pure-button-primary {
 .malungo-post {
   background: #F7EFE7;
   color: #303331;
-  font-family: serif; }
+  font-family: 'Maitree', serif; }
   .malungo-post article.page {
     font-size: 18px;
     line-height: 1.5em;
@@ -968,13 +969,6 @@ a.pure-button-primary {
     text-align: center;
     font-weight: bold; }
 
-/* html, body {
-	overflow: hidden;
-	line-height: 1.5;
-	font-family: 'Montserrat', 'Arial', sans-serif;
-	color: $texts-and-icons;
-	text-align: center;
-} */
 #mobile-menu-1 {
   display: none; }
 
@@ -1070,7 +1064,7 @@ a.pure-button-primary {
   transition: all 450ms ease; }
 
 .lines-fb {
-  background-color: #303331;
+  background-color: #F7EFE7;
   width: 100%;
   height: 2px;
   margin: 8px 0;
@@ -1078,7 +1072,7 @@ a.pure-button-primary {
 
 .close-hamburguer .lines {
   cursor: pointer;
-  background-color: black !important; }
+  background-color: #F7EFE7 !important; }
 .close-hamburguer .line-top {
   transform: translateY(6px) rotate(45deg); }
 .close-hamburguer .line-mid {

@@ -3,21 +3,13 @@
 $transition-type: ease;
 $overlay-color: black;
 $texts-and-icons: #fff;
-$linhas-close: black;
-$cor-linha-fundobraco: #303331;
+$linhas-close: $branco-malungo;
+$cor-linha-fundobraco: $branco-malungo;
 
 
 
 
 // SET BASIC CONTENT - HTML AND BODY 
-
-/* html, body {
-	overflow: hidden;
-	line-height: 1.5;
-	font-family: 'Montserrat', 'Arial', sans-serif;
-	color: $texts-and-icons;
-	text-align: center;
-} */
 
 #mobile-menu-1 {
    display: none;

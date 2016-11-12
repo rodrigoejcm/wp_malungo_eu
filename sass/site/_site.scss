@@ -9,3 +9,12 @@
 ## Comments
 --------------------------------------------------------------*/
 @import "primary/comments";
+
+#content{
+    min-height: 100vh;
+    margin: 0;
+}
+
+ul {
+    margin-bottom: 0!important;
+}

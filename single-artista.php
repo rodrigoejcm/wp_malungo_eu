@@ -56,9 +56,9 @@ get_header(); ?>
 			    	<div class="arrow-down">
 			    		<!-- triangulo equilatero,
 			    			formando um V com 5 de largura -->
-			    		<svg width="100" height="40">
+			    		<svg width="50" height="20">
 							<polygon
-							points="0 0, 5 0, 50 35, 95 0, 100 0, 50 40">
+							points="0 0, 3 0, 25 17, 47 0, 50 0, 25 20">
 							</polygon>
 						</svg>
 			    	</div>
@@ -92,16 +92,12 @@ get_header(); ?>
 										
 									/*$img = wp_get_attachment_image($image);*/
 									$imagem_infos = wp_prepare_attachment_for_js( $id );
-													
-
 									
 								?>
 
 									<img src=" <?php echo $imagem_infos['url']; ?> " />
 
-								<?php
-									endforeach;
-								?>
+								<?php endforeach; ?>
 							</div>
 
 							

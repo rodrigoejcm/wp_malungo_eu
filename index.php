@@ -35,7 +35,7 @@ get_header(); ?>
 						  			.'/img/home-img01-banner.jpg' ?>"
 						  			alt="Slide 1">
 							  <div class="carousel-caption">
-							  	Crédito slide 1
+							  	foto por <strong>Tete Kitissou</strong>
 							  </div>
 						</div>
 						<div class="item">
@@ -43,7 +43,7 @@ get_header(); ?>
 						  			.'/img/home-img02-banner.jpg' ?>"
 						  			alt="Slide 2">
 							  <div class="carousel-caption">
-							  	Crédito slide 2
+							  	foto por: <strong>Leandro Aragonez</strong>
 							  </div>
 						</div>
 						<div class="item">
@@ -51,7 +51,7 @@ get_header(); ?>
 						  			.'/img/home-img03-banner.jpg' ?>"
 						  			alt="Slide 3">
 							  <div class="carousel-caption">
-							  	Crédito slide 3
+							  	foto por <strong>Tete Kitissou</strong>
 							  </div>
 						</div>
 					</div>

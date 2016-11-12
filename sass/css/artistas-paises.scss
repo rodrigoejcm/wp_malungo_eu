@@ -33,7 +33,7 @@ $tamanho-borda-categoria: 1px;
     //gambi FTW pra não ter bordas duplicadas
     margin-left: -$tamanho-borda-categoria;
     margin-bottom: -$tamanho-borda-categoria;
-    width: auto;
+    width: $tamanho-categoria;
     *{
         margin: 0;
         padding: 0; 

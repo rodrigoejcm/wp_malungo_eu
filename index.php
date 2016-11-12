@@ -44,7 +44,7 @@ get_header(); ?>
 			<div class="content-wrapper">
 				<div class="container">
 				    <div class="rol">
-				    	<div class="col-md-12">
+				    	<div class="col-md-12 header-center">
 			               <h1 class="header-home">ENCONTROS COM ÁFRICA: ENTRE LÁ E CÁ</h1>
 			            </div>
 				    </div>

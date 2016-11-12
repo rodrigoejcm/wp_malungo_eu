@@ -7,10 +7,19 @@
 	width:500px;
 }
 
+.header-center{
+	text-align: center;
+}
+
 .header-home{
+	@include lines-up-down($preto-malungo, 3px);
+	display: inline-block;
+	font-weight: lighter;
 	text-align:center;
 	margin: 60px 0;
-	font-weight: lighter;
+	padding-top: .2em;
+	padding-bottom: .2em;
+	width: auto;
 }
 
 .home-post{

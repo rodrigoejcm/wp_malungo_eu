@@ -131,7 +131,14 @@ a.pure-button-primary {
     top: 0;
     left: 0;
     position: fixed !important;
-    background-image: url("img/background-home_01.jpg");
+    .carousel img{
+        height: 100vh!important;
+        width: 100%;
+        object-fit: cover;
+    }
+    .carousel-caption {
+        left: initial!important;
+    }
 }
 
 .splash {

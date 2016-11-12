@@ -828,8 +828,13 @@ a.pure-button-primary {
   height: 100vh;
   top: 0;
   left: 0;
-  position: fixed !important;
-  background-image: url("img/background-home_01.jpg"); }
+  position: fixed !important; }
+  .splash-container .carousel img {
+    height: 100vh !important;
+    width: 100%;
+    object-fit: cover; }
+  .splash-container .carousel-caption {
+    left: initial !important; }
 
 .splash {
   /* absolute center .splash within .splash-container */

@@ -14,6 +14,7 @@ $(document).ready(function () {
         "index.php#",
         "/index.php#"
     ];
+    banner_file = 'Simbolobannerhome.png';
     isHome = home_paths.indexOf(location)!=-1;
     if(!isHome || $(document).scrollTop() > 10){
         $('.logo-malungo img').addClass('active');

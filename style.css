@@ -834,7 +834,8 @@ a.pure-button-primary {
     width: 100%;
     object-fit: cover; }
   .splash-container .carousel-caption {
-    left: initial !important; }
+    left: initial !important;
+    right: 5% !important; }
 
 .splash {
   /* absolute center .splash within .splash-container */
@@ -1126,8 +1127,8 @@ ul, ol {
   top: 2px; }
 
 .img-yaon {
-  padding-left: 10px;
-  padding-right: 10px; }
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .img-cultura {
   width: 500px; }

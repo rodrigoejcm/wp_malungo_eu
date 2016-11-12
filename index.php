@@ -19,7 +19,7 @@ get_header(); ?>
 		
 			<div class="splash-container">
 				<div id="carousel-home" class="carousel slide"
-					data-interval="3000"
+					data-interval="6000"
 					data-ride="carousel">
 					<!-- Indicators -->
 					<ol class="carousel-indicators">
@@ -35,7 +35,7 @@ get_header(); ?>
 						  			.'/img/home-img01-banner.jpg' ?>"
 						  			alt="Slide 1">
 							  <div class="carousel-caption">
-							  	foto por <strong>Tete Kitissou</strong>
+							  	foto por Tete Kitissou
 							  </div>
 						</div>
 						<div class="item">
@@ -43,7 +43,7 @@ get_header(); ?>
 						  			.'/img/home-img02-banner.jpg' ?>"
 						  			alt="Slide 2">
 							  <div class="carousel-caption">
-							  	foto por: <strong>Leandro Aragonez</strong>
+							  	foto por: Leandro Aragonez
 							  </div>
 						</div>
 						<div class="item">
@@ -51,7 +51,7 @@ get_header(); ?>
 						  			.'/img/home-img03-banner.jpg' ?>"
 						  			alt="Slide 3">
 							  <div class="carousel-caption">
-							  	foto por <strong>Tete Kitissou</strong>
+							  	foto por Tete Kitissou
 							  </div>
 						</div>
 					</div>

@@ -14,7 +14,6 @@ $(document).ready(function () {
         "index.php#",
         "/index.php#"
     ];
-    banner_file = 'Simbolobannerhome.png';
     isHome = home_paths.indexOf(location)!=-1;
     if(!isHome || $(document).scrollTop() > 10){
         $('.logo-malungo img').addClass('active');
@@ -24,10 +23,16 @@ $(document).ready(function () {
             home = $('.cor-scroll');
 
         if(isHome){
-            if(x > 10)
+            if(x > 10){
+                $('.img-yaon').removeClass('active');
+                $('.img-after-yaon').addClass('active');
                 $('.logo-malungo img').addClass('active');
-            else
+            }
+            else{
                 $('.logo-malungo img').removeClass('active');
+                $('.img-yaon').addClass('active');
+                $('.img-after-yaon').removeClass('active');
+            }
         }
 
         if (x > 40) {

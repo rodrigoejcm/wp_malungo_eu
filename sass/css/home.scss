@@ -1,6 +1,25 @@
 .img-yaon{
 	padding-left: 10%;
 	padding-right: 10%;
+	opacity: 0;
+	@include transition(all ease 800ms);
+}
+
+.img-yaon.active, .img-after-yaon.active {
+	@include transition(all ease 800ms);
+	opacity: 1;
+}
+
+.img-after-yaon {
+	@include transition(all ease 800ms);
+	left: 0;
+	right: 0;
+	top: 0;
+	padding-left: 10%;
+	padding-right: 10%;
+	position: absolute;
+	opacity: 0;
+	z-index: 3;
 }
 
 .img-cultura{

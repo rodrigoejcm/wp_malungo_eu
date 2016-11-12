@@ -1,6 +1,11 @@
 .img-yaon{
+	@include transition(all ease 400ms);
+	height: yaon-height();
 	padding-left: 10px;
 	padding-right: 10px;
+	top: 20%;
+	width: yaon-width();
+	z-index: 1;
 }
 
 .img-cultura{

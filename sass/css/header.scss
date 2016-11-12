@@ -4,12 +4,12 @@
 			display: block;
 			margin: 0 auto;
 			opacity: 0;
-			transition: opacity 400ms ease;
-			width: 160px;
+			@include transition(all $transition-type 400ms);
+			width: $logo-malungo-width;
 		}
 		img.active{
 			opacity: 1;
-			transition: opacity 400ms ease;
+			@include transition(all $transition-type 400ms);
 		}
 	}
 	.pure-menu-list{

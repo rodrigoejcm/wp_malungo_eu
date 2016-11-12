@@ -1,0 +1,7 @@
+@function yaon-height($width: 960px){
+    @return (3 * $width) / 16;
+}
+
+@function yaon-width($height: 180px){
+    @return (16 * $height) / 3;
+}

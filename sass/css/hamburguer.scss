@@ -60,7 +60,7 @@ $cor-linha-fundobraco: $branco-malungo;
 		overflow: hidden;
 		position: absolute;
   		top: 0;
-		transition: all 400ms $transition-type;
+		@include transition(all $transition-type 400ms);
  		width: 100%;
 	}
 
@@ -68,7 +68,7 @@ $cor-linha-fundobraco: $branco-malungo;
 
 	&.active {
 		transform: translateX(0%);
-		transition: all 400ms $transition-type;
+		@include transition(all $transition-type 400ms);
 		top:0;
 		opacity: 1;
 		z-index: 3;

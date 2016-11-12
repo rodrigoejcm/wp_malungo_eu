@@ -186,37 +186,17 @@ function remove_my_post_metaboxes() {
 add_action('admin_menu','remove_my_post_metaboxes');
 
 
+function src_img($name) {
+    return get_template_directory_uri()."/img/$name";
+}
 
+function get_svg($name, $content = false) {
+    $file = src_img("$name.svg");
+    return $content? file_get_contents($file) : $file;
+}
 
-function get_imagem_categoria_artista( $categoria ){
-	
-	$imagem = '';
-
-	switch ($categoria) {
-	    case 'artes-visuais' :
-	        $imagem = 'ARTISTAS_simbolos-01.png';
-	    	break;
-	    case 'audiovisual' :
-	    	$imagem = 'ARTISTAS_simbolos-02.png';
-	    	break;
-	    case 'danca' :
-	    	$imagem = 'ARTISTAS_simbolos-03.png';
-	    	break;
-	    case 'literatura' :
-	    	$imagem = 'ARTISTAS_simbolos-04.png';
-	    	break;
-	    case 'moda' :
-	    	$imagem = 'ARTISTAS_simbolos-05.png';
-	    	break;
-	    case 'musica' :
-	    	$imagem = 'ARTISTAS_simbolos-06.png';
-	    	break;
-	    case 'teatro' :	
-	    	$imagem = 'ARTISTAS_simbolos-07.png';
-	    	break;
-	}       
-
-	return $imagem;
+function get_imagem_categoria_artista( $categoria , $content = false){
+    return get_svg("artistas-$categoria-icon", $content);
 }
 
 /**
@@ -243,3 +223,12 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+// temporariamente removendo barra superior para debug
+add_filter('show_admin_bar', '__return_false');
+
+register_nav_menu('sobre', "Itens de menu abaixo de 'sobre'");
+register_nav_menu('panorama-africa',
+                  "Itens de menu abaixo de 'Panorama África'");
+register_nav_menu('blog', "Itens de menu abaixo de 'blog'");
+register_nav_menu('exposicao', "Itens de menu abaixo de 'exposição'");

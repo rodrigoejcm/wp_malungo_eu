@@ -1,0 +1,80 @@
+.malunguices-all{
+    background: $preto-malungo;
+    box-sizing: border-box;
+    padding-top: 60px;
+    font-family: 'Maitree', serif;
+    &,*{
+        color: $branco-malungo;
+    }
+
+    & > h1{
+        margin: auto;
+        width: $page-size;
+    }
+
+    a,a:hover{
+        text-decoration: none;
+    }
+    ul.grid-malunguices{
+        background: $preto-malungo;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        // max-width: $page-size;
+        width: 100%;
+        li{
+            height: 25vh;
+            a {
+                align-items: center;
+                display: flex;
+                height: 100%;
+                width: 100%;
+            }
+            @include transition(all ease 400ms);
+        }
+        li:hover{
+            @include transition(all ease 400ms);
+            a{
+                background: rgba($cinza-indicacao, 0.5);
+                opacity:1!important;
+            }
+            &,*{
+                color: $amarelo-malungo!important;
+            }
+        }
+        li:nth-child(3n){
+            width: 100%;
+        }
+        li:nth-child(6n+1), li:nth-child(6n+5){
+            background: $branco-malungo;
+            &,*{
+                color: $preto-malungo;
+            }
+            width: 30%;
+        }
+        li:nth-child(6n+2), li:nth-child(6n+4){
+            width: 70%;
+        }
+    }
+}
+
+.single-malunguice{
+    height: calc(100vh + 1em);
+    background: $preto-malungo;
+    padding-top: 55px;
+    .site-content{
+        background: $branco-malungo;
+        color: $preto-malungo;
+        font-family: 'Maitree', serif;
+        min-height: calc(100vh - 55px);
+        padding: 1em;
+        h1{
+            font-family: 'Proxima Nova', sans-serif;
+            text-align: center;
+        }
+    }
+    .content-malunguice{
+        margin: 0 auto;
+        width: $page-size;
+    }
+}

@@ -2820,4 +2820,68 @@ ul {
   .epq-pull-quote-default a:hover, .epq-pull-quote-default a:focus {
     text-decoration: none !important; }
 
+.malunguices-all {
+  background: #303331;
+  box-sizing: border-box;
+  padding-top: 60px;
+  font-family: 'Maitree', serif; }
+  .malunguices-all, .malunguices-all * {
+    color: #F7EFE7; }
+  .malunguices-all > h1 {
+    margin: auto;
+    width: 880px; }
+  .malunguices-all a, .malunguices-all a:hover {
+    text-decoration: none; }
+  .malunguices-all ul.grid-malunguices {
+    background: #303331;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%; }
+    .malunguices-all ul.grid-malunguices li {
+      height: 25vh;
+      -webkit-transition: all ease 400ms;
+      -moz-transition: all ease 400ms;
+      transition: all ease 400ms; }
+      .malunguices-all ul.grid-malunguices li a {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        width: 100%; }
+    .malunguices-all ul.grid-malunguices li:hover {
+      -webkit-transition: all ease 400ms;
+      -moz-transition: all ease 400ms;
+      transition: all ease 400ms; }
+      .malunguices-all ul.grid-malunguices li:hover a {
+        background: rgba(85, 85, 85, 0.5);
+        opacity: 1 !important; }
+      .malunguices-all ul.grid-malunguices li:hover, .malunguices-all ul.grid-malunguices li:hover * {
+        color: #FB9D00 !important; }
+    .malunguices-all ul.grid-malunguices li:nth-child(3n) {
+      width: 100%; }
+    .malunguices-all ul.grid-malunguices li:nth-child(6n+1), .malunguices-all ul.grid-malunguices li:nth-child(6n+5) {
+      background: #F7EFE7;
+      width: 30%; }
+      .malunguices-all ul.grid-malunguices li:nth-child(6n+1), .malunguices-all ul.grid-malunguices li:nth-child(6n+1) *, .malunguices-all ul.grid-malunguices li:nth-child(6n+5), .malunguices-all ul.grid-malunguices li:nth-child(6n+5) * {
+        color: #303331; }
+    .malunguices-all ul.grid-malunguices li:nth-child(6n+2), .malunguices-all ul.grid-malunguices li:nth-child(6n+4) {
+      width: 70%; }
+
+.single-malunguice {
+  height: calc(100vh + 1em);
+  background: #303331;
+  padding-top: 55px; }
+  .single-malunguice .site-content {
+    background: #F7EFE7;
+    color: #303331;
+    font-family: 'Maitree', serif;
+    min-height: calc(100vh - 55px);
+    padding: 1em; }
+    .single-malunguice .site-content h1 {
+      font-family: 'Proxima Nova', sans-serif;
+      text-align: center; }
+  .single-malunguice .content-malunguice {
+    margin: 0 auto;
+    width: 880px; }
+
 /*# sourceMappingURL=style.css.map */

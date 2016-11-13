@@ -17,8 +17,7 @@ get_header();
 			<h1><?php echo $post->post_title ?></h1>
 			<?php echo apply_filters('the_content', $post->post_content); ?>
 		</main><!-- #main -->
-	</div>#primary
-
+	</div>
 <?php
 
 get_footer();

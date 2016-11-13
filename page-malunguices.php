@@ -19,7 +19,7 @@ get_header(); ?>
 		<div class="malunguices-all">
 			<h1>
 				<img src="<?=get_template_directory_uri().
-						'/img/titulo-paises.svg'?>"
+						'/img/titulo-mafuademalungos.svg'?>"
 					alt="MALUNGUICES"
 					/>
 			</h1>
@@ -52,6 +52,9 @@ get_header(); ?>
 								</li>
 							<?php
 							}
+						}
+						else{
+							echo "<h2> Nenhum malunguice ainda. </h2>";
 						}
 				?>
 				</ul>

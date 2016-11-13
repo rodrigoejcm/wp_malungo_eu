@@ -2824,7 +2824,8 @@ ul {
   background: #303331;
   box-sizing: border-box;
   padding-top: 60px;
-  font-family: 'Maitree', serif; }
+  font-family: 'Maitree', serif;
+  min-height: 100vh; }
   .malunguices-all, .malunguices-all * {
     color: #F7EFE7; }
   .malunguices-all > h1 {

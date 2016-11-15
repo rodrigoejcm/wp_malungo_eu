@@ -453,6 +453,7 @@ a {
     background: rgba(247, 239, 231, 0.8);
     box-sizing: border-box;
     color: #303331;
+    font-family: "Proxima Nova", sans-serif !important;
     font-size: 10px;
     font-weight: bold;
     padding: 10px;
@@ -719,7 +720,7 @@ object {
 /*--------------------------------------------------------------
 # Outros
 --------------------------------------------------------------*/
-* {
+html, body {
   font-family: "Maitree", serif !important; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2899,8 +2900,9 @@ ul {
   background: #303331;
   box-sizing: border-box;
   padding-top: 60px;
-  font-family: "Maitree", serif !important;
   min-height: 100vh; }
+  .malunguices-all h2 {
+    font-family: "Maitree", serif !important; }
   .malunguices-all, .malunguices-all * {
     color: #F7EFE7; }
   .malunguices-all > h1 {

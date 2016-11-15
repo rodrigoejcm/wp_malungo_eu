@@ -78,60 +78,57 @@ get_header(); ?>
 
 
 			<div class="content-wrapper">
-				<div class="container">
-				    <div class="rol">
-				    	<div class="col-md-12 header-center">
-			               <h1 class="header-home">ENCONTROS COM ÁFRICA: ENTRE LÁ E CÁ</h1>
-			            </div>
-				    </div>
-				    <div class="row">
-				    	<div class="home-post">
-					    	<div class="col-md-8 col-sm-12">
-				                <div class="imagem-h-400">
-					                <img src="<?=get_template_directory_uri().'/img/DESTAQUE_01.jpg' ?>" >
-									</img>
-								</div>
-				            </div>
-				            <div class="col-md-4 col-sm-12 col-h-400">
-				            	<a href="" class="hover-artesvisuais">
-				            		<h3 class="categoria cor-artesvisuais">Artes Visuais</h3>
-				               		<h2 class="titulo">Conheça o Land Art com o coletivo Site Specific.</h2>
-				               		<p class="resumo">O coletivo Site_Specific teve início em 2011 como um esforço colaborativo dos sul-africanos Strijdom van der Merwe, Anni Snyman, PC van Rensburg, Heather Greig, Erica Lüttich, entre outros artistas, amigos e simpatizantes. Lançado durante a “International Land Art Biennale” na baía de Plettenberg na África do Sul, o coletivo, devotado...</p>
-				            	</a>
-					        </div>
-			            </div>
-				    </div>
-				    <br>
-				    <div class="row">
-				    	<div class="col-md-6">
-
-				    		<div class="home-post">
-					    		<div class="imagem-h-300">
-						    		<img src="<?=get_template_directory_uri().'/img/DESTAQUE_02.jpg' ?>" >
-									</img>
-								</div>
-								<a href="" class="hover-danca">
-					            	<h3 class="categoria cor-danca">Dança</h3>
-					               	<h2 class="titulo">Tradição e contemporâneo juntos!.</h2>
-					               	<p class="resumo">O grupo de dança contemporânea cabo-verdiano Raiz di Polon foi fundado em 1991, pelos coreógrafos José Emanuel Brandão (Mano Preto) e Zezinho Semedo. Sua formação é composta ainda pelo diretor musical e compositor Mário Lúcio, pelos bailarinos Carlos Oliveira, Bety Fernandes, Luís da Rosa, Rosy Timas, Djemilson Barreto, e pelo produtor executivo Jeff Hessney...</p>
-				               </a>
-				            </div>
-			            </div>
-			            <div class="col-md-6">
-			               	<div class="home-post">
-			               	<div class="imagem-h-300">
-				               	<img src="<?=get_template_directory_uri().'/img/DESTAQUE_03.png' ?>" >
-								</img>
-							</div>
-								<a href="" class="hover-musica">
-					            	<h3 class="categoria cor-musica">Música</h3>
-					               	<h2 class="titulo"> De Moçambique aos festivais de São Paulo.</h2>
-					               	<p class="resumo">A cantora Lenna Bahule nasceu em 1989, em Maputo, e hoje reside no Brasil, na cidade de São Paulo. Sua iniciação musical teve início aos cinco anos, quando ingressou na Escola Nacional de Música (ENM), estudando piano. A carreira como vocalista solo se deu a partir de 2006, quando Lenna passa a compor, participar de festivais, fazer parcerias e experimentações com artistas moçambicanos e de outros países...</p>
-				               </a>
-				            </div>
-			            </div>
-				    </div>
-				</div>
+		    	<div class="col-md-12 header-center">
+	               <h1 class="header-home">ENCONTROS COM ÁFRICA: ENTRE LÁ E CÁ</h1>
+	            </div>
+				<ul class="home-noticias">
+	            <?php
+	            	$noticias = new WP_Query(array(
+							'post_type' => 'noticia',
+							'posts_per_page' => 3,
+							'paged' => get_query_var( 'paged' ),
+						));
+	            	if ( $noticias->have_posts() ) : while ( $noticias->have_posts() ) : $noticias->the_post();
+							$thumb_id = get_post_thumbnail_id();
+							$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+							$thumb_url = $thumb_url_array[0];
+	            ?>
+					<li class="home-post">
+	               		<?php if(has_post_thumbnail($noticia)) { ?>
+	               				<img src="<?=$thumb_url ?>" />
+						<?php
+							}
+							$categoria = get_the_category()[0];
+							$cat_string = preg_replace('/-/', "", $categoria->slug);
+						?>
+						<a href="<?= get_permalink() ?>"
+							class="link-noticia hover-<?=$cat_string?>">
+			            	<h3 class="categoria cor-<?=$cat_string?>">
+			            		<?= $categoria->name ?>
+			            	</h3>
+			               	<h2 class="titulo"><?php the_title(); ?></h2>
+			               	<p class="resumo">
+			               		<?php $post_text = wp_strip_all_tags(get_the_content()); ?>
+			               		<?= substr($post_text, 0, 420) ?>
+			               		<span class="reticencias
+			               					reticencias-<?=$cat_string?>">
+			               		 	<?= (strlen($post_text)>=420? '...':'')?>
+			               		</span>
+			               	</p>
+		               	</a>
+					</li>
+		               	<?php endwhile; else : ?>
+							<h2> Nenhuma notícia ainda. Volte mais tarde. </h2>
+						<?php endif; ?>
+	            </ul>
+	            <ul class="pagination">
+					<li><?php
+						previous_posts_link( '<<' );
+					?></li>
+					<li><?php
+						next_posts_link( '>>', $noticias->max_num_pages );
+					?></li>
+				</ul>
 			</div>
 
 		</main><!-- #main -->

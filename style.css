@@ -719,6 +719,12 @@ object {
 /*--------------------------------------------------------------
 # Outros
 --------------------------------------------------------------*/
+* {
+  font-family: "Maitree", serif !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Proxima Nova", sans-serif !important; }
+
 ul.pagination {
   display: block;
   font-weight: bold;
@@ -983,7 +989,7 @@ a.pure-button-primary {
 .malungo-post {
   background: #F7EFE7;
   color: #303331;
-  font-family: 'Maitree', serif;
+  font-family: "Maitree", serif !important;
   font-weight: 300; }
   .malungo-post .mafua-content {
     font-size: 18px;
@@ -1138,8 +1144,8 @@ ul, ol {
   top: 2px; }
 
 .img-logo-grande {
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 30%;
+  padding-right: 30%;
   opacity: 0;
   -webkit-transition: all ease 800ms;
   -moz-transition: all ease 800ms;
@@ -1160,8 +1166,8 @@ ul, ol {
   left: 0;
   right: 0;
   top: 0;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 30%;
+  padding-right: 30%;
   position: absolute;
   opacity: 0;
   z-index: 3; }
@@ -1189,40 +1195,77 @@ ul, ol {
   padding-bottom: .2em;
   width: auto; }
 
-.home-post .imagem-h-300 {
-  height: 300px;
-  overflow: hidden; }
-  .home-post .imagem-h-300 img {
-    width: 100%;
-    margin: auto; }
-.home-post .imagem-h-400 {
-  overflow: hidden;
-  height: 400px; }
-  .home-post .imagem-h-400 img {
-    width: 100%;
-    margin: auto; }
-.home-post .col-h-400 {
-  box-sizing: border-box;
-  max-height: 400px;
-  text-overflow: ellipsis; }
-.home-post a.hover-artesvisuais:hover, .home-post a.hover-artesvisuais:hover *:not(.categoria) {
-  color: #40c1fb !important;
-  text-decoration: none; }
-.home-post a.hover-audiovisual:hover, .home-post a.hover-audiovisual:hover *:not(.categoria) {
-  color: #ff362d !important;
-  text-decoration: none; }
-.home-post a.hover-danca:hover, .home-post a.hover-danca:hover *:not(.categoria) {
-  color: #18cc58 !important;
-  text-decoration: none; }
-.home-post a.hover-literatura:hover, .home-post a.hover-literatura:hover *:not(.categoria) {
-  color: #c6006c !important;
-  text-decoration: none; }
-.home-post a.hover-teatro:hover, .home-post a.hover-teatro:hover *:not(.categoria) {
-  color: #0083fc !important;
-  text-decoration: none; }
-.home-post a.hover-musica:hover, .home-post a.hover-musica:hover *:not(.categoria) {
-  color: #FF9B0F !important;
-  text-decoration: none; }
+ul.home-noticias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%; }
+  ul.home-noticias li {
+    padding-bottom: .5em;
+    padding-top: .5em;
+    padding-right: 1em;
+    width: 50%; }
+    ul.home-noticias li .link-noticia {
+      box-sizing: border-box;
+      display: block;
+      padding: .5em; }
+    ul.home-noticias li img {
+      display: block;
+      height: 18em;
+      object-fit: cover;
+      width: 100%; }
+  ul.home-noticias li:first-child {
+    display: inline-flex;
+    max-height: 19em;
+    overflow: hidden;
+    width: 100%; }
+    ul.home-noticias li:first-child img {
+      display: inline-block;
+      object-fit: cover;
+      width: 65%; }
+    ul.home-noticias li:first-child .link-noticia {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 0;
+      padding-top: 0; }
+      ul.home-noticias li:first-child .link-noticia h3 {
+        display: inline-table;
+        margin: 0; }
+      ul.home-noticias li:first-child .link-noticia p {
+        margin: 0; }
+
+.home-post a.hover-artesvisuais:hover {
+  cursor: pointer; }
+  .home-post a.hover-artesvisuais:hover, .home-post a.hover-artesvisuais:hover *:not(.categoria) {
+    color: #40c1fb !important;
+    text-decoration: none; }
+.home-post a.hover-audiovisual:hover {
+  cursor: pointer; }
+  .home-post a.hover-audiovisual:hover, .home-post a.hover-audiovisual:hover *:not(.categoria) {
+    color: #ff362d !important;
+    text-decoration: none; }
+.home-post a.hover-danca:hover {
+  cursor: pointer; }
+  .home-post a.hover-danca:hover, .home-post a.hover-danca:hover *:not(.categoria) {
+    color: #18cc58 !important;
+    text-decoration: none; }
+.home-post a.hover-literatura:hover {
+  cursor: pointer; }
+  .home-post a.hover-literatura:hover, .home-post a.hover-literatura:hover *:not(.categoria) {
+    color: #c6006c !important;
+    text-decoration: none; }
+.home-post a.hover-teatro:hover {
+  cursor: pointer; }
+  .home-post a.hover-teatro:hover, .home-post a.hover-teatro:hover *:not(.categoria) {
+    color: #0083fc !important;
+    text-decoration: none; }
+.home-post a.hover-musica:hover {
+  cursor: pointer; }
+  .home-post a.hover-musica:hover, .home-post a.hover-musica:hover *:not(.categoria) {
+    color: #FF9B0F !important;
+    text-decoration: none; }
 .home-post .categoria {
   font-weight: bold;
   font-size: 15px;
@@ -1247,6 +1290,22 @@ ul, ol {
 .home-post .cor-musica {
   background-color: #FF9B0F;
   color: #F7EFE7; }
+.home-post .reticencias {
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 0; }
+.home-post .reticencias-artesvisuais {
+  color: #40c1fb; }
+.home-post .reticencias-audiovisual {
+  color: #ff362d; }
+.home-post .reticencias-danca {
+  color: #18cc58; }
+.home-post .reticencias-literatura {
+  color: #c6006c; }
+.home-post .reticencias-teatro {
+  color: #0083fc; }
+.home-post .reticencias-musica {
+  color: #FF9B0F; }
 .home-post .titulo {
   margin-top: 10px;
   text-transform: uppercase;
@@ -1297,7 +1356,7 @@ ul, ol {
     padding-top: .5em;
     padding-bottom: .5em;
     color: #F7EFE7;
-    font-family: "proxima-nova",sans-serif;
+    font-family: "Proxima Nova", sans-serif !important;
     font-size: 0.9em;
     letter-spacing: 2.5px;
     line-height: 1.1em;
@@ -1755,7 +1814,7 @@ ul.menu-categorias {
 /* This is the main heading that appears on the blue section */
 .splash-head-artista {
   font-size: 7vw;
-  font-family: "proxima-nova",sans-serif;
+  font-family: "proxima-nova", sans-serif !important;
   font-weight: lighter;
   color: white;
   margin-top: 5px;
@@ -1855,7 +1914,7 @@ ul.menu-categorias {
 /* This is the main heading that appears on the blue section */
 .splash-head-pais {
   font-size: 6vw;
-  font-family: "proxima-nova",sans-serif;
+  font-family: "proxima-nova",sans-serif !important;
   font-weight: lighter;
   color: white;
   /*  border: 3px solid white; */
@@ -2818,7 +2877,7 @@ ul {
 
 .alignleft {
   margin: 0 15px 7px inherit;
-  font-family: 'proxima nova';
+  font-family: 'proxima nova', sans-serif !important;
   font-style: italic; }
   .alignleft .wp-caption-text {
     margin-bottom: 2px !important; }
@@ -2840,7 +2899,7 @@ ul {
   background: #303331;
   box-sizing: border-box;
   padding-top: 60px;
-  font-family: 'Maitree', serif;
+  font-family: "Maitree", serif !important;
   min-height: 100vh; }
   .malunguices-all, .malunguices-all * {
     color: #F7EFE7; }
@@ -2884,20 +2943,20 @@ ul {
     .malunguices-all ul.grid-malunguices li:nth-child(6n+2), .malunguices-all ul.grid-malunguices li:nth-child(6n+4) {
       width: 70%; }
 
-.single-malunguice {
+.single-malunguice, .single-noticia {
   height: calc(100vh + 1em);
   background: #303331;
   padding-top: 55px; }
-  .single-malunguice .site-content {
+  .single-malunguice .site-content, .single-noticia .site-content {
     background: #F7EFE7;
     color: #303331;
-    font-family: 'Maitree', serif;
+    font-family: "Maitree", serif !important;
     min-height: calc(100vh - 55px);
     padding: 1em; }
-    .single-malunguice .site-content h1 {
-      font-family: 'Proxima Nova', sans-serif;
+    .single-malunguice .site-content h1, .single-noticia .site-content h1 {
+      font-family: "Proxima Nova", sans-serif !important;
       text-align: center; }
-  .single-malunguice .content-malunguice {
+  .single-malunguice .content-malunguice, .single-noticia .content-malunguice {
     margin: 0 auto;
     width: 880px; }
 

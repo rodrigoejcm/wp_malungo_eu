@@ -111,6 +111,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Outros
 --------------------------------------------------------------*/
+* {
+    font-family: 'Maitree', serif!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Proxima Nova', sans-serif!important;
+}
+
 @import "css/pagination";
 @import "css/malungo";
 @import "css/mafua";
@@ -123,5 +130,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "css/artista-post" ;
 @import "css/pullquote" ;
 @import "css/malunguices" ;
-
-

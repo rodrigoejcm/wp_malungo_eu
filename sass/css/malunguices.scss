@@ -2,7 +2,7 @@
     background: $preto-malungo;
     box-sizing: border-box;
     padding-top: 60px;
-    font-family: 'Maitree', serif;
+    font-family: 'Maitree', serif!important;
     min-height: 100vh;
     &,*{
         color: $branco-malungo;
@@ -59,18 +59,18 @@
     }
 }
 
-.single-malunguice{
+.single-malunguice, .single-noticia{
     height: calc(100vh + 1em);
     background: $preto-malungo;
     padding-top: 55px;
     .site-content{
         background: $branco-malungo;
         color: $preto-malungo;
-        font-family: 'Maitree', serif;
+        font-family: 'Maitree', serif!important;
         min-height: calc(100vh - 55px);
         padding: 1em;
         h1{
-            font-family: 'Proxima Nova', sans-serif;
+            font-family: 'Proxima Nova', sans-serif!important;
             text-align: center;
         }
     }

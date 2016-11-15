@@ -1,4 +1,4 @@
-$margin-image-yaon: 20%;
+$margin-image-yaon: 30%;
 .img-logo-grande{
 	padding-left: $margin-image-yaon;
 	padding-right: $margin-image-yaon;
@@ -46,33 +46,60 @@ $margin-image-yaon: 20%;
 	width: auto;
 }
 
+ul.home-noticias {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 75%;
+	li{
+		padding-bottom: .5em;
+		padding-top: .5em;
+		padding-right: 1em;
+		width: 50%;
+		.link-noticia {
+			box-sizing: border-box;
+			display: block;
+			padding: .5em;
+		}
+		img{
+			display: block;
+			height: 18em;
+			object-fit: cover;
+			width: 100%;
+		}
+	}
+	li:first-child{
+		display: inline-flex;
+		max-height: 19em;
+		img{
+			display: inline-block;
+			object-fit: cover;
+			width: 65%;
+		}
+		.link-noticia{
+			display: flex;
+			flex-direction: column;
+    		justify-content: space-between;
+    		padding-bottom: 0;
+    		padding-top: 0;
+    		h3{
+    			display: inline-table;
+    			margin:0;
+    		}
+    		p{
+    			margin:0;
+    		}
+		}
+		overflow: hidden;
+		width: 100%;
+	}
+}
+
 .home-post{
-	.imagem-h-300{
-		height: 300px;
-		overflow: hidden;
-		img{
-			width: 100%;
-			margin: auto;
-		}
-	}
-
-	.imagem-h-400{
-		overflow: hidden;
-		height: 400px;
-		img{
-			width: 100%;
-			margin: auto;
-		}
-	}
-
-	.col-h-400 {
-		box-sizing: border-box;
-		max-height: 400px;
-		text-overflow: ellipsis; //não funfou ainda :(
-	}
-
 	@mixin hover-texto($color){
 		&:hover{
+			cursor: pointer;
 			&, & *:not(.categoria) {
 				color: $color !important;
 				text-decoration: none;
@@ -106,6 +133,19 @@ $margin-image-yaon: 20%;
 	.cor-literatura		{ @include titulo-post($rosa-literatura);}
 	.cor-teatro			{ @include titulo-post($azul-teatro);}
 	.cor-musica			{ @include titulo-post($laranja-musica);}
+
+	.reticencias {
+		font-weight: bold;
+		font-size: 1.5em;
+		line-height: 0;
+	}
+
+	.reticencias-artesvisuais	{ color: $azul-artesvisuais; }
+	.reticencias-audiovisual	{ color: $laranja-audiovisual; }
+	.reticencias-danca			{ color: $verde-danca; }
+	.reticencias-literatura		{ color: $rosa-literatura; }
+	.reticencias-teatro			{ color: $azul-teatro; }
+	.reticencias-musica			{ color: $laranja-musica; }
 
 	.titulo {
 		margin-top: 10px;

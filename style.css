@@ -1127,34 +1127,40 @@ ul, ol {
   right: 0px;
   top: 2px; }
 
-.img-yaon {
-  padding-left: 10%;
-  padding-right: 10%;
+.img-logo-grande {
+  padding-left: 20%;
+  padding-right: 20%;
   opacity: 0;
   -webkit-transition: all ease 800ms;
   -moz-transition: all ease 800ms;
   transition: all ease 800ms; }
 
-.img-yaon.active, .img-after-yaon.active {
+.img-yaon.active,
+.img-logo-grande.active,
+.img-cultura.active {
   -webkit-transition: all ease 800ms;
   -moz-transition: all ease 800ms;
   transition: all ease 800ms;
   opacity: 1; }
 
-.img-after-yaon {
+.img-yaon {
   -webkit-transition: all ease 800ms;
   -moz-transition: all ease 800ms;
   transition: all ease 800ms;
   left: 0;
   right: 0;
   top: 0;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
   position: absolute;
   opacity: 0;
   z-index: 3; }
 
 .img-cultura {
+  -webkit-transition: all ease 800ms;
+  -moz-transition: all ease 800ms;
+  transition: all ease 800ms;
+  opacity: 0;
   width: 500px; }
 
 .header-center {

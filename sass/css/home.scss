@@ -1,28 +1,33 @@
-.img-yaon{
-	padding-left: 10%;
-	padding-right: 10%;
+$margin-image-yaon: 20%;
+.img-logo-grande{
+	padding-left: $margin-image-yaon;
+	padding-right: $margin-image-yaon;
 	opacity: 0;
 	@include transition(all ease 800ms);
 }
 
-.img-yaon.active, .img-after-yaon.active {
+.img-yaon.active,
+.img-logo-grande.active,
+.img-cultura.active {
 	@include transition(all ease 800ms);
 	opacity: 1;
 }
 
-.img-after-yaon {
+.img-yaon {
 	@include transition(all ease 800ms);
 	left: 0;
 	right: 0;
 	top: 0;
-	padding-left: 10%;
-	padding-right: 10%;
+	padding-left: $margin-image-yaon;
+	padding-right: $margin-image-yaon;
 	position: absolute;
 	opacity: 0;
 	z-index: 3;
 }
 
 .img-cultura{
+	@include transition(all ease 800ms);
+	opacity: 0;
 	width:500px;
 }
 

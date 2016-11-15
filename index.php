@@ -57,13 +57,10 @@ get_header(); ?>
 					</div>
 				</div>
 			    <div class="splash">
-			    	<img class="img-yaon active" src="<?=get_template_directory_uri().'/img/Simbolobannerhome.png' ?>" >
+			    	<img class="img-yaon" src="<?=get_template_directory_uri().'/img/Simbolobannerhome.png' ?>" />
 					</img>
-					<img class="img-after-yaon" src="<?=get_template_directory_uri().'/img/malungo-logo.svg' ?>">
-					<br><br><br><br><br><br>
-			    	<img class="img-cultura" src="<?=get_template_directory_uri().'/img/Culturaemmovimento.png' ?>" >
-					</img>
-
+					<img class="img-logo-grande active" src="<?=get_template_directory_uri().'/img/malungo-logo.svg' ?>"/>
+					<img class="img-cultura" src="<?=get_template_directory_uri().'/img/Culturaemmovimento.png' ?>" />
 					<br><br>
 			    	<!-- <div class="splash-head">VEM BRINCÁ MAIS EU MANO MEU!</div> -->
 			    	<div class="splash-subhead" style="font-weight:bold;">VEM BRINCÁ MAIS EU MANO MEU!</div>

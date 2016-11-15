@@ -24,14 +24,14 @@ $(document).ready(function () {
 
         if(isHome){
             if(x > 10){
-                $('.img-yaon').removeClass('active');
-                $('.img-after-yaon').addClass('active');
+                $('.img-logo-grande').removeClass('active');
+                $('.img-yaon, .img-cultura').addClass('active');
                 $('.logo-malungo img').addClass('active');
             }
             else{
                 $('.logo-malungo img').removeClass('active');
-                $('.img-yaon').addClass('active');
-                $('.img-after-yaon').removeClass('active');
+                $('.img-logo-grande').addClass('active');
+                $('.img-yaon, .img-cultura').removeClass('active');
             }
         }
 

@@ -2945,20 +2945,20 @@ ul {
     .malunguices-all ul.grid-malunguices li:nth-child(6n+2), .malunguices-all ul.grid-malunguices li:nth-child(6n+4) {
       width: 70%; }
 
-.single-malunguice, .single-noticia {
+.single-malunguice, .single-noticia, .single-zumzum {
   height: calc(100vh + 1em);
   background: #303331;
   padding-top: 55px; }
-  .single-malunguice .site-content, .single-noticia .site-content {
+  .single-malunguice .site-content, .single-noticia .site-content, .single-zumzum .site-content {
     background: #F7EFE7;
     color: #303331;
     font-family: "Maitree", serif !important;
     min-height: calc(100vh - 55px);
     padding: 1em; }
-    .single-malunguice .site-content h1, .single-noticia .site-content h1 {
+    .single-malunguice .site-content h1, .single-noticia .site-content h1, .single-zumzum .site-content h1 {
       font-family: "Proxima Nova", sans-serif !important;
       text-align: center; }
-  .single-malunguice .content-malunguice, .single-noticia .content-malunguice {
+  .single-malunguice .content-malunguice, .single-noticia .content-malunguice, .single-zumzum .content-malunguice {
     margin: 0 auto;
     width: 880px; }
 

@@ -26,37 +26,40 @@ get_header(); ?>
 				<ul class='grid-malunguices'>
 					<?php
 
-						$posts = get_posts(array(
+						$posts = new WP_Query(array(
 							'post_type' => 'malunguice',
+							'posts_per_page' => 12,
+							'paged' => get_query_var( 'paged' ),
 						));
 
 
-						if($posts)
-						{
-							foreach($posts as $post)
-							{
-								$thumb_id = get_post_thumbnail_id();
-								$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-								$thumb_url = $thumb_url_array[0];
-							?>
-								<li
-									<?php
-											if(has_post_thumbnail($post)) {
-											?>
-												style="background: url('<?= $thumb_url ?>');"
-										<?php }?>
-								> 
-									<a  href="<?=get_permalink();?>">
-											<h2><?php the_title();?></h2>
-									</a>
-								</li>
-							<?php
-							}
-						}
-						else{
-							echo "<h2> Nenhum malunguice ainda. </h2>";
-						}
-				?>
+						if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post();
+							$thumb_id = get_post_thumbnail_id();
+							$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
+							$thumb_url = $thumb_url_array[0];
+						?>
+							<li
+								<?php
+										if(has_post_thumbnail($post)) {
+										?>
+											style="background: url('<?= $thumb_url ?>');"
+									<?php }?>
+							> 
+								<a  href="<?=get_permalink();?>">
+										<h2><?php the_title();?></h2>
+								</a>
+							</li>
+						<?php endwhile; else : ?>
+							<h2> Nenhum malunguice ainda. </h2>
+						<?php endif; ?>
+				</ul>
+				<ul class="pagination">
+					<li><?php
+						previous_posts_link( '<<' );
+					?></li>
+					<li><?php
+						next_posts_link( '>>', $posts->max_num_pages );
+					?></li>
 				</ul>
 			</div>
 		</main><!-- #main -->

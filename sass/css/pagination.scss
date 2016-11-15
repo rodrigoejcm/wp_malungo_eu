@@ -1,0 +1,10 @@
+ul.pagination {
+    display: block;
+    font-weight: bold;
+    margin: 0 auto;
+    text-align: center;
+    li {
+        display: inline-block;
+    }
+    a { color: $preto-malungo!important; }
+}

@@ -65,7 +65,7 @@ get_header(); ?>
 			    </div>
 			</div>
 
-			<div class="content-wrapper-artista">
+			<div class="content-wrapper-artista content-artista content-artista-<?= $cat_string ?>">
 				<div class="container">
 					<br>
 					<br>

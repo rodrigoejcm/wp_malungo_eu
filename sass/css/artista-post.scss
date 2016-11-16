@@ -33,3 +33,51 @@
 .wp-caption {
     margin-bottom: 0;
 }
+
+.content-artista a {
+    &, &:hover {
+        text-decoration: none;
+    }
+}
+
+.content-artista-artesvisuais a {
+    &, * {
+        color: $azul-artesvisuais;
+    }
+}
+.content-artista-audiovisual a  {
+    &, * {
+        color: $laranja-audiovisual;
+    }
+}
+.content-artista-danca a        {
+    &, * {
+        color: $verde-danca;
+    }
+}
+.content-artista-literatura a   {
+    &, * {
+        color: $rosa-literatura;
+    }
+}
+.content-artista-moda a         {
+    &, * {
+        color: $roxo-sociedade;
+    }
+}
+.content-artista-musica a       {
+    &, * {
+        color: $laranja-malunguices;
+    }
+}
+.content-artista-teatro a       {
+    &, * {
+        color: $azul-teatro;
+    }
+}
+.content-artista-indicacao a    {
+   &, * {
+    
+    color: $cinza-indicacao;
+    }
+}

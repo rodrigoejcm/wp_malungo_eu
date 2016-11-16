@@ -2887,6 +2887,33 @@ ul {
 .wp-caption {
   margin-bottom: 0; }
 
+.content-artista a, .content-artista a:hover {
+  text-decoration: none; }
+
+.content-artista-artesvisuais a, .content-artista-artesvisuais a * {
+  color: #40c1fb; }
+
+.content-artista-audiovisual a, .content-artista-audiovisual a * {
+  color: #ff362d; }
+
+.content-artista-danca a, .content-artista-danca a * {
+  color: #18cc58; }
+
+.content-artista-literatura a, .content-artista-literatura a * {
+  color: #c6006c; }
+
+.content-artista-moda a, .content-artista-moda a * {
+  color: #593F7E; }
+
+.content-artista-musica a, .content-artista-musica a * {
+  color: #FF9B0F; }
+
+.content-artista-teatro a, .content-artista-teatro a * {
+  color: #0083fc; }
+
+.content-artista-indicacao a, .content-artista-indicacao a * {
+  color: #555555; }
+
 .epq-pull-quote-default {
   border-top: 2px solid white;
   /* border-bottom: 2px solid white; */

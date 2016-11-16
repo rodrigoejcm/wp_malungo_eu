@@ -81,3 +81,59 @@
     color: $cinza-indicacao;
     }
 }
+
+ul.social{
+    border-bottom: 1px solid $branco-malungo;
+    margin-bottom: 1em!important;
+    padding-bottom: 1em;
+    li{
+        padding-right: .5em;
+        display: inline-block;
+    }
+    svg {
+        height: 2em;
+    }
+    a:hover{
+        cursor: pointer;
+    }
+    .link-artesvisuais:hover {
+        svg *{
+            fill: $azul-artesvisuais;
+        }
+    }
+    .link-audiovisual:hover {
+        svg *{
+            fill: $laranja-audiovisual;
+        }
+    }
+    .link-danca:hover {
+        svg *{
+            fill: $verde-danca;
+        }
+    }
+    .link-literatura:hover {
+        svg *{
+            fill: $rosa-literatura;
+        }
+    }
+    .link-moda:hover {
+        svg *{
+            fill: $roxo-sociedade;
+        }
+    }
+    .link-musica:hover {
+        svg *{
+            fill: $laranja-malunguices;
+        }
+    }
+    .link-teatro:hover {
+        svg *{
+            fill: $azul-teatro;
+        }
+    }
+    .link-indicacao:hover {
+        svg *{
+            fill: $cinza-indicacao;
+        }
+    }
+}

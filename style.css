@@ -2914,6 +2914,34 @@ ul {
 .content-artista-indicacao a, .content-artista-indicacao a * {
   color: #555555; }
 
+ul.social {
+  border-bottom: 1px solid #F7EFE7;
+  margin-bottom: 1em !important;
+  padding-bottom: 1em; }
+  ul.social li {
+    padding-right: .5em;
+    display: inline-block; }
+  ul.social svg {
+    height: 2em; }
+  ul.social a:hover {
+    cursor: pointer; }
+  ul.social .link-artesvisuais:hover svg * {
+    fill: #40c1fb; }
+  ul.social .link-audiovisual:hover svg * {
+    fill: #ff362d; }
+  ul.social .link-danca:hover svg * {
+    fill: #18cc58; }
+  ul.social .link-literatura:hover svg * {
+    fill: #c6006c; }
+  ul.social .link-moda:hover svg * {
+    fill: #593F7E; }
+  ul.social .link-musica:hover svg * {
+    fill: #FF9B0F; }
+  ul.social .link-teatro:hover svg * {
+    fill: #0083fc; }
+  ul.social .link-indicacao:hover svg * {
+    fill: #555555; }
+
 .epq-pull-quote-default {
   border-top: 2px solid white;
   /* border-bottom: 2px solid white; */

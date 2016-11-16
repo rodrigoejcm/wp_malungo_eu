@@ -199,6 +199,10 @@ function get_imagem_categoria_artista( $categoria , $content = false){
     return get_svg("artistas-$categoria-icon", $content);
 }
 
+function get_icone_social_artista($rede, $content = false){
+    return get_svg("exploremais-$rede-icon", $content);
+}
+
 /**
  * Implement the Custom Header feature.
  */

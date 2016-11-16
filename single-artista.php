@@ -76,9 +76,35 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<?php 
-					$galeria = get_field('galeria', $post->ID); 
-					
+					<ul class="social">
+						<?php
+						$redes = array(
+					               "blog",
+					               "facebook",
+					               "flickr",
+					               "instagram",
+					               "site",
+					               "soundcloud",
+					               "twitter",
+					               "vimeo",
+					               "youtube",
+				                );
+						foreach($redes as $name){
+							$rede = get_field($name, $post->ID);
+							if($rede){
+								?>
+								<li>
+									<a href="<?=$rede?>" class="link-<?= $cat_string?>">
+										<?=get_icone_social_artista($name, true)?>
+									</a>
+								</li>
+								<?php
+							}
+						}
+						?>
+					</ul>
+					<?php
+					$galeria = get_field('galeria', $post->ID);
 					if($galeria){
 					?>
 					<div class="row">

@@ -57,7 +57,7 @@ get_header(); ?>
 								</a>
 							</li>
 						<?php } endwhile; else : ?>
-							<h2> Nenhum malunguice ainda. </h2>
+							<h2> Nenhum post ainda. </h2>
 						<?php endif; ?>
 				</ul>
 				<ul class="pagination">

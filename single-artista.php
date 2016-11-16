@@ -76,8 +76,8 @@ get_header(); ?>
 							</div>
 						</div>
 					</div>
-					<ul class="social">
-						<?php
+					<?php
+						$has_rede = false;
 						$redes = array(
 					               "blog",
 					               "facebook",
@@ -89,6 +89,21 @@ get_header(); ?>
 					               "vimeo",
 					               "youtube",
 				                );
+						foreach($redes as $name){
+							$rede = get_field($name, $post->ID);
+							if($rede){
+								$has_rede = true;
+								break;
+							}
+						}
+						if($has_rede){
+							?>
+							<h2 class="explore-mais">Explore mais</h2>
+							<?php
+						}
+					?>
+					<ul class="social col-md-8 col-md-offset-2">
+						<?php
 						foreach($redes as $name){
 							$rede = get_field($name, $post->ID);
 							if($rede){

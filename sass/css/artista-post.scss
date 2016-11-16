@@ -82,6 +82,16 @@
     }
 }
 
+.explore-mais{
+    @include lines-up-down($branco-malungo);
+    color: $branco-malungo;
+    display: inline-block;
+    font-size: .8em;
+    font-weight: bold;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
 ul.social{
     border-bottom: 1px solid $branco-malungo;
     margin-bottom: 1em!important;

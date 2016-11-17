@@ -39,6 +39,7 @@ get_header();
                     />
                 </a>
             </h1>
+            <br>
             <ul class="menu-categorias">
             	<li>
             		<a  class="link-artesvisuais <?php

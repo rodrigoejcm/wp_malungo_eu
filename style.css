@@ -721,7 +721,9 @@ object {
 # Outros
 --------------------------------------------------------------*/
 html, body {
-  font-family: "Maitree", serif !important; }
+  font-family: "Maitree", serif !important;
+  font-weight: 300;
+  font-size: 20px; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Proxima Nova", sans-serif !important; }
@@ -1405,13 +1407,15 @@ ul.home-noticias {
   font-size: 9px; }
 
 .artistas-categorias {
-  background: #303331;
-  padding-top: 5%; }
+  background: #303331; }
   .artistas-categorias h1, .artistas-categorias p {
     color: #F7EFE7;
     text-align: center; }
-  .artistas-categorias h1 > img {
-    height: 3em; }
+  .artistas-categorias h1 {
+    margin: 0;
+    padding-top: 60px; }
+    .artistas-categorias h1 img {
+      height: 3em; }
   .artistas-categorias .link-artesvisuais {
     text-decoration: none; }
     .artistas-categorias .link-artesvisuais:hover, .artistas-categorias .link-artesvisuais:hover * {
@@ -1509,7 +1513,7 @@ ul.home-noticias {
     padding-top: 60px;
     margin: 0; }
     .artistas h1 img {
-      height: 20vh; }
+      height: 3em; }
   .artistas h1, .artistas p {
     color: #F7EFE7;
     text-align: center; }
@@ -1525,6 +1529,8 @@ ul.menu-categorias {
   text-align: center;
   text-transform: uppercase;
   width: 100%; }
+  ul.menu-categorias * {
+    font-family: 'proxima-nova', sans-serif; }
   ul.menu-categorias a {
     color: #F7EFE7; }
   ul.menu-categorias li {
@@ -1781,6 +1787,8 @@ ul.menu-categorias {
   bottom: 0;
   right: 20;
   width: 100%; }
+  .splash-artista :not(.data_publicacao) {
+    font-family: 'Proxima nova', sans-serif; }
   .splash-artista svg {
     height: 20%; }
   .splash-artista .title-artista-artesvisuais {
@@ -1810,6 +1818,7 @@ ul.menu-categorias {
   .splash-artista .arrow-down svg {
     fill: #F7EFE7; }
   .splash-artista .data_publicacao {
+    font-family: "Maitree", serif !important;
     margin-top: 20px;
     font-size: 9px; }
 
@@ -3014,19 +3023,27 @@ ul.social {
       width: 70%; }
 
 .single-malunguice, .single-noticia, .single-zumzum {
-  height: calc(100vh + 1em);
-  background: #303331;
-  padding-top: 55px; }
-  .single-malunguice .site-content, .single-noticia .site-content, .single-zumzum .site-content {
+  padding-top: 55px;
+  background: #303331; }
+
+.mafua-content, .single-malunguice, .single-noticia, .single-zumzum {
+  min-height: calc(100vh + 1em);
+  line-height: 1.6em; }
+  .mafua-content h1, .mafua-content h2, .mafua-content h3, .mafua-content h4, .mafua-content h5, .mafua-content h6, .single-malunguice h1, .single-malunguice h2, .single-malunguice h3, .single-malunguice h4, .single-malunguice h5, .single-malunguice h6, .single-noticia h1, .single-noticia h2, .single-noticia h3, .single-noticia h4, .single-noticia h5, .single-noticia h6, .single-zumzum h1, .single-zumzum h2, .single-zumzum h3, .single-zumzum h4, .single-zumzum h5, .single-zumzum h6 {
+    font-family: "Maitree", serif !important; }
+  .mafua-content .site-content, .single-malunguice .site-content, .single-noticia .site-content, .single-zumzum .site-content {
     background: #F7EFE7;
     color: #303331;
     font-family: "Maitree", serif !important;
     min-height: calc(100vh - 55px);
     padding: 1em; }
-    .single-malunguice .site-content h1, .single-noticia .site-content h1, .single-zumzum .site-content h1 {
-      font-family: "Proxima Nova", sans-serif !important;
+    .mafua-content .site-content h1, .single-malunguice .site-content h1, .single-noticia .site-content h1, .single-zumzum .site-content h1 {
+      font-weight: bold;
+      font-size: 42px;
+      margin-top: 60px;
+      margin-bottom: 30px;
       text-align: center; }
-  .single-malunguice .content-malunguice, .single-noticia .content-malunguice, .single-zumzum .content-malunguice {
+  .mafua-content .content-malunguice, .single-malunguice .content-malunguice, .single-noticia .content-malunguice, .single-zumzum .content-malunguice {
     margin: 0 auto;
     width: 880px; }
 

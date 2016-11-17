@@ -3,7 +3,8 @@ $altura-imagem: 399px;
     overflow: hidden;
     & > img {
         height: 100%;
-        width: auto;
+        object-fit: cover;
+        width: 100%;
     }
     & > svg {
         left: 0;

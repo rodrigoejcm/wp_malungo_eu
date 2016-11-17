@@ -36,7 +36,7 @@ $margin-image-yaon: 30%;
 }
 
 .header-home{
-	@include lines-up-down($preto-malungo, 3px);
+	@include lines-up-down($preto-malungo, 1px);
 	display: inline-block;
 	font-weight: lighter;
 	text-align:center;
@@ -160,4 +160,17 @@ ul.home-noticias {
 		color: 	$cor-texto;
 	}
 
-}				            
+}
+
+.splash-home{
+	.splash-subhead{
+		text-transform: none;
+	}
+	font-weight: 400!important;
+	.maior{
+		font-size: 26px;
+	}
+	.menor{
+		font-size: 16px;
+	}
+}			            

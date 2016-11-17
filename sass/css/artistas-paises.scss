@@ -110,6 +110,7 @@ $tamanho-borda-categoria: 1px;
 
 .artistas-categorias{
     background: $cor-fundo;
+    min-height: 100vh;
 	h1,p{
 		color: $cor-texto;
 		text-align: center;

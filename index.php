@@ -56,16 +56,16 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-			    <div class="splash">
+			    <div class="splash splash-home">
 			    	<img class="img-yaon" src="<?=get_template_directory_uri().'/img/Simbolobannerhome.png' ?>" />
 					</img>
 					<img class="img-logo-grande active" src="<?=get_template_directory_uri().'/img/malungo-logo.svg' ?>"/>
 					<img class="img-cultura" src="<?=get_template_directory_uri().'/img/Culturaemmovimento.png' ?>" />
 					<br><br>
 			    	<!-- <div class="splash-head">VEM BRINCÁ MAIS EU MANO MEU!</div> -->
-			    	<div class="splash-subhead" style="font-weight:bold;">VEM BRINCÁ MAIS EU MANO MEU!</div>
+			    	<div class="splash-subhead maior" style="font-weight:bold;">Vem brincá mais eu, mano meu!</div>
 			    	<br>
-			    	<div class="splash-subhead">
+			    	<div class="splash-subhead menor">
 			    		Em terreiro de Malungo Eu cabe você, eu e o seu vizinho.
 			    		<br>
 			    		Fazemos do longe perto, do tempo agora e despertamos malungos por aí.

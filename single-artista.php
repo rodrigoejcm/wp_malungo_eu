@@ -31,12 +31,16 @@ get_header(); ?>
 			<div class="splash-container-artista" style="background-image: url('<?=$thumb_url;?>')">
 				<div class="splash-container-artista-opacity">
 				</div>
-			    <div class="splash-artista">
-			    	<?= $categoria_imagem ?>
+			    <div class="splash-artista splash-artista-<?= $cat_string ?>">
+			    	<a class="link-categoria"
+			    		href='<?=get_site_url() ."/artistas/?categoria_artista=$categoria_principal->slug" ?>'>
+				    	<?= $categoria_imagem ?>
 			    	<br>
-			    	<div class="splash-subhead-artista-categoria">
-			    		<?= esc_html($categoria) ; ?>
-			    	</div>
+			    	<br>
+			    		<span class="title-categoria splash-subhead-artista-categoria title-artista-<?= $cat_string ?>">
+			    			<?= esc_html($categoria) ; ?>
+		    			</span> 
+			    	</a>
 			    	<h1 class="splash-head-artista title-artista-<?= $cat_string ?>">
 			    		<?= the_title(); ?>
 			    	</h1>
@@ -56,7 +60,7 @@ get_header(); ?>
 			    	<div class="arrow-down">
 			    		<!-- triangulo equilatero,
 			    			formando um V com 5 de largura -->
-			    		<svg width="50" height="20">
+			    		<svg class="svg-arrow" width="50" height="20">
 							<polygon
 							points="0 0, 3 0, 25 17, 47 0, 50 0, 25 20">
 							</polygon>
@@ -73,35 +77,36 @@ get_header(); ?>
 						<div class="col-md-8 col-md-offset-2">
 							<div class="descricao-artistas" >
 								<?php echo apply_filters('the_content', $post->post_content); ?>
+								<?php
+									$has_rede = false;
+									$redes = array(
+								               "blog",
+								               "facebook",
+								               "flickr",
+								               "instagram",
+								               "site",
+								               "soundcloud",
+								               "twitter",
+								               "vimeo",
+								               "youtube",
+							                );
+									foreach($redes as $name){
+										$rede = get_field($name, $post->ID);
+										if($rede){
+											$has_rede = true;
+											break;
+										}
+									}
+									if($has_rede){
+										?>
+										<h2 class="explore-mais">Explore mais</h2>
+										<br>
+										<?php
+									}
+								?>
 							</div>
 						</div>
 					</div>
-					<?php
-						$has_rede = false;
-						$redes = array(
-					               "blog",
-					               "facebook",
-					               "flickr",
-					               "instagram",
-					               "site",
-					               "soundcloud",
-					               "twitter",
-					               "vimeo",
-					               "youtube",
-				                );
-						foreach($redes as $name){
-							$rede = get_field($name, $post->ID);
-							if($rede){
-								$has_rede = true;
-								break;
-							}
-						}
-						if($has_rede){
-							?>
-							<h2 class="explore-mais">Explore mais</h2>
-							<?php
-						}
-					?>
 					<ul class="social col-md-8 col-md-offset-2">
 						<?php
 						foreach($redes as $name){

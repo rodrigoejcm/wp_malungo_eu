@@ -24,12 +24,12 @@ $tamanho-borda-categoria: 1px;
 }
 %box{
     align-items: center;
-    border: $tamanho-borda-categoria solid white;
+    border: $tamanho-borda-categoria solid $branco-malungo;
     height: $tamanho-categoria;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-end;
     //gambi FTW pra não ter bordas duplicadas
     margin-left: -$tamanho-borda-categoria;
     margin-bottom: -$tamanho-borda-categoria;
@@ -42,16 +42,18 @@ $tamanho-borda-categoria: 1px;
     svg{
         box-sizing: border-box;
         height: 0.6 * $tamanho-categoria;
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
     }
     
     p{
-        @include lines-up-down();
+        @include lines-up-down($branco-malungo);
         color: $cor-texto;
         font-family: "Proxima Nova",sans-serif!important;
         font-size: 0.9em;
         letter-spacing: 2.5px;
         line-height: 1.1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
         max-width: 80%;
         text-align: center;
         text-transform: uppercase;
@@ -209,6 +211,47 @@ ul.menu-categorias {
     background-size: cover;
     background-position: center center;
     min-height: 200px !important;
+    .link-categoria{
+        height: 30%;
+        text-decoration: none;
+        &:hover{
+            svg * {
+                fill: $branco-malungo;
+            }
+            .title-artista-artesvisuais {
+                @include lines-up-down($azul-artesvisuais);
+                color: $azul-artesvisuais;
+            }
+            .title-artista-artesvisuais {
+                @include lines-up-down($azul-artesvisuais);
+                color:$azul-artesvisuais;
+            }
+            .title-artista-audiovisual  {
+                @include lines-up-down($laranja-audiovisual);
+                color:$laranja-audiovisual;
+            }
+            .title-artista-danca        {
+                @include lines-up-down($verde-danca);
+                color:$verde-danca;
+            }
+            .title-artista-literatura   {
+                @include lines-up-down($rosa-literatura);
+                color:$rosa-literatura;
+            }
+            .title-artista-moda         {
+                @include lines-up-down($roxo-sociedade);
+                color:$roxo-sociedade;
+            }
+            .title-artista-musica       {
+                @include lines-up-down($laranja-malunguices);
+                color:$laranja-malunguices;
+            }
+            .title-artista-teatro       {
+                @include lines-up-down($azul-teatro);
+                color:$azul-teatro;
+            }
+        }
+    }
 }
 
 .splash-container-artista-opacity{
@@ -246,7 +289,7 @@ ul.menu-categorias {
 
 
     svg{
-        height: 20%;
+        height: 70%;
     }
 
     .title-artista-artesvisuais { color: $azul-artesvisuais; }
@@ -287,10 +330,10 @@ ul.menu-categorias {
     font-size: 7vw;
     font-family: "proxima-nova", sans-serif!important;
     font-weight: lighter;
-    color: white;
+    color: $branco-malungo;
     margin-top: 5px;
    
-   /*  border: 3px solid white; */
+   /*  border: 3px solid $branco-malungo; */
     
     
     line-height: 1em;
@@ -304,7 +347,7 @@ ul.menu-categorias {
     letter-spacing: 0.05em;
     opacity: 0.8;
     text-align: center;
-    color: white;
+    color: $branco-malungo;
     margin-top: 5px;
 }
 
@@ -316,9 +359,6 @@ ul.menu-categorias {
     font-weight: bold;
 }
 
-.splash-artista img{
-
-}
 
 /*
  * -- CONTENT STYLES --
@@ -400,12 +440,9 @@ ul.menu-categorias {
         text-align: center;
         padding: 5px 10px;
         background-color: blue;
-        color: white;
+        color: $branco-malungo;
         font-weight: bold;
-        
     }
-
-
 }
 
 /* This is the main heading that appears on the blue section */
@@ -413,8 +450,8 @@ ul.menu-categorias {
    font-size: 6vw;
     font-family: "proxima-nova",sans-serif !important;
     font-weight: lighter;
-    color: white;
-   /*  border: 3px solid white; */
+    color: $branco-malungo;
+   /*  border: 3px solid $branco-malungo; */
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
@@ -424,15 +461,12 @@ ul.menu-categorias {
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead-pais {
-    color: white;
+    color: $branco-malungo;
     letter-spacing: 0.05em;
     opacity: 0.8;
     text-align: center;
 }
 
-.splash-pais img{
-
-}
 
 /*
  * -- CONTENT STYLES --

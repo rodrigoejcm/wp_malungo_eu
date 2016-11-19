@@ -147,3 +147,44 @@ ul.social{
         }
     }
 }
+
+.splash-artista-artesvisuais {
+    svg:not(.svg-arrow) *{
+        fill: $azul-artesvisuais;
+    }
+}
+.splash-artista-audiovisual {
+    svg:not(.svg-arrow) *{
+        fill: $laranja-audiovisual;
+    }
+}
+.splash-artista-danca {
+    svg:not(.svg-arrow) *{
+        fill: $verde-danca;
+    }
+}
+.splash-artista-literatura {
+    svg:not(.svg-arrow) *{
+        fill: $rosa-literatura;
+    }
+}
+.splash-artista-moda {
+    svg:not(.svg-arrow) *{
+        fill: $roxo-sociedade;
+    }
+}
+.splash-artista-musica {
+    svg:not(.svg-arrow) *{
+        fill: $laranja-malunguices;
+    }
+}
+.splash-artista-teatro {
+    svg:not(.svg-arrow) *{
+        fill: $azul-teatro;
+    }
+}
+.splash-artista-indicacao {
+    svg:not(.svg-arrow) *{
+        fill: $cinza-indicacao;
+    }
+}

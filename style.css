@@ -1283,6 +1283,11 @@ ul.home-noticias {
   .home-post a.hover-musica:hover, .home-post a.hover-musica:hover *:not(.categoria) {
     color: #FF9B0F !important;
     text-decoration: none; }
+.home-post a.hover-cinza:hover {
+  cursor: pointer; }
+  .home-post a.hover-cinza:hover, .home-post a.hover-cinza:hover *:not(.categoria) {
+    color: #555555 !important;
+    text-decoration: none; }
 .home-post .categoria {
   font-weight: bold;
   font-size: 15px;
@@ -1306,6 +1311,9 @@ ul.home-noticias {
   color: #F7EFE7; }
 .home-post .cor-musica {
   background-color: #FF9B0F;
+  color: #F7EFE7; }
+.home-post .cor-cinza {
+  background-color: #555555;
   color: #F7EFE7; }
 .home-post .reticencias {
   font-weight: bold;
@@ -1360,12 +1368,12 @@ ul.home-noticias {
 
 .paises-lista .box-pais, .artistas-categorias .box-categoria {
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid #F7EFE7;
   height: 220px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-end;
   margin-left: -1px;
   margin-bottom: -1px;
   width: 220px; }
@@ -1374,11 +1382,10 @@ ul.home-noticias {
     padding: 0; }
   .paises-lista .box-pais svg, .artistas-categorias .box-categoria svg {
     box-sizing: border-box;
-    height: 132px;
-    padding-bottom: 10px; }
+    height: 132px; }
   .paises-lista .box-pais p, .artistas-categorias .box-categoria p {
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-top: 1px solid #F7EFE7;
+    border-bottom: 1px solid #F7EFE7;
     padding-top: .5em;
     padding-bottom: .5em;
     color: #F7EFE7;
@@ -1386,6 +1393,8 @@ ul.home-noticias {
     font-size: 0.9em;
     letter-spacing: 2.5px;
     line-height: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     max-width: 80%;
     text-align: center;
     text-transform: uppercase;
@@ -1780,6 +1789,59 @@ ul.menu-categorias {
   background-size: cover;
   background-position: center center;
   min-height: 200px !important; }
+  .splash-container-artista .link-categoria {
+    height: 30%;
+    text-decoration: none; }
+    .splash-container-artista .link-categoria:hover svg * {
+      fill: #F7EFE7; }
+    .splash-container-artista .link-categoria:hover .title-artista-artesvisuais {
+      border-top: 1px solid #40c1fb;
+      border-bottom: 1px solid #40c1fb;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #40c1fb; }
+    .splash-container-artista .link-categoria:hover .title-artista-artesvisuais {
+      border-top: 1px solid #40c1fb;
+      border-bottom: 1px solid #40c1fb;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #40c1fb; }
+    .splash-container-artista .link-categoria:hover .title-artista-audiovisual {
+      border-top: 1px solid #ff362d;
+      border-bottom: 1px solid #ff362d;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #ff362d; }
+    .splash-container-artista .link-categoria:hover .title-artista-danca {
+      border-top: 1px solid #18cc58;
+      border-bottom: 1px solid #18cc58;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #18cc58; }
+    .splash-container-artista .link-categoria:hover .title-artista-literatura {
+      border-top: 1px solid #c6006c;
+      border-bottom: 1px solid #c6006c;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #c6006c; }
+    .splash-container-artista .link-categoria:hover .title-artista-moda {
+      border-top: 1px solid #593F7E;
+      border-bottom: 1px solid #593F7E;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #593F7E; }
+    .splash-container-artista .link-categoria:hover .title-artista-musica {
+      border-top: 1px solid #FF9B0F;
+      border-bottom: 1px solid #FF9B0F;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #FF9B0F; }
+    .splash-container-artista .link-categoria:hover .title-artista-teatro {
+      border-top: 1px solid #0083fc;
+      border-bottom: 1px solid #0083fc;
+      padding-top: .5em;
+      padding-bottom: .5em;
+      color: #0083fc; }
 
 .splash-container-artista-opacity {
   background-color: #303331;
@@ -1813,7 +1875,7 @@ ul.menu-categorias {
   .splash-artista :not(.data_publicacao) {
     font-family: 'Proxima nova', sans-serif; }
   .splash-artista svg {
-    height: 20%; }
+    height: 70%; }
   .splash-artista .title-artista-artesvisuais {
     color: #40c1fb; }
   .splash-artista .title-artista-artesvisuais {
@@ -1850,9 +1912,9 @@ ul.menu-categorias {
   font-size: 7vw;
   font-family: "proxima-nova", sans-serif !important;
   font-weight: lighter;
-  color: white;
+  color: #F7EFE7;
   margin-top: 5px;
-  /*  border: 3px solid white; */
+  /*  border: 3px solid $branco-malungo; */
   line-height: 1em;
   text-align: center; }
 
@@ -1863,7 +1925,7 @@ ul.menu-categorias {
   letter-spacing: 0.05em;
   opacity: 0.8;
   text-align: center;
-  color: white;
+  color: #F7EFE7;
   margin-top: 5px; }
 
 .splash-subhead-artista-categoria {
@@ -1942,7 +2004,7 @@ ul.menu-categorias {
     text-align: center;
     padding: 5px 10px;
     background-color: blue;
-    color: white;
+    color: #F7EFE7;
     font-weight: bold; }
 
 /* This is the main heading that appears on the blue section */
@@ -1950,8 +2012,8 @@ ul.menu-categorias {
   font-size: 6vw;
   font-family: "proxima-nova",sans-serif !important;
   font-weight: lighter;
-  color: white;
-  /*  border: 3px solid white; */
+  color: #F7EFE7;
+  /*  border: 3px solid $branco-malungo; */
   font-weight: 100;
   border-radius: 5px;
   line-height: 1em;
@@ -1960,7 +2022,7 @@ ul.menu-categorias {
 
 /* This is the subheading that appears on the blue section */
 .splash-subhead-pais {
-  color: white;
+  color: #F7EFE7;
   letter-spacing: 0.05em;
   opacity: 0.8;
   text-align: center; }
@@ -2985,6 +3047,30 @@ ul.social {
     fill: #0083fc; }
   ul.social .link-indicacao:hover svg * {
     fill: #555555; }
+
+.splash-artista-artesvisuais svg:not(.svg-arrow) * {
+  fill: #40c1fb; }
+
+.splash-artista-audiovisual svg:not(.svg-arrow) * {
+  fill: #ff362d; }
+
+.splash-artista-danca svg:not(.svg-arrow) * {
+  fill: #18cc58; }
+
+.splash-artista-literatura svg:not(.svg-arrow) * {
+  fill: #c6006c; }
+
+.splash-artista-moda svg:not(.svg-arrow) * {
+  fill: #593F7E; }
+
+.splash-artista-musica svg:not(.svg-arrow) * {
+  fill: #FF9B0F; }
+
+.splash-artista-teatro svg:not(.svg-arrow) * {
+  fill: #0083fc; }
+
+.splash-artista-indicacao svg:not(.svg-arrow) * {
+  fill: #555555; }
 
 .epq-pull-quote-default {
   border-top: 2px solid white;

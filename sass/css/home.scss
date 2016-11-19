@@ -113,6 +113,7 @@ ul.home-noticias {
 	a.hover-literatura		{ @include hover-texto($rosa-literatura); }
 	a.hover-teatro			{ @include hover-texto($azul-teatro); }
 	a.hover-musica			{ @include hover-texto($laranja-musica); }
+	a.hover-cinza			{ @include hover-texto($cinza-indicacao); }
 
 	.categoria{
 		font-weight: bold;
@@ -133,6 +134,7 @@ ul.home-noticias {
 	.cor-literatura		{ @include titulo-post($rosa-literatura);}
 	.cor-teatro			{ @include titulo-post($azul-teatro);}
 	.cor-musica			{ @include titulo-post($laranja-musica);}
+	.cor-cinza			{ @include titulo-post($cinza-indicacao);}
 
 	.reticencias {
 		font-weight: bold;

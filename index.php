@@ -84,8 +84,15 @@ get_header(); ?>
 				<ul class="home-noticias">
 	            <?php
 	            	$noticias = new WP_Query(array(
-							'post_type' => 'noticia',
-							'posts_per_page' => 3,
+	                        'post_type' => array(
+	                                             'post',
+	                                             'malunguice',
+	                                             'zumzum'
+                                        ),
+							'posts_per_page' => 10,
+							'meta_key' => 'destaque',
+							'meta_value' => 's',
+							'orderby' => 'ordem_do_destaque',
 							'paged' => get_query_var( 'paged' ),
 						));
 	            	if ( $noticias->have_posts() ) : while ( $noticias->have_posts() ) : $noticias->the_post();
@@ -100,6 +107,7 @@ get_header(); ?>
 							}
 							$categoria = get_the_category()[0];
 							$cat_string = preg_replace('/-/', "", $categoria->slug);
+							$cat_string = empty($cat_string)? "cinza" : $cat_string;
 						?>
 						<a href="<?= get_permalink() ?>"
 							class="link-noticia hover-<?=$cat_string?>">
@@ -118,7 +126,7 @@ get_header(); ?>
 		               	</a>
 					</li>
 		               	<?php endwhile; else : ?>
-							<h2> Nenhuma notícia ainda. Volte mais tarde. </h2>
+							<h2> Nenhum post em destaque ainda. Volte mais tarde. </h2>
 						<?php endif; ?>
 	            </ul>
 	            <ul class="pagination">

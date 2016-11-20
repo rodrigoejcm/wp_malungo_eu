@@ -80,15 +80,15 @@ get_header(); ?>
 								<?php
 									$has_rede = false;
 									$redes = array(
+								               "site",
 								               "blog",
 								               "facebook",
-								               "flickr",
-								               "instagram",
-								               "site",
-								               "soundcloud",
 								               "twitter",
-								               "vimeo",
+								               "instagram",
+								               "flickr",
+								               "soundcloud",
 								               "youtube",
+								               "vimeo",
 							                );
 									foreach($redes as $name){
 										$rede = get_field($name, $post->ID);

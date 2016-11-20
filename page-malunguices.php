@@ -19,7 +19,7 @@ get_header(); ?>
 		<div class="malunguices-all">
 			<h1>
 				<img src="<?=get_template_directory_uri().
-						'/img/titulo-mafuademalungos.svg'?>"
+						'/img/titulo-malunguices.svg'?>"
 					alt="MALUNGUICES"
 					/>
 			</h1>

@@ -23,7 +23,6 @@ get_header(); ?>
 					alt="ARTES"
 					/>
 			</h1>
-			<br>
 			<div class="categoria-grid">
 				<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
 					<div class="box-categoria">

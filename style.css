@@ -1408,10 +1408,13 @@ ul.home-noticias {
 .paises-lista {
   background: #303331;
   box-sizing: border-box;
-  padding-top: 5%; }
+  padding-top: 120px; }
   .paises-lista h1 > img {
-    height: 3em; }
+    height: 3em;
+    max-width: 80vw;
+    margin-bottom: 65px; }
   .paises-lista h1, .paises-lista p {
+    margin: 0;
     color: #F7EFE7;
     text-align: center; }
   .paises-lista ul li:first-child {
@@ -1445,9 +1448,11 @@ ul.home-noticias {
     text-align: center; }
   .artistas-categorias h1 {
     margin: 0;
-    padding-top: 60px; }
+    padding-top: 120px; }
     .artistas-categorias h1 img {
-      height: 3em; }
+      height: 3em;
+      max-width: 80vw;
+      margin-bottom: 65px; }
   .artistas-categorias .link-artesvisuais {
     text-decoration: none; }
     .artistas-categorias .link-artesvisuais:hover, .artistas-categorias .link-artesvisuais:hover * {
@@ -1545,7 +1550,8 @@ ul.home-noticias {
     padding-top: 60px;
     margin: 0; }
     .artistas h1 img {
-      height: 3em; }
+      height: 3em;
+      margin-bottom: 65px; }
   .artistas h1, .artistas p {
     color: #F7EFE7;
     text-align: center; }
@@ -3086,17 +3092,23 @@ ul.social {
     text-decoration: none !important; }
 
 .malunguices-all {
-  background: #303331;
+  background: #F7EFE7;
   box-sizing: border-box;
-  padding-top: 60px;
+  padding-top: 120px;
   min-height: 100vh; }
   .malunguices-all h2 {
     font-family: "Maitree", serif !important; }
   .malunguices-all, .malunguices-all * {
     color: #F7EFE7; }
   .malunguices-all > h1 {
-    margin: auto;
-    width: 880px; }
+    text-align: center;
+    margin: 0;
+    width: 100%; }
+    .malunguices-all > h1 img {
+      height: 3em;
+      margin: auto;
+      max-width: 80vw;
+      margin-bottom: 65px; }
   .malunguices-all a, .malunguices-all a:hover {
     text-decoration: none; }
   .malunguices-all ul.grid-malunguices {

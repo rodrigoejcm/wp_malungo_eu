@@ -1,7 +1,7 @@
 .malunguices-all{
-    background: $preto-malungo;
+    background: $branco-malungo;
     box-sizing: border-box;
-    padding-top: 60px;
+    padding-top: 120px;
     h2 { font-family: 'Maitree', serif!important; }
     min-height: 100vh;
     &,*{
@@ -9,8 +9,15 @@
     }
 
     & > h1{
-        margin: auto;
-        width: $page-size;
+        text-align: center;
+        margin:0;
+        width: 100%;
+        img{
+            height: 3em;
+            margin: auto;
+            max-width: 80vw;
+            margin-bottom: 65px;
+        }
     }
 
     a,a:hover{

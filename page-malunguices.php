@@ -13,7 +13,10 @@
  */
 
 get_header(); ?>
-
+	<script type="text/javascript">
+	$('.cor-scroll').css("background-color", "#303331");
+	zumzum = true;
+	</script>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="malunguices-all">

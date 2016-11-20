@@ -3243,23 +3243,4 @@ ul.social {
     .zumzum-all ul.grid-zumzum li {
       display: block; }
 
-.single-zumzum {
-  font-family: "Maitree", serif !important;
-  font-weight: 300;
-  line-height: 1.5em;
-  margin: 0 auto;
-  width: 880px; }
-  .single-zumzum *, .single-zumzum p {
-    margin-bottom: 30px; }
-  .single-zumzum h1 {
-    font-weight: bold;
-    font-size: 42px;
-    line-height: 1em;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    text-align: center; }
-  .single-zumzum h1, .single-zumzum h2, .single-zumzum h3, .single-zumzum h4, .single-zumzum h5, .single-zumzum h6 {
-    font-family: "Maitree", serif !important;
-    font-weight: bold; }
-
 /*# sourceMappingURL=style.css.map */

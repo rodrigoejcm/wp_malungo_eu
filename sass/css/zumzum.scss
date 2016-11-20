@@ -1,0 +1,44 @@
+.container-zumzum{
+    background: $branco-malungo;
+}
+.zumzum-all{
+    @include page();
+    color: $preto-malungo;
+    box-sizing: border-box;
+    padding-top: 120px;
+    font-size: 18px;
+    font-family: 'Maitree', serif!important;
+    font-weight: 300;
+    min-height: calc(100vh - 55px);
+    h1{
+        font-weight: bold;
+        font-size: 42px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    h2 { font-family: 'Maitree', serif!important; }
+    min-height: 100vh;
+    &,*{
+        color: $preto-malungo;
+    }
+
+    a,a:hover{
+        text-decoration: none;
+    }
+    ul.grid-zumzum{
+        background: $branco-malungo;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: $page-size;
+        width: 100%;
+        li{
+            display: block;
+        }
+    }
+}
+
+.single-zumzum{
+    @include page();
+}

@@ -39,9 +39,11 @@ $(document).ready(function () {
             $('.cor-scroll').css("background-color", "#303331");
             $('.home-menu').css("border-bottom", "none");        
         }else{
-            $('.cor-scroll').css("background-color", "transparent");
-            $('.home-menu').css("border-bottom",
+            if(typeof zumzum === 'undefined' || !zumzum){
+                $('.cor-scroll').css("background-color", "transparent");
+                $('.home-menu').css("border-bottom",
                             "1px solid rgba(247,239,231,0.5)");
+            }
         }
         
     });

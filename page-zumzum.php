@@ -13,50 +13,37 @@
  */
 
 get_header(); ?>
-
-	<div id="primary" class="content-area">
+	<script type="text/javascript">
+	$('.cor-scroll').css("background-color", "#303331");
+	zumzum = true;
+	</script>
+	<div id="primary" class="content-area container-zumzum">
 		<main id="main" class="site-main" role="main">
-		<div class="malunguices-all">
-			<h1>Zumzum</h1>
-				<ul class='grid-malunguices'>
+		<div class="zumzum-all">
+				<ul class='grid-zumzum'>
 					<?php
 						$first = true;
 						$posts = new WP_Query(array(
 							'post_type' => 'zumzum',
-							'posts_per_page' => 12,
+							'posts_per_page' => 8,
 							'paged' => get_query_var( 'paged' ),
 						));
 
-
 						if ( $posts->have_posts() ) : while ( $posts->have_posts() ) : $posts->the_post();
-							$thumb_id = get_post_thumbnail_id();
-							$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-							$thumb_url = $thumb_url_array[0];
-							if($first){
-								$first = false;
-								?>
-								<div id="primary" class="content-area content-zumzum">
-							        <main id="main" class="site-main" role="main">
-							            <h1><?php echo $post->post_title ?></h1>
-							            <?php echo apply_filters('the_content', $post->post_content); ?>
-							        </main>
+							?>
+							<li>
+								<div class="content-zumzum">
+						            <h2><?php echo $post->post_title ?></h2>
+						            <p>Publicado em: <a href="<?= get_permalink() ?>"><?= the_date() ?></a></p>
+						            <?php echo wp_trim_excerpt(the_content()); ?>
+						            <br>
+						            <br>
+						            <a href="<?= get_permalink() ?>">leia mais</a>
+						            <br>
+						            <br>
 							    </div>
-							    <h2>Mais posts</h2>
-							    <?php
-							} else {
-						?>
-							<li
-								<?php
-										if(has_post_thumbnail($post)) {
-										?>
-											style="background: url('<?= $thumb_url ?>');"
-									<?php }?>
-							> 
-								<a  href="<?=get_permalink();?>">
-										<h2><?php the_title();?></h2>
-								</a>
 							</li>
-						<?php } endwhile; else : ?>
+						<?php endwhile; else : ?>
 							<h2> Nenhum post ainda. </h2>
 						<?php endif; ?>
 				</ul>

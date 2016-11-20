@@ -136,3 +136,26 @@
         @include bg-slide($preto-malungo, $cinza-indicacao);
     }
 }
+
+@mixin page(){
+    font-family: 'Maitree', serif!important;
+    font-weight: 300;
+    line-height: 1.5em; 
+    margin: 0 auto;
+    width: $page-size;
+    *, p{
+        margin-bottom: 30px;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 42px;
+        line-height: 1em;
+        margin-top: 60px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    h1, h2, h3, h4, h5, h6{
+        font-family: 'Maitree', serif!important;
+        font-weight: bold;
+    }
+}

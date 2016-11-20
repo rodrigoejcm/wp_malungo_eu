@@ -141,15 +141,18 @@ function _s_scripts() {
         wp_enqueue_script('malungo-galleria-run-js');*/
 	}
 
-	wp_enqueue_script( '_s-malungo-hamburguer', get_template_directory_uri() . '/js/malungo.js', array(), '20151215', true );
 
-	wp_enqueue_script( '_s-malungo-jquery', get_template_directory_uri() . '/js/malungo_jquery.js', array(), '20151215', true );
+    wp_enqueue_script( '_s-malungo-hamburguer', get_template_directory_uri() . '/js/malungo.js', array(), '20151215', true );
 
-	wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+    wp_enqueue_script( '_s-malungo-jquery', get_template_directory_uri() . '/js/malungo_jquery.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'malungo-font-typekit', 'https://use.typekit.net/xuw0ghm.js'); 	
+    wp_enqueue_script( '_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'malungo-font-typekit-load', get_template_directory_uri() . '/js/typekit-load.js', array(), '20151215', false );
+    wp_enqueue_script( 'malungo-font-typekit', 'https://use.typekit.net/xuw0ghm.js');   
+
+    wp_enqueue_script( 'malungo-font-typekit-load', get_template_directory_uri() . '/js/typekit-load.js', array(), '20151215', false );
+    
+    wp_enqueue_script('malungo-galeria-js', get_template_directory_uri() . '/js/galeria-artista-custom.js', array(), '20161119', true );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

@@ -128,10 +128,12 @@ get_header(); ?>
 					if($galeria){
 					?>
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
-							<div 	class="fotorama"
+						<div class="col-md-8 col-md-offset-2 galeria">
+							<div 	id="galeria"
 									data-allowfullscreen="true"
-							 		data-nav="thumbs" >
+							 		data-nav="thumbs"
+							 		data-width="100%"
+							 		>
 								<?php 
 									$acf_photo_gallery_attachments = explode(',', $galeria);
 									foreach($acf_photo_gallery_attachments as $id):
@@ -141,7 +143,9 @@ get_header(); ?>
 									
 								?>
 
-									<img src=" <?php echo $imagem_infos['url']; ?> " />
+									<img src=" <?php echo $imagem_infos['url']; ?> "
+											data-caption="<?= get_post($id)->caption?>"
+									/>
 
 								<?php endforeach; ?>
 							</div>
@@ -159,5 +163,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-
+wp_enqueue_script('malungo-galeria-js');
 get_footer();

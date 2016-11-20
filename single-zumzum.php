@@ -12,8 +12,8 @@ get_header();
 /*while ( have_posts() ) {*/
 ?>
 
-    <div id="primary" class="content-area content-zumzum">
-        <main id="main" class="site-main" role="main">
+    <div id="primary" class="content-area malungo-post">
+        <main id="main" class="site-main mafua-content" role="main">
             <h1><?php echo $post->post_title ?></h1>
             <?php echo apply_filters('the_content', $post->post_content); ?>
         </main><!-- #main -->

@@ -1501,13 +1501,13 @@ ul.home-noticias {
     text-decoration: none; }
     .artistas-categorias .link-moda:hover, .artistas-categorias .link-moda:hover * {
       background: #F7EFE7;
-      color: #593F7E;
-      color: #593F7E;
+      color: #bcf819;
+      color: #bcf819;
       cursor: pointer; }
     .artistas-categorias .link-moda:hover *:not(.box-categoria) {
-      border-color: #593F7E; }
+      border-color: #bcf819; }
     .artistas-categorias .link-moda svg, .artistas-categorias .link-moda svg * {
-      fill: #593F7E; }
+      fill: #bcf819; }
   .artistas-categorias .link-musica {
     text-decoration: none; }
     .artistas-categorias .link-musica:hover, .artistas-categorias .link-musica:hover * {
@@ -1547,7 +1547,7 @@ ul.home-noticias {
   box-sizing: border-box;
   color: #F7EFE7; }
   .artistas h1 {
-    padding-top: 60px;
+    padding-top: 120px;
     margin: 0; }
     .artistas h1 img {
       height: 3em;
@@ -1635,7 +1635,7 @@ ul.menu-categorias {
       background-position: 0 -100%;
       cursor: pointer; }
   ul.menu-categorias .link-moda:not(.active) {
-    background-image: linear-gradient(to bottom, #303331 50%, #593F7E 50%);
+    background-image: linear-gradient(to bottom, #303331 50%, #bcf819 50%);
     background-size: 100% 200%;
     height: 1.8em;
     width: 10em;
@@ -1734,7 +1734,7 @@ ul.menu-categorias {
       background-position: 0 -100%;
       cursor: pointer; }
   ul.menu-categorias .link-moda.active {
-    background-image: linear-gradient(to bottom, #593F7E 50%, #303331 50%);
+    background-image: linear-gradient(to bottom, #bcf819 50%, #303331 50%);
     background-size: 100% 200%;
     height: 1.8em;
     width: 10em;
@@ -1831,11 +1831,11 @@ ul.menu-categorias {
       padding-bottom: .5em;
       color: #c6006c; }
     .splash-container-artista .link-categoria:hover .title-artista-moda {
-      border-top: 1px solid #593F7E;
-      border-bottom: 1px solid #593F7E;
+      border-top: 1px solid #bcf819;
+      border-bottom: 1px solid #bcf819;
       padding-top: .5em;
       padding-bottom: .5em;
-      color: #593F7E; }
+      color: #bcf819; }
     .splash-container-artista .link-categoria:hover .title-artista-musica {
       border-top: 1px solid #FF9B0F;
       border-bottom: 1px solid #FF9B0F;
@@ -1893,7 +1893,7 @@ ul.menu-categorias {
   .splash-artista .title-artista-literatura {
     color: #c6006c; }
   .splash-artista .title-artista-moda {
-    color: #593F7E; }
+    color: #bcf819; }
   .splash-artista .title-artista-musica {
     color: #FF9B0F; }
   .splash-artista .title-artista-teatro {
@@ -2119,7 +2119,7 @@ ul {
   .projects-list .box-literatura h3 {
     color: #c6006c; }
   .projects-list .box-moda h3 {
-    color: #593F7E; }
+    color: #bcf819; }
   .projects-list .box-musica h3 {
     color: #FF9B0F; }
   .projects-list .box-teatro h3 {
@@ -3003,7 +3003,7 @@ ul {
   color: #c6006c; }
 
 .content-artista-moda a, .content-artista-moda a * {
-  color: #593F7E; }
+  color: #bcf819; }
 
 .content-artista-musica a, .content-artista-musica a * {
   color: #FF9B0F; }
@@ -3046,7 +3046,7 @@ ul.social {
   ul.social .link-literatura:hover svg * {
     fill: #c6006c; }
   ul.social .link-moda:hover svg * {
-    fill: #593F7E; }
+    fill: #bcf819; }
   ul.social .link-musica:hover svg * {
     fill: #FF9B0F; }
   ul.social .link-teatro:hover svg * {
@@ -3067,7 +3067,7 @@ ul.social {
   fill: #c6006c; }
 
 .splash-artista-moda svg:not(.svg-arrow) * {
-  fill: #593F7E; }
+  fill: #bcf819; }
 
 .splash-artista-musica svg:not(.svg-arrow) * {
   fill: #FF9B0F; }

@@ -51,7 +51,7 @@
          .link-audiovisual  { @include link-hover($branco-malungo, $laranja-audiovisual); }
          .link-danca        { @include link-hover($branco-malungo, $verde-danca); }
          .link-literatura   { @include link-hover($branco-malungo, $rosa-literatura); }
-         .link-moda         { @include link-hover($branco-malungo, $roxo-sociedade); }
+         .link-moda         { @include link-hover($branco-malungo, $roxo-moda); }
          .link-musica       { @include link-hover($branco-malungo, $laranja-malunguices); }
          .link-teatro       { @include link-hover($branco-malungo, $azul-teatro); }
          .link-indicacao    { @include link-hover($branco-malungo, $cinza-indicacao); }
@@ -61,7 +61,7 @@
          .link-audiovisual  { @include link-hover($laranja-audiovisual); }
          .link-danca        { @include link-hover($verde-danca); }
          .link-literatura   { @include link-hover($rosa-literatura); }
-         .link-moda         { @include link-hover($roxo-sociedade); }
+         .link-moda         { @include link-hover($roxo-moda); }
          .link-musica       { @include link-hover($laranja-malunguices); }
          .link-teatro       { @include link-hover($azul-teatro); }
          .link-indicacao    { @include link-hover($cinza-indicacao); }
@@ -94,7 +94,7 @@
         @include bg-slide($rosa-literatura, $preto-malungo);
     }
      .link-moda:not(.active) {
-        @include bg-slide($roxo-sociedade, $preto-malungo);
+        @include bg-slide($roxo-moda, $preto-malungo);
     }
      .link-musica:not(.active) {
         @include bg-slide($laranja-malunguices, $preto-malungo);
@@ -124,7 +124,7 @@
         @include bg-slide($preto-malungo, $rosa-literatura);
     }
      .link-moda.active {
-        @include bg-slide($preto-malungo, $roxo-sociedade);
+        @include bg-slide($preto-malungo, $roxo-moda);
     }
      .link-musica.active {
         @include bg-slide($preto-malungo, $laranja-malunguices);

@@ -62,7 +62,7 @@
 }
 .content-artista-moda a         {
     &, * {
-        color: $roxo-sociedade;
+        color: $roxo-moda;
     }
 }
 .content-artista-musica a       {
@@ -128,7 +128,7 @@ ul.social{
     }
     .link-moda:hover {
         svg *{
-            fill: $roxo-sociedade;
+            fill: $roxo-moda;
         }
     }
     .link-musica:hover {
@@ -170,7 +170,7 @@ ul.social{
 }
 .splash-artista-moda {
     svg:not(.svg-arrow) *{
-        fill: $roxo-sociedade;
+        fill: $roxo-moda;
     }
 }
 .splash-artista-musica {

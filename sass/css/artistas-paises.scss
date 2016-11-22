@@ -146,7 +146,7 @@ $tamanho-borda-categoria: 1px;
     box-sizing: border-box;
     color: $cor-texto;
     h1{
-        padding-top: 60px;
+        padding-top: 120px;
         margin: 0;
         img {
             height: 3em;
@@ -245,8 +245,8 @@ ul.menu-categorias {
                 color:$rosa-literatura;
             }
             .title-artista-moda         {
-                @include lines-up-down($roxo-sociedade);
-                color:$roxo-sociedade;
+                @include lines-up-down($roxo-moda);
+                color:$roxo-moda;
             }
             .title-artista-musica       {
                 @include lines-up-down($laranja-malunguices);
@@ -303,7 +303,7 @@ ul.menu-categorias {
     .title-artista-audiovisual  { color:$laranja-audiovisual; }
     .title-artista-danca        { color:$verde-danca; }
     .title-artista-literatura   { color:$rosa-literatura; }
-    .title-artista-moda         { color:$roxo-sociedade; }
+    .title-artista-moda         { color:$roxo-moda; }
     .title-artista-musica       { color:$laranja-malunguices; }
     .title-artista-teatro       { color:$azul-teatro; }
 

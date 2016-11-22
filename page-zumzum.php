@@ -34,7 +34,7 @@ get_header(); ?>
 							<li>
 								<div class="content-zumzum">
 						            <h2><?php echo $post->post_title ?></h2>
-						            <p>Publicado em: <a href="<?= get_permalink() ?>"><?= the_date() ?></a></p>
+						            <p>Publicado em: <a href="<?= get_permalink() ?>"><?= get_the_date() ?></a></p>
 						            <?php echo wp_trim_excerpt(the_content()); ?>
 						            <br>
 						            <br>

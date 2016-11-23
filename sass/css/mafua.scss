@@ -22,10 +22,14 @@ $altura-imagem: 399px;
     font-family: 'Maitree', serif!important;
     font-weight: 300;
     .mafua-content{
-        font-size: 18px;
-        line-height: 1.5em;
+        font-size: 20px;
+        line-height: 1.6em;
         margin: auto;
         min-width: 320px;
         max-width: $page-size;
+    }
+    p{
+        margin-bottom: 30px;
+        margin-top: 60px;
     }
 }

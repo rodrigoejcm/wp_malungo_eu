@@ -997,11 +997,14 @@ a.pure-button-primary {
   font-family: "Maitree", serif !important;
   font-weight: 300; }
   .malungo-post .mafua-content {
-    font-size: 18px;
-    line-height: 1.5em;
+    font-size: 20px;
+    line-height: 1.6em;
     margin: auto;
     min-width: 320px;
     max-width: 880px; }
+  .malungo-post p {
+    margin-bottom: 30px;
+    margin-top: 60px; }
 
 #mobile-menu-1 {
   display: none; }
@@ -1346,8 +1349,10 @@ ul.home-noticias {
   .splash-home .splash-subhead {
     text-transform: none; }
   .splash-home .maior {
-    font-size: 26px; }
+    font-family: "Maitree", serif !important;
+    font-size: 25px; }
   .splash-home .menor {
+    font-family: "Maitree", serif !important;
     font-size: 16px; }
 
 .paises-lista .grid-paises, .artistas-categorias .categoria-grid {

@@ -1,23 +1,43 @@
 .container-zumzum{
     background: $branco-malungo;
 }
+
+%link{
+    border: $beje solid 1px;
+    color: $beje;
+    cursor: pointer;
+    font-family: 'Proxima nova', sans-serif!important;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.3em;
+}
+
+%link:hover{
+    color: $beje;
+    cursor: pointer;
+    opacity: .8;
+}
+
 .zumzum-all{
     @include page();
     color: $preto-malungo;
     box-sizing: border-box;
-    padding-top: 120px;
     font-size: 18px;
     font-family: 'Maitree', serif!important;
     font-weight: 300;
     min-height: calc(100vh - 55px);
-    h1{
-        font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 940px;
+
+    h2 {
+        border-bottom: solid $preto-malungo 1px;
+        font-family: 'Maitree', serif!important;
         font-size: 42px;
-        margin-top: 60px;
-        margin-bottom: 30px;
-        text-align: center;
+        margin-bottom: 0;
     }
-    h2 { font-family: 'Maitree', serif!important; }
     min-height: 100vh;
     &,*{
         color: $preto-malungo;
@@ -32,9 +52,103 @@
         flex-wrap: wrap;
         margin: 0 auto;
         max-width: $page-size;
-        width: 100%;
         li{
             display: block;
+            font-size: 20px;
         }
+    }
+    .post-meta-data{
+        display: flex;
+        font-family: 'proxima-nova', sans-serif!important;
+        font-size: 12px;
+        font-weight: bold;
+        justify-content: space-between;
+        text-transform: uppercase;
+    }
+    .authorlink{
+        color: $beje;
+    }
+    .authorlink:hover{
+        color: $beje;
+        cursor: pointer;
+        opacity: .8;
+    }
+    .veja-mais{
+        @extend %link;
+    }
+}
+
+.zumzum-sidebar{
+    border-left: 1px solid rgba($preto-malungo, 0.4);
+    padding-left: 30px;
+    width: 260px;
+    h3{
+        color: $roxo-zumzum;
+        font-family: 'proxima-nova', sans-serif!important;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h3:before{
+        border-top: 3px $verde-zumzum solid;
+        content: '';
+        display: block;
+        height: 1em;
+        position: relative;
+        top: 2.5em;
+        width: 2em;
+        z-index: 10;
+    }
+    .tag-link{
+        @extend %link;
+        font-size: 12px;
+    }
+    a{
+        @extend %link;
+        border: none;
+    }
+    .tags{
+        border: 1px $beje solid;
+        padding: 1em;
+    }
+}
+.zumzum-posts-pages{
+    width: 640px;
+}
+
+.main-zumzum{
+    & > h1{
+        font-weight: bold;
+        // font-size: 42px;
+        margin: 0;
+        // margin-top: 60px;
+        // margin-bottom: 30px;
+        padding-top: 120px;
+        text-align: center;
+        width: 100%;
+        img{
+            height: 3em;
+            margin: auto;
+            max-width: 80vw;
+            margin-bottom: 65px;
+        }
+    }
+    .burburinho{
+        @include lines-up-down($preto-malungo);
+        color: $roxo-zumzum;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 50px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    .content-zumzum{
+        border-bottom: 1px solid $preto-malungo;
+        padding-bottom: 1em;
+    }
+    .tags-content a{
+        @extend %link;
     }
 }

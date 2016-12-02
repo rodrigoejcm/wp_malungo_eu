@@ -120,6 +120,13 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Proxima Nova', sans-serif!important;
 }
 
+
+.addtoany_list{
+    &, * {
+        margin: 0!important;
+    }
+}
+
 @import "css/pagination";
 @import "css/malungo";
 @import "css/mafua";

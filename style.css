@@ -728,6 +728,9 @@ html, body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Proxima Nova", sans-serif !important; }
 
+.addtoany_list, .addtoany_list * {
+  margin: 0 !important; }
+
 ul.pagination {
   display: block;
   font-weight: bold;
@@ -3222,10 +3225,12 @@ ul.social {
   text-transform: uppercase;
   padding: 0.3em; }
 
+.hover-roxo:hover {
+  color: #53417b !important; }
+
 .zumzum-all .veja-mais:hover, .zumzum-sidebar .tag-link:hover, .zumzum-sidebar a:hover, .main-zumzum .tags-content a:hover {
   color: #ad8d6e;
-  cursor: pointer;
-  opacity: .8; }
+  cursor: pointer; }
 
 .zumzum-all {
   font-family: "Maitree", serif !important;
@@ -3287,6 +3292,8 @@ ul.social {
     color: #ad8d6e;
     cursor: pointer;
     opacity: .8; }
+  .zumzum-all .veja-mais:hover {
+    color: #53417b !important; }
 
 .zumzum-sidebar {
   border-left: 1px solid rgba(48, 51, 49, 0.4);
@@ -3306,9 +3313,11 @@ ul.social {
     position: relative;
     top: 2.5em;
     width: 2em;
-    z-index: 10; }
+    z-index: 2; }
   .zumzum-sidebar .tag-link {
     font-size: 12px; }
+  .zumzum-sidebar .tag-link:hover {
+    color: #53417b; }
   .zumzum-sidebar a {
     border: none; }
   .zumzum-sidebar .tags {
@@ -3329,6 +3338,10 @@ ul.social {
     margin: auto;
     max-width: 80vw;
     margin-bottom: 65px; }
+.main-zumzum .featured-img {
+  height: 5em;
+  object-fit: cover;
+  width: 968px; }
 .main-zumzum .burburinho {
   border-top: 1px solid #303331;
   border-bottom: 1px solid #303331;
@@ -3344,5 +3357,7 @@ ul.social {
 .main-zumzum .content-zumzum {
   border-bottom: 1px solid #303331;
   padding-bottom: 1em; }
+.main-zumzum .tags-content a:hover {
+  color: #53417b !important; }
 
 /*# sourceMappingURL=style.css.map */

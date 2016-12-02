@@ -45,21 +45,30 @@ get_header(); ?>
 									<div class="content-zumzum">
 							            <h2><?php echo $post->post_title ?></h2>
 							            <p class="post-meta-data">
-							            	<a href="authorlink" class="authorlink">Por <?= get_the_author() ?></a>
+							            	<a href="authorlink" class="authorlink hover-roxo__">Por <?= get_the_author() ?></a>
 							            	<span class="data-publicacao"><?= get_the_date() ?></span>
 							            </p>
-							            <img src="<?= $thumb_url ?>">
+							            <img src="<?= $thumb_url ?>" class="featured-img">
 
 							            <?php echo wp_trim_words(get_the_excerpt(), 30); ?>
 							            <br>
 							            <br>
 							            <a href="<?= get_permalink() ?>" class="veja-mais">Continue o papo</a>
+							            <br>
+							            <br>
+							            <!-- 
 							            <h3>Tags</h3>
 							            <?php
 										if(get_the_tag_list()) {
 										    echo get_the_tag_list('<ul class="tags-content"><li>','</li><li>','</li></ul>');
 										}
 										?>
+										 -->
+										<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
+										    ADDTOANY_SHARE_SAVE_KIT( array( 
+										        'buttons' => array( 'facebook', 'twitter', 'google_plus'),
+										    ) );
+										} ?>
 								    </div>
 								</li>
 							<?php endwhile; else : ?>
@@ -97,13 +106,13 @@ get_header(); ?>
 									$thumb_url = $thumb_url_array[0];
 						?>
 						<li><a href="<?= get_permalink() ?>" class="link-post">
-			               	<h4 class="titulo"><?php the_title(); ?></h4>
-			               	<a href="authorlink" class="authorlink">Por <?= get_the_author() ?></a>
+			               	<h4 class="titulo hover-roxo"><?php the_title(); ?></h4>
+			               	<a href="authorlink" class="authorlink hover-roxo">Por <?= get_the_author() ?></a>
 			            	<p class="data-publicacao"><?= get_the_date() ?></p>
 		               	</a></li>
 						<?php endwhile; endif; ?>
 					</ul>
-					<section class="tags">
+					<!-- <section class="tags">
 						<h3>Dê uma volta</h3>
 						<ul class="tags-list">
 							<?php
@@ -125,7 +134,7 @@ get_header(); ?>
 								</a>
 							</li>
 						</ul>
-					</section>
+					</section> -->
 				</div>
 			</div>
 		</main><!-- #main -->

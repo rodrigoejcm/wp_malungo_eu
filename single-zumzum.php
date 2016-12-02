@@ -34,7 +34,7 @@ get_header();
                 <img src="<?= $thumb_url ?>">
                 <div class="content-autor">
                     <h3><?= $autor->post_title ?></h3>
-                    <?php echo apply_filters('the_content', $post->post_content); ?>
+                    <?php echo apply_filters('the_content', $autor->post_content); ?>
                 </div>
             </div>
         </main><!-- #main -->

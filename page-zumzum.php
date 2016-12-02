@@ -40,12 +40,13 @@ get_header(); ?>
 								$thumb_id = get_post_thumbnail_id();
 								$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
 								$thumb_url = $thumb_url_array[0];
+								$autor = get_field('autor');
 								?>
 								<li>
 									<div class="content-zumzum">
 							            <h2><?php echo $post->post_title ?></h2>
 							            <p class="post-meta-data">
-							            	<a href="authorlink" class="authorlink hover-roxo__">Por <?= get_the_author() ?></a>
+							            	<a href="authorlink" class="authorlink hover-roxo__">Por <?= $autor->post_title ?></a>
 							            	<span class="data-publicacao"><?= get_the_date() ?></span>
 							            </p>
 							            <img src="<?= $thumb_url ?>" class="featured-img">

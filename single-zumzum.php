@@ -11,7 +11,10 @@ get_header();
 
 /*while ( have_posts() ) {*/
 ?>
-
+    <script type="text/javascript">
+    $('.cor-scroll').css("background-color", "#303331");
+    zumzum = true;
+    </script>
     <div id="primary" class="content-area malungo-post">
         <main id="main" class="site-main main-zumzum mafua-content" role="main">
             <?php

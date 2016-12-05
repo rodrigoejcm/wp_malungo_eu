@@ -140,3 +140,11 @@ h1, h2, h3, h4, h5, h6 {
 @import "css/pullquote" ;
 @import "css/malunguices" ;
 @import "css/zumzum" ;
+
+.page-msg{
+    padding-top: 15vh;
+    h1{
+        color: $beje;
+        text-shadow: $preto-malungo 2px 2px 1px;
+    }
+}

@@ -1005,6 +1005,12 @@ a.pure-button-primary {
     margin: auto;
     min-width: 320px;
     max-width: 880px; }
+    .malungo-post .mafua-content a {
+      color: #ad8d6e; }
+    .malungo-post .mafua-content a:hover {
+      color: #53417b;
+      cursor: pointer;
+      text-decoration: none; }
   .malungo-post p {
     margin-bottom: 30px;
     margin-top: 60px; }
@@ -3386,5 +3392,11 @@ ul.social {
     top: 2.5em;
     width: 2em;
     z-index: 2; }
+
+.page-msg {
+  padding-top: 15vh; }
+  .page-msg h1 {
+    color: #ad8d6e;
+    text-shadow: #303331 2px 2px 1px; }
 
 /*# sourceMappingURL=style.css.map */

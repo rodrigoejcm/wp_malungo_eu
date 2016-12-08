@@ -26,6 +26,7 @@ get_header(); ?>
 					alt="MALUNGUICES"
 					/>
 			</h1>
+			<p class="uau">Uau! Descobertas mundo afora e brasil adentro.</p>
 				<ul class='grid-malunguices'>
 					<?php
 

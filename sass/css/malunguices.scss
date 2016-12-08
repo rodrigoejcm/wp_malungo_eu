@@ -13,7 +13,7 @@
         margin:0;
         width: 100%;
         img{
-            height: 3em;
+            height: 2em;
             margin: auto;
             max-width: 80vw;
             margin-bottom: 65px;
@@ -30,39 +30,75 @@
         margin: 0 auto;
         // max-width: $page-size;
         width: 100%;
+        $tamanho-li: 60vh;
         li{
-            height: 25vh;
+            background-size: cover!important;
+            background-position: 50% 50%!important;
+            height: $tamanho-li;
+            position: relative;
             a {
-                align-items: center;
+                align-items: flex-end;
                 display: flex;
                 height: 100%;
+                text-align: left;
+                padding: 1em;
                 width: 100%;
+            }
+            a:hover{
+                cursor: pointer;
+            }
+            &,*{
+                color: $branco-malungo!important;
             }
             @include transition(all ease 400ms);
         }
+        $tamanho-mais: $tamanho-li * 0.3;
+        li:before{
+            background: url('./img/malunguice-mais.svg') no-repeat;
+            background-size: contain;
+            background-position: 50% 50%;
+            content: ' ';
+            // display: none;
+            height: $tamanho-mais;
+            opacity: 0;
+            margin-top: calc(#{$tamanho-li} * -0.15);
+            margin-left: calc(50% - #{($tamanho-mais/2)});
+            position: absolute;
+            width: $tamanho-mais;
+            @include transition(opacity ease-out 1000ms);
+            @include transition(margin-top ease 400ms);
+        }
         li:hover{
+            &:before{
+                @include transition(opacity ease-out 1000ms);
+                @include transition(margin-top ease 400ms);
+                cursor: pointer;
+                display: block;
+                margin-top: calc(#{$tamanho-li} * 0.3);
+                opacity: 1;
+            }
             @include transition(all ease 400ms);
             a{
                 background: rgba($cinza-indicacao, 0.5);
                 opacity:1!important;
             }
-            &,*{
-                color: $amarelo-malungo!important;
-            }
         }
-        li:nth-child(3n){
-            width: 100%;
+        li:nth-child(4n+1), li:nth-child(4n){
+            width: 40%;
         }
-        li:nth-child(6n+1), li:nth-child(6n+5){
-            background: $branco-malungo;
-            &,*{
-                color: $preto-malungo;
-            }
-            width: 30%;
+        li:nth-child(4n+2), li:nth-child(4n+3){
+            width: 60%;
         }
-        li:nth-child(6n+2), li:nth-child(6n+4){
-            width: 70%;
-        }
+    }
+    .uau{
+        @include lines-up-down($preto-malungo);
+        color: $rosa-malunguice;
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
     }
 }
 

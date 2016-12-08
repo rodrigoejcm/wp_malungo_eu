@@ -3120,7 +3120,7 @@ ul.social {
     margin: 0;
     width: 100%; }
     .malunguices-all > h1 img {
-      height: 3em;
+      height: 2em;
       margin: auto;
       max-width: 80vw;
       margin-bottom: 65px; }
@@ -3133,33 +3133,75 @@ ul.social {
     margin: 0 auto;
     width: 100%; }
     .malunguices-all ul.grid-malunguices li {
-      height: 25vh;
+      background-size: cover !important;
+      background-position: 50% 50% !important;
+      height: 60vh;
+      position: relative;
       -webkit-transition: all ease 400ms;
       -moz-transition: all ease 400ms;
       transition: all ease 400ms; }
       .malunguices-all ul.grid-malunguices li a {
-        align-items: center;
+        align-items: flex-end;
         display: flex;
         height: 100%;
+        text-align: left;
+        padding: 1em;
         width: 100%; }
+      .malunguices-all ul.grid-malunguices li a:hover {
+        cursor: pointer; }
+      .malunguices-all ul.grid-malunguices li, .malunguices-all ul.grid-malunguices li * {
+        color: #F7EFE7 !important; }
+    .malunguices-all ul.grid-malunguices li:before {
+      background: url("./img/malunguice-mais.svg") no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
+      content: ' ';
+      height: 18vh;
+      opacity: 0;
+      margin-top: calc(60vh * -0.15);
+      margin-left: calc(50% - 9vh);
+      position: absolute;
+      width: 18vh;
+      -webkit-transition: opacity ease-out 1000ms;
+      -moz-transition: opacity ease-out 1000ms;
+      transition: opacity ease-out 1000ms;
+      -webkit-transition: margin-top ease 400ms;
+      -moz-transition: margin-top ease 400ms;
+      transition: margin-top ease 400ms; }
     .malunguices-all ul.grid-malunguices li:hover {
       -webkit-transition: all ease 400ms;
       -moz-transition: all ease 400ms;
       transition: all ease 400ms; }
+      .malunguices-all ul.grid-malunguices li:hover:before {
+        -webkit-transition: opacity ease-out 1000ms;
+        -moz-transition: opacity ease-out 1000ms;
+        transition: opacity ease-out 1000ms;
+        -webkit-transition: margin-top ease 400ms;
+        -moz-transition: margin-top ease 400ms;
+        transition: margin-top ease 400ms;
+        cursor: pointer;
+        display: block;
+        margin-top: calc(60vh * 0.3);
+        opacity: 1; }
       .malunguices-all ul.grid-malunguices li:hover a {
         background: rgba(85, 85, 85, 0.5);
         opacity: 1 !important; }
-      .malunguices-all ul.grid-malunguices li:hover, .malunguices-all ul.grid-malunguices li:hover * {
-        color: #FB9D00 !important; }
-    .malunguices-all ul.grid-malunguices li:nth-child(3n) {
-      width: 100%; }
-    .malunguices-all ul.grid-malunguices li:nth-child(6n+1), .malunguices-all ul.grid-malunguices li:nth-child(6n+5) {
-      background: #F7EFE7;
-      width: 30%; }
-      .malunguices-all ul.grid-malunguices li:nth-child(6n+1), .malunguices-all ul.grid-malunguices li:nth-child(6n+1) *, .malunguices-all ul.grid-malunguices li:nth-child(6n+5), .malunguices-all ul.grid-malunguices li:nth-child(6n+5) * {
-        color: #303331; }
-    .malunguices-all ul.grid-malunguices li:nth-child(6n+2), .malunguices-all ul.grid-malunguices li:nth-child(6n+4) {
-      width: 70%; }
+    .malunguices-all ul.grid-malunguices li:nth-child(4n+1), .malunguices-all ul.grid-malunguices li:nth-child(4n) {
+      width: 40%; }
+    .malunguices-all ul.grid-malunguices li:nth-child(4n+2), .malunguices-all ul.grid-malunguices li:nth-child(4n+3) {
+      width: 60%; }
+  .malunguices-all .uau {
+    border-top: 1px solid #303331;
+    border-bottom: 1px solid #303331;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    color: #c5006c;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%; }
 
 .single-malunguice, .single-noticia, .single-zumzum {
   background: #303331; }
@@ -3388,7 +3430,7 @@ ul.social {
   padding: 0; }
 
 .img-zumzum {
-  height: 350px;
+  height: 200px;
   display: block;
   margin: auto;
   max-width: 80vw;

@@ -17,12 +17,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<section class="artistas-categorias">
-			<h1>
-				<img src="<?=get_template_directory_uri().
-						'/img/titulo-artes.svg'?>"
-					alt="ARTES"
-					/>
-			</h1>
+			<img src="<?=get_template_directory_uri().
+					'/img/titulo-artes.svg'?>"
+				alt="ARTES"
+				class="img-zumzum"
+				/>
 			<div class="categoria-grid">
 				<a  class="link-artesvisuais" href="<?=get_site_url() .'/artistas/?categoria_artista=artes-visuais' ?>">
 					<div class="box-categoria">

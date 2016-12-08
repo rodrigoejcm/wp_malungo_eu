@@ -17,12 +17,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="paises-lista">
-			<h1>
-				<img src="<?=get_template_directory_uri().
-						'/img/titulo-paises.svg'?>"
-					alt="ARTES"
-					/>
-			</h1>
+			<img src="<?=get_template_directory_uri().
+					'/img/titulo-paises.svg'?>"
+				alt="ARTES"
+				class="img-zumzum"
+				/>
 				<ul class='grid-paises'>
 					<?php
 

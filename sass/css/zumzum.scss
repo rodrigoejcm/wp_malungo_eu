@@ -151,6 +151,8 @@
     .tags-content a:hover{
         color: $roxo-zumzum!important;
     }
+}
+.main-zumzum, .main-malunguice {
     .autor{
         border: 1px $beje solid;
         display: flex;
@@ -169,6 +171,7 @@
         }
     }
 }
+
 .burburinho{
     @include lines-up-down($preto-malungo);
     color: $roxo-zumzum;

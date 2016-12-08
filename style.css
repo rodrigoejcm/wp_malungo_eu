@@ -1421,8 +1421,7 @@ ul.home-noticias {
 
 .paises-lista {
   background: #303331;
-  box-sizing: border-box;
-  padding-top: 120px; }
+  box-sizing: border-box; }
   .paises-lista h1 > img {
     height: 3em;
     max-width: 80vw;
@@ -3386,24 +3385,25 @@ ul.social {
   padding-bottom: 1em; }
 .main-zumzum .tags-content a:hover {
   color: #53417b !important; }
-.main-zumzum .autor {
+
+.main-zumzum .autor, .main-malunguice .autor {
   border: 1px #ad8d6e solid;
   display: flex;
   justify-content: space-between;
   padding: 1em; }
-  .main-zumzum .autor img {
+  .main-zumzum .autor img, .main-malunguice .autor img {
     height: 30%;
     object-fit: cover;
     width: 30%; }
-  .main-zumzum .autor .content-autor {
+  .main-zumzum .autor .content-autor, .main-malunguice .autor .content-autor {
     width: 60%; }
-  .main-zumzum .autor h3 {
+  .main-zumzum .autor h3, .main-malunguice .autor h3 {
     color: #53417b;
     font-family: "proxima-nova", sans-serif !important;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase; }
-  .main-zumzum .autor h3:before {
+  .main-zumzum .autor h3:before, .main-malunguice .autor h3:before {
     border-top: 3px #18cc58 solid;
     content: '';
     display: block;

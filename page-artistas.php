@@ -31,14 +31,13 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="artistas">
-			<h1>
-                <a href="<?= site_url().'/categoria-artistas' ?>">
-                	<img src="<?=get_template_directory_uri().
-                        '/img/titulo-artes.svg'?>"
-                    alt="ARTES"
-                    />
-                </a>
-            </h1>
+            <a href="<?= site_url().'/categoria-artistas' ?>">
+            	<img src="<?=get_template_directory_uri().
+                    '/img/titulo-artes.svg'?>"
+                alt="ARTES"
+                class="img-zumzum"
+                />
+            </a>
             <br>
             <ul class="menu-categorias">
             	<li>

@@ -29,11 +29,21 @@ get_header();
             <h1><?php echo $post->post_title ?></h1>
             <img src="<?= $thumb_url ?>" class="featured-img">
             <?php echo apply_filters('the_content', $post->post_content); ?>
-            <?php echo apply_filters('the_content', get_field('para_escurecer')); ?>
-            <?php echo apply_filters('the_content', get_field('referencias')); ?>
+            <div class="pra-escurecer">
+                <?php echo apply_filters('the_content', get_field('para_escurecer')); ?>
+            </div>
+            <div class="referencias">
+                <?php echo apply_filters('the_content', get_field('referencias')); ?>
+            </div>
+            <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
+                ADDTOANY_SHARE_SAVE_KIT( array( 
+                    'buttons' => array( 'facebook', 'twitter', 'google_plus'),
+                ) );
+            } ?>
             <div class="autor">
                 <?php
-                    $autor = get_field('__autor');
+                    $autor = get_field('__autor', $post->ID);
+
                     $thumb_id = get_post_thumbnail_id($autor->ID);
                     $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                     $thumb_url = $thumb_url_array[0];
@@ -44,11 +54,6 @@ get_header();
                     <?php echo apply_filters('the_content', $autor->post_content); ?>
                 </div>
             </div>
-            <?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { 
-                ADDTOANY_SHARE_SAVE_KIT( array( 
-                    'buttons' => array( 'facebook', 'twitter', 'google_plus'),
-                ) );
-            } ?>
         </main><!-- #main -->
     </div>
 <?php

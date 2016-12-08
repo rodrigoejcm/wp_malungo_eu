@@ -21,7 +21,7 @@ get_header();
                     'buttons' => array( 'facebook', 'twitter', 'google_plus'),
                 ) );
             }
-            $autor = get_field('__autor');
+            $autor = get_field('__autor', $post->ID);
             ?>
             <div class="content-autor">
                 <h3><?= $autor->post_title ?></h3>

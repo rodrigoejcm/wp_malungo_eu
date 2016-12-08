@@ -134,37 +134,11 @@
 }
 
 .main-zumzum{
-    & > h1{
-        font-weight: bold;
-        // font-size: 42px;
-        margin: 0;
-        // margin-top: 60px;
-        // margin-bottom: 30px;
-        padding-top: 120px;
-        text-align: center;
-        width: 100%;
-        img{
-            height: 3em;
-            margin: auto;
-            max-width: 80vw;
-            margin-bottom: 65px;
-        }
-    }
 
     .featured-img{
         max-height: 360px;
         object-fit: cover;
         width: $page-size * 1.1;
-    }
-    .burburinho{
-        @include lines-up-down($preto-malungo);
-        color: $roxo-zumzum;
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 50px;
-        text-align: center;
-        text-transform: uppercase;
-        width: 100%;
     }
 
     .content-zumzum{
@@ -194,4 +168,27 @@
             @include titulo-zumzum();
         }
     }
+}
+.burburinho{
+    @include lines-up-down($preto-malungo);
+    color: $roxo-zumzum;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#content{
+    padding: 0;
+}
+.img-zumzum{
+    height: 350px;
+    display: block;
+    margin: auto;
+    max-width: 80vw;
+    margin-bottom: 65px;
+    padding-top: 120px;
+    width: auto;
 }

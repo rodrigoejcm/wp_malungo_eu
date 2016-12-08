@@ -3162,8 +3162,9 @@ ul.social {
       width: 70%; }
 
 .single-malunguice, .single-noticia, .single-zumzum {
-  padding-top: 55px;
   background: #303331; }
+  .single-malunguice:not(.single-zumzum), .single-noticia:not(.single-zumzum), .single-zumzum:not(.single-zumzum) {
+    padding-top: 55px; }
 
 .mafua-content,
 .single-malunguice,
@@ -3334,33 +3335,10 @@ ul.social {
 .zumzum-posts-pages {
   width: 640px; }
 
-.main-zumzum > h1 {
-  font-weight: bold;
-  margin: 0;
-  padding-top: 120px;
-  text-align: center;
-  width: 100%; }
-  .main-zumzum > h1 img {
-    height: 3em;
-    margin: auto;
-    max-width: 80vw;
-    margin-bottom: 65px; }
 .main-zumzum .featured-img {
   max-height: 360px;
   object-fit: cover;
   width: 968px; }
-.main-zumzum .burburinho {
-  border-top: 1px solid #303331;
-  border-bottom: 1px solid #303331;
-  padding-top: .5em;
-  padding-bottom: .5em;
-  color: #53417b;
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  text-align: center;
-  text-transform: uppercase;
-  width: 100%; }
 .main-zumzum .content-zumzum {
   border-bottom: 1px solid #303331;
   padding-bottom: 1em; }
@@ -3392,6 +3370,31 @@ ul.social {
     top: 2.5em;
     width: 2em;
     z-index: 2; }
+
+.burburinho {
+  border-top: 1px solid #303331;
+  border-bottom: 1px solid #303331;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  color: #53417b;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%; }
+
+#content {
+  padding: 0; }
+
+.img-zumzum {
+  height: 350px;
+  display: block;
+  margin: auto;
+  max-width: 80vw;
+  margin-bottom: 65px;
+  padding-top: 120px;
+  width: auto; }
 
 .page-msg {
   padding-top: 15vh; }

@@ -15,14 +15,18 @@ get_header();
     $('.cor-scroll').css("background-color", "#303331");
     zumzum = true;
     </script>
-    <div id="primary" class="content-area malungo-post">
+    <div id="primary" class="content-area malungo-post container-zumzum">
+        <img src="<?=get_template_directory_uri().
+            '/img/titulo-zumzum.svg'?>"
+            class="img-zumzum"/>
+        <p class="burburinho">Fala tu! Bem-vindo ao nosso burburinho.</p>
         <main id="main" class="site-main main-zumzum mafua-content" role="main">
             <?php
                 $thumb_id = get_post_thumbnail_id();
                 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
                 $thumb_url = $thumb_url_array[0];
             ?>
-            <h2><?php echo $post->post_title ?></h2>
+            <h1><?php echo $post->post_title ?></h1>
             <img src="<?= $thumb_url ?>" class="featured-img">
             <?php echo apply_filters('the_content', $post->post_content); ?>
             <?php echo apply_filters('the_content', get_field('para_escurecer')); ?>

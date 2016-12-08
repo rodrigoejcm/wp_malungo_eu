@@ -19,11 +19,9 @@ get_header(); ?>
 	</script>
 	<div id="primary" class="content-area container-zumzum">
 		<main id="main" class="site-main main-zumzum" role="main">
-		<h1>
-			<img src="<?=get_template_directory_uri().
-				'/img/titulo-zumzum.svg'?>"/>
-			<!--?= get_svg('titulo-zumzum', true) ?-->
-		</h1>
+		<img src="<?=get_template_directory_uri().
+			'/img/titulo-zumzum.svg'?>"
+			class="img-zumzum"/>
 		<p class="burburinho">Fala tu! Bem-vindo ao nosso burburinho.</p>
 		<div class="zumzum-all">
 				<div class="zumzum-posts-pages">

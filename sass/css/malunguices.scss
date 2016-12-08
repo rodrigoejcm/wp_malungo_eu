@@ -67,7 +67,9 @@
 }
 
 .single-malunguice, .single-noticia, .single-zumzum{
-    padding-top: 55px;
+    &:not(.single-zumzum){
+        padding-top: 55px;
+    }
     background: $preto-malungo;
 }
 .mafua-content,

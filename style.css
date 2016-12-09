@@ -3108,7 +3108,6 @@ ul.social {
 .malunguices-all {
   background: #F7EFE7;
   box-sizing: border-box;
-  padding-top: 120px;
   min-height: 100vh; }
   .malunguices-all h2 {
     font-family: "Maitree", serif !important; }
@@ -3153,7 +3152,7 @@ ul.social {
     .malunguices-all ul.grid-malunguices li:before {
       background: url("./img/malunguice-mais.svg") no-repeat;
       background-size: contain;
-      background-position: 50% 50%;
+      background-position: center center;
       content: ' ';
       height: 18vh;
       opacity: 0;
@@ -3181,7 +3180,8 @@ ul.social {
         cursor: pointer;
         display: block;
         margin-top: calc(60vh * 0.3);
-        opacity: 1; }
+        opacity: 1;
+        z-index: 4; }
       .malunguices-all ul.grid-malunguices li:hover a {
         background: rgba(85, 85, 85, 0.5);
         opacity: 1 !important; }
@@ -3204,8 +3204,6 @@ ul.social {
 
 .single-malunguice, .single-noticia, .single-zumzum {
   background: #303331; }
-  .single-malunguice:not(.single-zumzum), .single-noticia:not(.single-zumzum), .single-zumzum:not(.single-zumzum) {
-    padding-top: 55px; }
 
 .mafua-content,
 .single-malunguice,
@@ -3260,6 +3258,98 @@ ul.social {
   .single-zumzum .content-malunguice {
     margin: 0 auto;
     width: 880px; }
+
+.galeria-malunguice {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3em;
+  flex-wrap: wrap; }
+  .galeria-malunguice li:before {
+    background: url("./img/malunguice-mais.svg") no-repeat;
+    background-size: contain;
+    background-position: center center;
+    content: ' ';
+    height: 30%;
+    opacity: 0;
+    margin-top: calc(100% * -0.15);
+    margin-left: calc(50% - 15%);
+    position: absolute;
+    width: 30%;
+    -webkit-transition: opacity ease-out 1000ms;
+    -moz-transition: opacity ease-out 1000ms;
+    transition: opacity ease-out 1000ms;
+    -webkit-transition: margin-top ease 400ms;
+    -moz-transition: margin-top ease 400ms;
+    transition: margin-top ease 400ms; }
+  .galeria-malunguice li:hover {
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    transition: all ease 400ms; }
+    .galeria-malunguice li:hover:before {
+      -webkit-transition: opacity ease-out 1000ms;
+      -moz-transition: opacity ease-out 1000ms;
+      transition: opacity ease-out 1000ms;
+      -webkit-transition: margin-top ease 400ms;
+      -moz-transition: margin-top ease 400ms;
+      transition: margin-top ease 400ms;
+      cursor: pointer;
+      display: block;
+      margin-top: calc(100% * 0.3);
+      opacity: 1;
+      z-index: 4; }
+    .galeria-malunguice li:hover a {
+      background: rgba(85, 85, 85, 0.5);
+      opacity: 1 !important; }
+  .galeria-malunguice li {
+    background: transparent;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    padding: .25em;
+    position: relative;
+    min-width: 90px;
+    width: 33.33%;
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    transition: all ease 400ms; }
+    .galeria-malunguice li:after {
+      box-sizing: border-box;
+      color: #F7EFE7;
+      display: block;
+      font-size: 1.2em;
+      font-weight: 400;
+      height: 3em;
+      margin-top: -2em;
+      opacity: 0;
+      overflow: hidden;
+      padding-left: .5em;
+      position: absolute;
+      text-align: left;
+      width: 100%;
+      z-index: 5;
+      -webkit-transition: all ease 400ms;
+      -moz-transition: all ease 400ms;
+      transition: all ease 400ms; }
+  .galeria-malunguice li:hover {
+    background: #303331;
+    cursor: pointer;
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    transition: all ease 400ms; }
+    .galeria-malunguice li:hover img.item-galeria-malunguice {
+      opacity: .3; }
+    .galeria-malunguice li:hover:after {
+      opacity: 1;
+      -webkit-transition: all ease 400ms;
+      -moz-transition: all ease 400ms;
+      transition: all ease 400ms; }
+  .galeria-malunguice img.item-galeria-malunguice {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    -webkit-transition: all ease 400ms;
+    -moz-transition: all ease 400ms;
+    transition: all ease 400ms; }
 
 .container-zumzum {
   background: #F7EFE7; }

@@ -20,12 +20,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="malunguices-all">
-			<h1>
-				<img src="<?=get_template_directory_uri().
-						'/img/titulo-malunguices.svg'?>"
-					alt="MALUNGUICES"
-					/>
-			</h1>
+			<img src="<?=get_template_directory_uri().
+					'/img/titulo-malunguices.svg'?>"
+				alt="MALUNGUICES"
+				class="img-zumzum"
+				/>
 			<p class="uau">Uau! Descobertas mundo afora e brasil adentro.</p>
 				<ul class='grid-malunguices'>
 					<?php

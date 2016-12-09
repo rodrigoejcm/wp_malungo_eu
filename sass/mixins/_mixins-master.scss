@@ -159,3 +159,38 @@
         font-weight: bold;
     }
 }
+
+@mixin mais-hover($tamanho-li: 100%, $seletor: 'li'){
+    $tamanho-mais: $tamanho-li * 0.3;
+    #{$seletor}:before{
+            background: url('./img/malunguice-mais.svg') no-repeat;
+            background-size: contain;
+            background-position: center center;
+            content: ' ';
+            // display: none;
+            height: $tamanho-mais;
+            opacity: 0;
+            margin-top: calc(#{$tamanho-li} * -0.15);
+            margin-left: calc(50% - #{($tamanho-mais/2)});
+            position: absolute;
+            width: $tamanho-mais;
+            @include transition(opacity ease-out 1000ms);
+            @include transition(margin-top ease 400ms);
+        }
+        #{$seletor}:hover{
+            &:before{
+                @include transition(opacity ease-out 1000ms);
+                @include transition(margin-top ease 400ms);
+                cursor: pointer;
+                display: block;
+                margin-top: calc(#{$tamanho-li} * 0.3);
+                opacity: 1;
+                z-index: 4;
+            }
+            @include transition(all ease 400ms);
+            a{
+                background: rgba($cinza-indicacao, 0.5);
+                opacity:1!important;
+            }
+        }
+}

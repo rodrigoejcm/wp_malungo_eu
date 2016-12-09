@@ -1,7 +1,6 @@
 .malunguices-all{
     background: $branco-malungo;
     box-sizing: border-box;
-    padding-top: 120px;
     h2 { font-family: 'Maitree', serif!important; }
     min-height: 100vh;
     &,*{
@@ -52,37 +51,7 @@
             }
             @include transition(all ease 400ms);
         }
-        $tamanho-mais: $tamanho-li * 0.3;
-        li:before{
-            background: url('./img/malunguice-mais.svg') no-repeat;
-            background-size: contain;
-            background-position: 50% 50%;
-            content: ' ';
-            // display: none;
-            height: $tamanho-mais;
-            opacity: 0;
-            margin-top: calc(#{$tamanho-li} * -0.15);
-            margin-left: calc(50% - #{($tamanho-mais/2)});
-            position: absolute;
-            width: $tamanho-mais;
-            @include transition(opacity ease-out 1000ms);
-            @include transition(margin-top ease 400ms);
-        }
-        li:hover{
-            &:before{
-                @include transition(opacity ease-out 1000ms);
-                @include transition(margin-top ease 400ms);
-                cursor: pointer;
-                display: block;
-                margin-top: calc(#{$tamanho-li} * 0.3);
-                opacity: 1;
-            }
-            @include transition(all ease 400ms);
-            a{
-                background: rgba($cinza-indicacao, 0.5);
-                opacity:1!important;
-            }
-        }
+        @include mais-hover($tamanho-li);
         li:nth-child(4n+1), li:nth-child(4n){
             width: 40%;
         }
@@ -103,9 +72,6 @@
 }
 
 .single-malunguice, .single-noticia, .single-zumzum{
-    &:not(.single-zumzum){
-        padding-top: 55px;
-    }
     background: $preto-malungo;
 }
 .mafua-content,
@@ -138,5 +104,59 @@
     .content-malunguice{
         margin: 0 auto;
         width: $page-size;
+    }
+}
+
+.galeria-malunguice {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 3em;
+    flex-wrap: wrap;
+    @include mais-hover(100%);
+    li{
+        background: rgba(0,0,0,0);
+        box-sizing: border-box;
+        margin: 0;
+        text-align: center;
+        padding: .25em;
+        position: relative;
+        min-width: 90px;
+        width: 33.33%;
+        @include transition(all ease 400ms);
+        &:after{
+            box-sizing: border-box;
+            color: $branco-malungo;
+            display: block;
+            font-size: 1.2em;
+            font-weight: 400;
+            height: 3em;
+            margin-top: -2em;
+            opacity: 0;
+            overflow: hidden;
+            padding-left: .5em;
+            position: absolute;
+            text-align: left;
+            width: 100%;
+            z-index: 5;
+            @include transition(all ease 400ms);
+        }
+    }
+    li:hover{
+        background: $preto-malungo;
+        cursor: pointer;
+        @include transition(all ease 400ms);
+        img.item-galeria-malunguice{
+            opacity: .3;
+        }
+        &:after{
+            opacity: 1;
+            @include transition(all ease 400ms);
+        }
+    }
+    img.item-galeria-malunguice{
+        height: auto;
+        object-fit: cover;
+        width: 100%;
+        @include transition(all ease 400ms);
     }
 }

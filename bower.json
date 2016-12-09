@@ -16,6 +16,10 @@
     "tests"
   ],
   "dependencies": {
-    "bourbon": "^4.2.7"
+    "bourbon": "^4.2.7",
+    "sass-mediaqueries": "^1.6.1"
+  },
+  "devDependencies": {
+    "gess": "^1.2.0"
   }
 }

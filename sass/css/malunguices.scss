@@ -58,6 +58,11 @@
         li:nth-child(4n+2), li:nth-child(4n+3){
             width: 60%;
         }
+        @media #{media_query('small')}{
+            li {
+                width: 100%!important;
+            }
+        }
     }
     .uau{
         @include lines-up-down($preto-malungo);
@@ -104,6 +109,7 @@
     .content-malunguice{
         margin: 0 auto;
         width: $page-size;
+        max-width: 90vw!important;
     }
 }
 
@@ -120,8 +126,15 @@
         text-align: center;
         padding: .25em;
         position: relative;
-        min-width: 90px;
-        width: 33.33%;
+        @media #{media_query('big')} {
+            width: 33.33%;
+        }
+        @media #{media_query('medium')} {
+            width: 50%;
+        }
+        @media #{media_query('small')}{
+            width: 90%;
+        }
         @include transition(all ease 400ms);
         &:after{
             box-sizing: border-box;

@@ -163,14 +163,26 @@ ul.menu-categorias {
     }
     @include lines-up-down($branco-malungo);
     a { color: $branco-malungo; }
-    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin-bottom: 1.5em;
     margin-left: 0;
+    padding: 0;
     text-align: center;
     text-transform: uppercase;
     width: 100%;
     li {
+        $quantidade: 7;
         display: inline-block;
+        text-align: center;
+        @media #{media_query('medium')}{
+            width: 33.3%;
+        }
+        @media #{media_query('small')}{
+            width: 100%;
+        }
     }
     a {
         display: inline-block;

@@ -51,7 +51,7 @@ get_header();
                 <img src="<?= $thumb_url ?>">
                 <div class="content-autor">
                     <h3><?= $autor->post_title ?></h3>
-                    <?php echo apply_filters('the_content', $autor->post_content); ?>
+                    <?=$autor->post_content ?>
                     <a href="<?=site_url('em-breve')//get_post_permalink($autor->ID)?>">Mais posts de <?= $autor->post_title ?></a>
                 </div>
             </div>

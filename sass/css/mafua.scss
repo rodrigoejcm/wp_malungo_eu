@@ -11,7 +11,13 @@ $altura-imagem: 399px;
         margin: 0 auto;
         position: absolute;
         right: 0;
-        top: $altura-imagem / 2;
+        top: 60px;
+        @media (min-width: 1000px){
+            top: $altura-imagem / 2;
+        }
+        @media #{media_query('big')} and (max-width: 1000px){
+            top: $altura-imagem / 3;
+        }
         width: 70%;
         z-index: 2;
     }

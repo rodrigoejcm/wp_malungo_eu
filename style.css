@@ -441,34 +441,49 @@ a {
     padding-left: 0; }
   .main-navigation *, .main-navigation *:hover {
     text-decoration: none; }
-  .main-navigation > .explica-menu, .main-navigation > .menus {
+  .main-navigation > .menus {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin: auto;
     text-align: center;
     width: 90%; }
-    .main-navigation > .explica-menu > li, .main-navigation > .menus > li {
+    .main-navigation > .menus > li {
       width: 240px; }
-  .main-navigation > .explica-menu {
+  .main-navigation .container-explica {
     background: rgba(247, 239, 231, 0.8);
     box-sizing: border-box;
+    height: 4em;
+    padding-top: .5em; }
+  .main-navigation .explica {
+    border-top: 1px solid #303331;
+    border-bottom: 1px solid #303331;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    display: block;
     color: #303331;
     font-family: "Proxima Nova", sans-serif !important;
     font-size: 10px;
     font-weight: bold;
     padding: 10px;
     text-transform: uppercase; }
-    .main-navigation > .explica-menu > li span {
-      border-top: 1px solid #303331;
-      border-bottom: 1px solid #303331;
-      padding-top: .5em;
-      padding-bottom: .5em; }
   .main-navigation > .menus {
     font-family: 'Maitree', serif;
     font-weight: 200;
     text-transform: lowercase; }
     .main-navigation > .menus li, .main-navigation > .menus a {
       color: #F7EFE7; }
+    .main-navigation > .menus > li {
+      display: inline-block; }
+      @media (min-width: 768px) {
+        .main-navigation > .menus > li {
+          width: 25%; } }
+      @media (min-width: 480px) and (max-width: 768px) {
+        .main-navigation > .menus > li {
+          width: 50%; } }
+      @media (min-width: 0) and (max-width: 480px) {
+        .main-navigation > .menus > li {
+          width: 100%; } }
     .main-navigation > .menus li:hover, .main-navigation > .menus a:hover {
       color: #FB9D00; }
     .main-navigation > .menus li:hover {
@@ -994,9 +1009,15 @@ a.pure-button-primary {
     margin: 0 auto;
     position: absolute;
     right: 0;
-    top: 199.5px;
+    top: 60px;
     width: 70%;
     z-index: 2; }
+    @media (min-width: 1000px) {
+      .cabecalho-mafua > svg {
+        top: 199.5px; } }
+    @media (min-width: 768px) and (max-width: 1000px) {
+      .cabecalho-mafua > svg {
+        top: 133px; } }
 
 .malungo-post {
   background: #F7EFE7;
@@ -1104,7 +1125,6 @@ a.pure-button-primary {
     z-index: 3; }
     .full-menu.active li {
       opacity: 1;
-      transform: translateX(0%);
       text-align: center; }
   .full-menu .main-navigation {
     z-index: 5; }

@@ -56,34 +56,46 @@
 			
 			<nav id="site-navigation" class="main-navigation"
 			role="navigation">
-			
-				<ul class="explica-menu">
-					<li><span>Sobre</span></li>
-					<li><span>Panorama África</span></li>
-					<li><span>Blog</span></li>
-					<li><span>Exposição</span></li>
-				</ul>
-			
 				<ul class="menus">
 					<li>
-						<?php wp_nav_menu( array(
-							'theme_location' => 'sobre'
-							) ); ?>
+						<div class="container-explica">
+							<span class="explica">Sobre</span>
+						</div>
+						<div class="ma-sub-menu">
+							<?php wp_nav_menu( array(
+								'theme_location' => 'sobre'
+								) ); ?>
+						</div>
 					</li>
 					<li>
-						<?php wp_nav_menu( array(
-							'theme_location' => 'panorama-africa'
-							) ); ?>
+						<div class="container-explica">
+							<span class="explica">Panorama África</span>
+						</div>
+						<div class="ma-sub-menu">
+							<?php wp_nav_menu( array(
+								'theme_location' => 'panorama-africa'
+								) ); ?>
+						</div>
 					</li>
 					<li>
-						<?php wp_nav_menu( array(
-							'theme_location' => 'blog'
-							) ); ?>
+						<div class="container-explica">
+							<span class="explica">Blog</span>
+						</div>
+						<div class="ma-sub-menu">
+							<?php wp_nav_menu( array(
+								'theme_location' => 'blog'
+								) ); ?>
+						</div>
 					</li>
 					<li>
-						<?php wp_nav_menu( array(
-							'theme_location' => 'exposicao'
-							) ); ?>
+						<div class="container-explica">
+							<span class="explica">Exposição</span>
+						</div>
+						<div class="ma-sub-menu">
+							<?php wp_nav_menu( array(
+								'theme_location' => 'exposicao'
+								) ); ?>
+						</div>
 					</li>
 				</ul>
 			</nav><!-- #site-navigation -->

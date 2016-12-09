@@ -14,19 +14,24 @@
 	*, *:hover{
 		text-decoration: none;
 	}
-	& > .explica-menu,
 	& > .menus {
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: space-around;
 		margin: auto;
 		text-align: center;
 		& > li { width: $item-size; }
 		width: 90%;
 	}
-	& > .explica-menu {
-		& > li span { @include lines-up-down($cor-texto); }
+	.container-explica{
 		background: rgba($branco-malungo, 0.8);
 		box-sizing: border-box;
+		height: 4em;
+		padding-top: .5em;
+	}
+	.explica {
+		@include lines-up-down($cor-texto);
+		display: block;
 		color: $cor-texto;
 		font-family: 'Proxima Nova', sans-serif!important;
 		font-size: 10px;
@@ -39,6 +44,19 @@
 		font-weight: 200;
 		text-transform: lowercase; 
 		li,a { color: $branco-malungo; }
+		& > li{
+			display: inline-block;
+			@media #{media_query('big')}{
+				width: 25%;
+			}
+			@media #{media_query('medium')}{
+				width: 50%;
+			}
+			@media #{media_query('small')}{
+				width: 100%;
+			}
+		}
+
 
 		li:hover, a:hover { color: $amarelo-malungo; }
 		li:hover { cursor: default; }

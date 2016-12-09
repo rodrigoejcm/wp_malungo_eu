@@ -160,3 +160,40 @@
         @include transition(all ease 400ms);
     }
 }
+
+.single-malunguice {
+    .autor{
+        margin:  0 auto;
+        max-width: 600px;
+    }
+}
+
+.modal-malunguice{
+    background: rgba($branco-malungo, 0.6);
+    .modal-dialog{
+        background: $branco-malungo;
+        border: solid $beje 1px;
+        box-sizing: border-box;
+        padding: 2em;
+        img{
+            text-align: center;
+            width: 90%;
+        } 
+    }
+    h3{
+        @include titulo-zumzum($rosa-malunguice, $preto-malungo);
+        margin-bottom: 2em;
+        text-transform: none!important;
+    }
+    .fecha-modal{
+        background: none;
+        border: none;
+        box-shadow: none;
+        color: $beje;
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

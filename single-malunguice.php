@@ -59,7 +59,7 @@ get_header();
                                 $imagem_infos = wp_prepare_attachment_for_js( $id );
                                 
                             ?>
-                            <li id="li-<?= $id ?>">
+                            <li id="li-<?= $id ?>" class="js-modal-dispara" data-target="#modal-<?=$id?>">
                                 <img class="item-galeria-malunguice"
                                     src=" <?php echo $imagem_infos['url']; ?> "/>
                                 <style>
@@ -70,9 +70,24 @@ get_header();
                             </li>
                             <?php endforeach; ?>
                 </ul>
+                <?php
+                    foreach($acf_photo_gallery_attachments as $id):
+                            $imagem_infos = wp_prepare_attachment_for_js( $id );?>
+                        <div class="modal fade modal-malunguice" id="modal-<?=$id?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                              <div class="modal-dialog" role="document">
+                                <button type="button" class="fecha-modal" data-dismiss="modal">x</button>
+                                <h3><?=$post->post_title?></h3>
+                                <img class="item-modal-malunguice"
+                                src=" <?php echo $imagem_infos['url']; ?> "/>
+                                <h4><?=get_post($id)->post_title?></h4>
+                                <p><?=get_post($id)->post_content?></p>
+                                </div>
+                              </div>
+                    <?php endforeach; ?>
             <?php } ?>
 		</main><!-- #main -->
 	</div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <?php
 
 get_footer();

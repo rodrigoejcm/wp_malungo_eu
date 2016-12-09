@@ -3351,6 +3351,49 @@ ul.social {
     -moz-transition: all ease 400ms;
     transition: all ease 400ms; }
 
+.single-malunguice .autor {
+  margin: 0 auto;
+  max-width: 600px; }
+
+.modal-malunguice {
+  background: rgba(247, 239, 231, 0.6); }
+  .modal-malunguice .modal-dialog {
+    background: #F7EFE7;
+    border: solid #ad8d6e 1px;
+    box-sizing: border-box;
+    padding: 2em; }
+    .modal-malunguice .modal-dialog img {
+      text-align: center;
+      width: 90%; }
+  .modal-malunguice h3 {
+    margin-bottom: 2em;
+    text-transform: none !important; }
+    .modal-malunguice h3 {
+      color: #c5006c;
+      font-family: "proxima-nova", sans-serif !important;
+      font-size: 20px;
+      font-weight: bold;
+      text-transform: uppercase; }
+    .modal-malunguice h3:before {
+      border-top: 3px #303331 solid;
+      content: '';
+      display: block;
+      height: 1em;
+      position: relative;
+      top: 2.5em;
+      width: 2em;
+      z-index: 2; }
+  .modal-malunguice .fecha-modal {
+    background: none;
+    border: none;
+    box-shadow: none;
+    color: #ad8d6e;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
 .container-zumzum {
   background: #F7EFE7; }
 

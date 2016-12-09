@@ -86,26 +86,6 @@
     }
 }
 
-@mixin titulo-zumzum(){
-    &{
-        color: $roxo-zumzum;
-        font-family: 'proxima-nova', sans-serif!important;
-        font-size: 20px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    &:before{
-        border-top: 3px $verde-zumzum solid;
-        content: '';
-        display: block;
-        height: 1em;
-        position: relative;
-        top: 2.5em;
-        width: 2em;
-        z-index: 2;
-    }
-}
-
 .zumzum-sidebar{
     border-left: 1px solid rgba($preto-malungo, 0.4);
     padding-left: 30px;

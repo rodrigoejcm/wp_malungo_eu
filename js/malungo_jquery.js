@@ -77,3 +77,10 @@ $(document).ready(function () {
             $(this).children('.sub-menu').stop().fadeOut();
     });
 });
+
+$(document).ready(function () {
+    $('.js-modal-dispara').on('click', function(ev){
+        var target = $(this).attr("data-target");
+        $(target).modal('toggle');
+    });
+});

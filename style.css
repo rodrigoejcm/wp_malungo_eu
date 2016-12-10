@@ -466,7 +466,9 @@ a {
     font-size: 10px;
     font-weight: bold;
     padding: 10px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin: auto;
+    width: 60%; }
   .main-navigation > .menus {
     font-family: 'Maitree', serif;
     font-weight: 200;
